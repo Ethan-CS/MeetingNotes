@@ -1,2 +1,2 @@
 # Research
-Research notes and meetings
+PhD research notes and meetings.

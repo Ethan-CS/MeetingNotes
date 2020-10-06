@@ -1,2 +1,2 @@
-# research
+# Research
 Research notes and meetings

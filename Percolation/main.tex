@@ -1,0 +1,84 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options
+	\geometry{a4paper}                   % ... or a4paper or a5paper or ...                
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%\setkomafont{title}{\normalfont\scshape}
+%\addtokomafont{disposition}{\rmfamily}
+    
+%\newcommand{\subtitle}{A review of previous work and avenues for future research}
+
+    
+\title{Percolation and the Firefighter Problem}
+\author{Ethan Kelly}%\\Supervisor: Dr Jessica Enright}
+
+\newcommand{\Addresses}{{% additional brackets for segregating \footnotesize
+  \bigskip
+  \footnotesize
+  \textsc{Ethan Kelly, Department of Computing Science, University of Glasgow}\par\nopagebreak
+   \textit{Email:~}\texttt{E.Kelly.1@research.gla.ac.uk}
+
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\label{sec:intro}
+
+The Firefighter Problem was first discussed by Hartnell in 1995 \cite{hartnell95}. It models an outbreak of fire with a firefighter strategically blocking its path. We discuss this original formulation of the problem in the next section and explain how it can be used in applications from disease spread to the spread of viral content on social media.\\
+
+The other topic we will address is Percolation Theory, and how it proves very promising in answering questions about Firefighter. We will outline the original conception and the context it was considered and then explain how a slight variant will prove far more useful for our purposes in considering the Firefighter Problem.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Background}
+
+\subsection{Firefighter}
+
+The Firefighter Problem, which we refer to as simply `Firefighter,' will be the focus of our discussion when we introduce Percolation: that is, we hope to show that Percolation can provide many answers to questions asked in Firefighter. The problem is formulated as follows: at $t=0$, fire breaks out at some vertex of graph $G$. The firefighter then `protects' another vertex\footnote{\, This has been extended to $n$ vertices in some research, but here we wish to illustrate for simplicity the original form of the problem.} of $G$. A protected vertex is protected for the remainder of the game; it is inflammable \textit{ad infinitum.} Similarly, a vertex that has been on fire is `burnt' for the rest of the game and cannot ignite again. The fire spreads to any immediate neighbouring vertices that are neither protected nor burnt. Then, the firefighter may protect another vertex, the fire spreads again and so on. Common questions to ask include: how do we minimise the number of vertices that will be burnt? In a given class of trees, what is the average number of burnt vertices? Is the problem NP-complete?\\
+
+There are many natural applications of this - if we think of each vertex being an individual and the edges representing social contact, we have a simple model for disease infection. If instead we think of these edges representing virtual contact between individuals on social media, we have a model for the spread of viral internet memes \cite{obrien19}.
+
+\subsection{Percolation Theory}
+
+Widely known and used in physics, statistics and mathematics, Percolation theory involves modelling scenarios as $n$-dimensional graphs, so application to Firefighter is not entirely unexpected. The edges between vertices in the graph can be either `open' or `closed' with probability $p$ and $1-p$ respectively. We can think of percolation problems as liquid being poured onto a porous material and whether there is a path from hole to hole along open paths through the material. Note that removing more and more edges mov†es us towards a critical point at which removing further edges would cause the graph to fall apart into smaller clusters of vertices and edges that have no access to each other \cite{grimmett99}. This is known as `bond' percolation, as edges correspond to bonds in many of its applications.\\
+
+Several authors have suggested percolation as a possible approach to Firefighter \cite{finbow09}. In this context, we could determine the critical point to see how we might contain the fire to a smaller cluster that cannot spread to the wider graph. For Firefighter, site percolation is more applicable: rather than considering open or closed \emph{edges} (`bonds') between vertices as in bond percolation, we consider each \emph{vertex} (`site') as being `occupied' or `unoccupied' with probability $p$ and $1-p$ respectively.\\
+
+Formally, we consider a point lattice $\mathbb{L}$ and denote the open cluster as $C(x)\text{,~where~}x\in\mathbb{L}$ is the local origin of the cluster. This cluster $C(x)$ is defined as the set of all vertices that can be reached from open paths beginning at the nucleation site, $x$. Then, we are particularly interested in the \emph{percolation probability}:
+$$
+\theta(p) = \mathbb{P}_p(\,|C(0)|=\infty\,),
+$$
+and the \emph{critical probability} (or \emph{percolation threshold}):
+$$
+p_c = \sup\{\,p \mid \theta(p)=0\,\}.
+$$
+Here, $\mathbb{P}_p$ is the product measure given by:
+$$
+\displaystyle \mathbb{P}_p=\prod_{v\in\mathbb{L}^d}\mu_v
+$$
+where $\mu_v$ is the \emph{Bernoulli measure}, which returns $p$ when $v$ is open and $1-p$ when $v$ is closed \cite[p. 28]{klenke14}. Analytically, others have shown that in the case of a two-dimensional regular point lattice, the critical probability is $p_c=1/2$ \cite{kersten80}.
+
+\section{Potential Uses of Percolation in The Firefighter Problem}
+
+We have identified two main avenues that may be pursued in Firefighter using Percolation: the firefighter may use percolation in order to defend the graph, or the fire spreads with percolation probability $p$. The former may be more useful when the firefighter can save more than one vertex at each turn; the latter may be more useful when modelling disease spread where the reproduction rate is introduced as the percolation probability. For instance, we can model how a fire spreads given a certain propagation probability or consider forest fires and how fire can spread in densely in regularly populated forests and forests with some degree of percolation to remove some of the population, to more accurately represent the less regular tree density of real forests. We could extend this latter thinking to our earlier contextualisations, where we wish to consider vertices as individuals and edges as the connections between them. In that case, percolation may give us a more useful model for disease spread when we do not assume the population is well mixed and instead introduce probability functions to correspond to the likelihood one vertex is connected to another.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{siam}
+\bibliography{bibliography.bib}
+%\nocite{*}
+
+\Addresses
+
+\end{document}  

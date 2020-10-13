@@ -1,0 +1,44 @@
+PHD MEETING
+
+Meeting 02
+13-10-2020
+
+Jess Enright
+Ethan Kelly
+
+
+1. Admin
+
+Jess forwarded Ethan an email from Lewis Mackenzie with details of four options of computer Ethan can select from. Ethan advised that he is more comfortable with Apple machines, but will look at the options as he already has an Apple laptop.
+
+2. Research
+
+Ethan has continued to look into Percolation, specifically its utility in Firefighter and potential applications, and has produced the beginnings of a 'dummy' (in that it is used only to record ideas and applications Ethan has read or thought of during reading) literature review for his own purposes. Jess noted that this would be useful in future projects and papers that require a review of the literature.
+
+Jess suggested a number of applications of this research area. For one, given a random selection of protection How much of graph burns should just be the percolation threshold? Can this be proved? This can provide a good litmus test: we should be doing better than random but not as good as best possible (which is tricky to find because te problem is NP-hard) in any strategy. We can use this to reason about how good or bad a defense strategy is, e.g. on sparse graphs a random strategy should be pretty good!
+
+Another application Jess suggested was investigating the most effective allocation of resources at the beginning of an outbreak of fire to limit the spread of fire. This is called Firebreak and lead to the idea of a plot of graph density versus effectiveness of graph defence (perhaps the best case scenario). Jess suggested the best way to start would be with one class of graphs such as Erdős–Rényi random graphs and try first to find research that has already been done, failing this to try and come up with an analytic expectation function for the effectiveness of defence and, failing this approach, to try and come up with a computational method.
+
+Ethan spoke to Jess about a new project William Kavanagh has suggested regarding data collection and analysis from tutorials this semester. This would be used to examine the effectiveness of the online delivery of labs and how engagement (with video, mic, through chat) correlates to success in lab exercises. Jess agreed that this would be a useful side project insofar as it encourages collaboration with another graduate student, and since time is not at as much of a premium with this being the first month of Ethan's PhD course.
+
+3. Plan
+
+Main plan for Ethan:
+- Begin work on understanding the plot of expected defence effectiveness versus graph density on particular graph classes and examining any relevant literature.
+- Continue work on Percolation and complete 'dummy' lit review as this may be useful in future authorship
+- Collaborate with William on data collection (long-term)
+
+4. Follow-up
+
+Ethan:
+- Let Jess know which of the four computation options offered would be most beneficial.
+- Follow plan (as above) and update Jess at next meeting, or earlier via email if urgent
+
+Jess: no follow-up.
+
+
+Next meeting: 14:00 20-10-2020
+
+
+EK 13-10-2020
+

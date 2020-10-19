@@ -1,0 +1,3 @@
+![[Log-normal PDF.png]]
+
+Figure 1: Temporal variation in reporting rate. We calculate the percentage of symptomatic cases reported on each day a country has had more than ten deaths. We then fit a Gaussian Process (GP) to these data (see Temporal variation model fitting section for details), highlighting the temporal trend of each countries reporting rate. The red shaded region is the 95% CrI of fitted GP.

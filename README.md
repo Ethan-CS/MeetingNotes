@@ -1,6 +1,6 @@
 # ethankelly/research/
 
-This repository contains various files associated with my PhD research, which is based around the topic "Game-theoretic and probabilistic methods applied to spatial network models of contagion". To learn more, see: [Ethan Kelly](https://gla.ac.uk/pgrs/ethankelly/)
+This repository contains various files associated with my PhD research, which is based around the topic "Game-theoretic and probabilistic methods applied to spatial network models of contagion". To find out more about my research and interests, see: [Ethan Kelly](https://gla.ac.uk/pgrs/ethankelly/)
 
 Below is a rough roadmap to the contents of the repo.
 

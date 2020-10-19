@@ -1,5 +1,7 @@
 * Source: Adapted from Szabolcs Horvát, Mathematica Stack Exchange Answer: mathematica.stackexchange.com/a/5173 October 2017*
 
+* Creates a graph and a widget that can be used to visualise percolation on a graph *
+
 * Create sample dataset *
 points = RandomReal[10 {-1, 1}, {200, 2}];
 

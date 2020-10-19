@@ -1,0 +1,1 @@
+A caterpillar is a tree with a path s.t. every vertex out-with the path is adjacent to some vertex in the path.

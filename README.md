@@ -10,7 +10,7 @@ Below is a rough roadmap to the contents of the repo.
 
 ## Contents:
 * `firefighter`
- * This is an ongoing project, where I am amiming to write code that can come up with an optimal solution to a given Firefighter graph. That is, given a graph (represented as an adjacency matrix), choose a random vertex v to be the initial point of outbreak. Then, the firefighter gets a defence per turn and the fire spreads to any unprotected (and unburned) vertices, the firefighter defends again, the fire spreads again and so on. The program will centre around an integer program that aims to throw an optimal defence solution to Firefighter on a given graph.
+  * This is an ongoing project, where I am amiming to write code that can come up with an optimal solution to a given Firefighter graph. That is, given a graph (represented as an adjacency matrix), choose a random vertex v to be the initial point of outbreak. Then, the firefighter gets a defence per turn and the fire spreads to any unprotected (and unburned) vertices, the firefighter defends again, the fire spreads again and so on. The program will centre around an integer program that aims to throw an optimal defence solution to Firefighter on a given graph.
 * `meeting-notes` 
   * This directory contains plain-text notes from PhD supervisory meetings, beginning 06-10-2020 that record any administrative tasks and topics, points of research discussion and any follow-ups for either Jess or myself and my own plan for the week to come.
 * `percolation`

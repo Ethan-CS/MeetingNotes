@@ -42,19 +42,6 @@ public class Graph {
 		}
 	}
 	
-// Neighbour check
-	public static boolean isNeighbour(int vertex1, int vertex2) {
-		boolean neighbour;
-		
-		if(getEdge(vertex1, vertex2)==true) {
-			neighbour = true;
-		} else {
-			neighbour = false;
-		}
-		
-		return neighbour;
-	}
-	
 // Weight of each vertex
 	public static int weightVertex(boolean[][] adjMatrix, int vertex) {
 		int weight = 0;
@@ -92,22 +79,6 @@ public class Graph {
 		
 		return index;
 	}
-	
-// Find next heaviest vertex (in case the heaviest vertex is on fire)
-	public static int nextLargest(int[] weights, int heaviestVertex) {
-		int[] otherWeights = new int[weights.length-1];
-		
-		for (int i=0, k=0; i<weights.length-1; i++) {
-			if (i == heaviestVertex) {
-				// Do nothing
-			} else {
-				otherWeights[k] = weights[i];
-				k++;
-		}
-	}
-	return largestWeight(otherWeights);
-}
-	
 	
 // Build the matrix
 	public String toString() {

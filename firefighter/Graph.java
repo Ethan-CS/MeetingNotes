@@ -9,6 +9,8 @@ package ethankelly.graphs.fire;
 
 // Program to create graph and represent with an adjacency matrix
 
+
+// Graph represented with an adjacency matrix
 public class Graph {
 	protected static boolean adjMatrix[][];
 	protected static int numVertices;
@@ -33,11 +35,24 @@ public class Graph {
 	
 // Get edge
 	public static boolean getEdge(int i, int j) {
-		if(adjMatrix[i][j] == true) {
+		if(adjMatrix[i][j] == true || adjMatrix[j][i] == true) {
 			return true;
 		} else {
 			return false;
 		}
+	}
+	
+// Neighbour check
+	public static boolean isNeighbour(int vertex1, int vertex2) {
+		boolean neighbour;
+		
+		if(getEdge(vertex1, vertex2)==true) {
+			neighbour = true;
+		} else {
+			neighbour = false;
+		}
+		
+		return neighbour;
 	}
 	
 // Weight of each vertex
@@ -67,7 +82,7 @@ public class Graph {
 		int index = 0;
 		
 		// Traverse each element, compare with current max
-		for (int i =1; i < weightsArray.length; i++) {
+		for (int i = 0; i < weightsArray.length; i++) {
 			if (weightsArray[i] > max) {
 				max = weightsArray[i];
 				index = i;
@@ -79,17 +94,20 @@ public class Graph {
 	}
 	
 // Find next heaviest vertex (in case the heaviest vertex is on fire)
-	public static int nextLargest(int[] weights) {
+	public static int nextLargest(int[] weights, int heaviestVertex) {
 		int[] otherWeights = new int[weights.length-1];
 		
 		for (int i=0, k=0; i<weights.length-1; i++) {
-			if (i == largestWeight(weights)) {
+			if (i == heaviestVertex) {
+				// Do nothing
 			} else {
-				otherWeights[k++] = weights[i];
+				otherWeights[k] = weights[i];
+				k++;
 		}
 	}
 	return largestWeight(otherWeights);
 }
+	
 	
 // Build the matrix
 	public String toString() {

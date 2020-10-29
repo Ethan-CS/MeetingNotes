@@ -20,7 +20,8 @@ public class GreedyFirefighter extends Graph {
 		super(numVertices);
 	}
 
-	// Choose a random vertex selection for outbreak of fire
+	
+// Choose a random vertex for outbreak of fire
 	public static int outbreak(int numVertices) {
 		int start = new Random().nextInt(numVertices);
 
@@ -28,16 +29,26 @@ public class GreedyFirefighter extends Graph {
 		return start;
 	}
 
-// Initialise 2D array for state
+/****
+ *
+ * Initialise 2D array to represent state of each vertex in graph at given time
+ *
+ * Rows correspond to vertices (indexed from 0), columns correspond to turn count (time t)
+ * Defence happens in odd rounds, burning in even rounds
+ * 
+ * 0 -> open; 1 -> defended; 2 -> burning.
+ *
+ ****/
 	public static int[][] initialState(int numVertices, int start, int turnCount) {
 		int[][] state = new int[numVertices][turnCount + 1];
+		
+		// Initialise with outbreak at t=0: 2,
+		// everything else 0
 
 		for (int n = 0; n <= turnCount; n++) {
 			state[start][n] = 2;
 		}
-
-		// 0 -> open; 1 -> defended; 2 -> burning.
-
+		
 		return state;
 	}
 
@@ -46,26 +57,33 @@ public class GreedyFirefighter extends Graph {
 		int[] burningVertices = new int[numVertices];
 
 		if (turnCount % 2 != 0) {
-			// TODO Make this an exception!
+			// TODO Make this an exception
 			System.out.println("Not an even numbered turn, cannot burn adjacent vertices");
 		} else
+			// burningVertices is an int array;
+			// Value of 1 if vertex (index) is burning, 0 otherwise (defended or open)
 			for (int i = 0; i < numVertices; i++) {
 				for (int j = 0; j < numVertices; j++) {
+					// Store any vertices already on fire
 					if (state[i][turnCount - 1] == 2) {
 						burningVertices[i] = 1;
+						// Open neighbours of burning vertices catch fire
 						if (state[j][turnCount - 1] == 0 && getEdge(i, j) == true) {
 							burningVertices[j] = 1;
 						}
 					}
 				}
 			}
+		// Array containing vertices burning last round,
+		// Used to check if we should end (in main())
 		int[] previouslyBurning = new int[numVertices];
 		for (int k = 0; k < numVertices; k++) {
 			if (state[k][turnCount - 1] == 2) {
 				previouslyBurning[k] = 1;
 			}
 		}
-
+		// If we haven't burned anything new, fire cannot spread, end game
+		// Flag if nothing can burn by filling all entries with -1 (usually meaningless in array: 1 if burning, 0 if not)
 		if (Arrays.equals(burningVertices, previouslyBurning)) {
 			Arrays.fill(burningVertices, -1);
 		}
@@ -95,7 +113,7 @@ public class GreedyFirefighter extends Graph {
 				}
 			}
 		}
-
+		// Test:
 		// System.out.print(Arrays.deepToString(updatedBurning));
 		return updatedBurning;
 	}
@@ -125,6 +143,7 @@ public class GreedyFirefighter extends Graph {
 		} else {
 			System.out.println("Defending heaviest possible vertex: " + defendVertex);
 		}
+		
 		return defendVertex;
 	}
 
@@ -140,9 +159,10 @@ public class GreedyFirefighter extends Graph {
 		}
 
 		for (int k = turnCount; k <= turnCount; k++) {
-			updatedDefence[defend][k] = 1;
 			// Only update what has been defended
+			updatedDefence[defend][k] = 1;
 		}
+		// Test:
 		// System.out.println(Arrays.deepToString(updatedState));
 		return updatedDefence;
 
@@ -152,7 +172,7 @@ public class GreedyFirefighter extends Graph {
 		// Loop through all rows
 		for (int[] row : matrix)
 
-			// convert each row to string and then printing in a separate line
+			// Convert each row to string, then print (moving cursor down each time)
 			System.out.println(Arrays.toString(row));
 	}
 
@@ -170,20 +190,26 @@ public class GreedyFirefighter extends Graph {
 		g.addEdge(2, 3);
 
 		// Print adjacency matrix
-		System.out.println("Initial graph:");
+		System.out.println("Graph:");
 		System.out.print(g.toString());
-
+		
+		// Inputs and state at t=0
 		int turnCount = 0;
 		int start = outbreak(numVertices);
 		int[][] state = initialState(numVertices, start, turnCount);
 		System.out.println("Initial state of play: ");
 		printMatrix(state);
 		turnCount++;
-
+		
+		// In odd rounds, defend;
+		// In even rounds, determine what is burning.
+		// Two possibilities to end: we can't defend anything else, or we can't burn anything (e.g. fire is contained).
 		for (int c = turnCount; c < numVertices * 10; c++) {
 			System.out.println("---- Turn Count: " + c + " ----");
 			if (c % 2 == 1) {
+				// Play a defence
 				int defend = defence(state, c);
+				// See if we can defend anything
 				if (defend > numVertices) {
 					System.out.println("No defensive moves can be made; game over.");
 					break;
@@ -195,14 +221,16 @@ public class GreedyFirefighter extends Graph {
 				}
 
 			} else {
+				// Determine burning vertices
 				int[] toBurn = burn(state, c);
 				int[] comparator = new int[numVertices];
 				Arrays.fill(comparator, -1);
+				// See if anything can be burned
 				if (Arrays.equals(toBurn, comparator)) {
 					System.out.println("No vertices can be burned; game over.");
 					break;
 				} else {
-
+					/* Test: prints the vertices to burn
 					System.out.print("Burning: ");
 					for (int i = 0; i < numVertices; i++) {
 						if (toBurn[i] == 1) {
@@ -210,6 +238,7 @@ public class GreedyFirefighter extends Graph {
 						}
 					}
 					System.out.println();
+					*/
 					int[][] newState = updateStateBurning(state, toBurn, c);
 					System.out.println("After burning: ");
 					printMatrix(newState);

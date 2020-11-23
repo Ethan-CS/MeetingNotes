@@ -1,10 +1,7 @@
 package io.github.ethankelly;
 
+
 import java.util.Arrays;
-
-import static io.github.ethankelly.Permutation.factorial;
-import static io.github.ethankelly.Permutation.permutation;
-
 
 /**
  * Program to return an optimal firefighter solution
@@ -18,6 +15,14 @@ public class NaiveOptimalFirefighter extends State {
         super(numVertices);
     }
 
+    // Calculate factorial of an integer input
+    public static int factorial(int input) {
+        if (input <= 2) {
+            return input;
+        }
+        return input * factorial(input - 1);
+    }
+
     /**
      * Determine optimal defence strategy
      *
@@ -25,12 +30,12 @@ public class NaiveOptimalFirefighter extends State {
      * @return optimal defence strategy from the combinations
      */
     public static int[] optimalDefence(int[][] perm, int[][] state) {
-        int[] pOptimal = new int[0];
         /*
          * Cycle through defence strategies
          * find end turn count for each and how many vertices burned in each (did we play all defences?)
          * use this info to determine the optimal strategy of all permutations
          */
+        int[] pOptimal = new int[0];
         return pOptimal;
     }
 
@@ -48,7 +53,7 @@ public class NaiveOptimalFirefighter extends State {
     }
 
 
-     public static int[][] defence(int[] strategy, int[][] state) {
+    public static int[][] defence(int[] strategy, int[][] state) {
         /*
          * Given a strategy (and which row it is in permutation matrix)
          * defend first defensible vertex, i++, burn relevant vertices, i++, repeat
@@ -90,6 +95,50 @@ public class NaiveOptimalFirefighter extends State {
         return state;
     }
 
+    /**
+     * Generates a matrix populated with all permutations of given vertex set
+     *
+     * @param  openVertices integer array of all open (neither burning nor defended) vertices
+     * @return 2d array with all permutations of the open vertices
+     */
+    public static int[][] permute(int[] openVertices) {
+        return permuteMethod(openVertices, 0, openVertices.length);
+    }
+
+    // Implement Heap's algorithm to find all permutations of given array of open vertices
+    private static int[][] permuteMethod(int[] array, int start, int end) {
+        int[][] permutation = new int[factorial(array.length)][array.length];
+
+        if (start < end) {
+            int i, j;
+            for (i = end - 2; i >= start; i--) {
+                for (j = i + 1; j < end; j++) {
+                    swap(array, i, j);
+                    permuteMethod(array, i + 1, end);
+                    //System.out.println(Arrays.toString(array));
+                    permutation[i] = array;
+                }
+                rotateLeft(array, i, end);
+            }
+        }
+        return permutation;
+    }
+
+    // Swaps two array elements
+    private static void swap(int[] array, int i, int j) {
+        int t;
+        t = array[i];
+        array[i] = array[j];
+        array[j] = t;
+    }
+
+    // Rotates the array
+    private static void rotateLeft(int[] array, int start, int end) {
+        int tmp = array[start];
+        if (end - 1 - start >= 0) System.arraycopy(array, start + 1, array, start, end - 1 - start);
+        array[end - 1] = tmp;
+    }
+
 
     /**
      *
@@ -122,14 +171,11 @@ public class NaiveOptimalFirefighter extends State {
         for (int i = 0, k = 0; i < numVertices; i++) if (i != start) openVertices[k++] = vertices[i];
 
         // Give all permutations of the open vertices
-        int w = openVertices.length;
-        int h = factorial(w);
-        int[][] newPerm = new int[h][w];
-        newPerm = permutation(openVertices, 0, w);
+        int[][] newPerm = permute(openVertices);
         printMatrix(newPerm);
 
         // Get the optimal defence strategy
-        //int[] defend = optimalDefence(newPerm, state);
-        //System.out.println(Arrays.toString(defend));
+        int[] defend = optimalDefence(newPerm, state);
+        System.out.println(Arrays.toString(defend));
     }
 }

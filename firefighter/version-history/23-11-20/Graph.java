@@ -82,7 +82,7 @@ public class Graph {
         return s.toString();
     }
 
-    public static void main(String[] args) throws InvalidTurnCountException {
+    public static void main(String[] args) {
         // Define the graph
         int numVertices = 4;
         Graph g = new Graph(numVertices);

@@ -57,12 +57,13 @@ public class  GreedyFirefighter extends State {
     }
 
     // Choose which vertex to defend each odd turnCount
-    public static int defence(int[][] state, int turnCount) throws InvalidTurnCountException {
+    public static int defence(int[][] state, int turnCount) {
         int defendVertex = 0;
         int[] possibleWeights = weightsArray(adjMatrix);
 
         if (turnCount % 2 == 0) {
-            throw new InvalidTurnCountException("Not an odd numbered turn, cannot defend");
+            // TODO Make this an exception!
+            System.out.println("Not an odd numbered turn, cannot defend");
         } else
             for (int i = 0; i < numVertices; i++) {
             if (state[i][turnCount - 1] != 0) {
@@ -85,7 +86,7 @@ public class  GreedyFirefighter extends State {
     }
 
     // Main method
-    public static void main(String[] args) throws InvalidTurnCountException {
+    public static void main(String[] args) {
         // Define graph g
         int numVertices = 4;
         Graph g = new Graph(numVertices);

@@ -25,11 +25,8 @@ public class State extends Graph {
         int[] burningVertices = new int[numVertices];
 
         if (turnCount % 2 != 0) {
-            try {
-                throw new InvalidTurnCountException("Not an even numbered turn, cannot burn adjacent vertices");
-            } catch (InvalidTurnCountException e) {
-                e.printStackTrace();
-            }
+            // TODO Make this an exception
+            System.out.println("Not an even numbered turn, cannot burn adjacent vertices");
         } else
             // burningVertices is an int array;
             // Value of 1 if vertex (index) is burning, 0 otherwise (defended or open)

@@ -1,11 +1,8 @@
 package io.github.ethankelly;
 
 /**
- * Simple point class to represent coordinates and calculate distances
- *
- * @author ethankelly <e.kelly.1@research.gla.ac.uk></e.kelly.1@research.gla.ac.uk>
- */
-
+ * a simple point class to contain the coordinates and calculate distances
+ **/
 public final class Point implements Cloneable {
     public int x;
     public int y;
@@ -15,7 +12,6 @@ public final class Point implements Cloneable {
         this.y = y;
     }
 
-    @Override
     public final Object clone() {
         return new Point(x, y);
     }
@@ -25,9 +21,9 @@ public final class Point implements Cloneable {
     }
 
     /**
-     * @param other
-     * @return rectilinear distance, (x1-x2, y1-y2)
-     */
+     * @param  other
+     * @return rectilinear distance, (x1+x2, y1+y2)
+     **/
     public final int distance(Point other) {
         return Math.abs(x - other.x) + Math.abs(y - other.y);
     }
@@ -36,7 +32,7 @@ public final class Point implements Cloneable {
         return Math.sqrt((x - other.x) * (x - other.x) + (y - other.y) * (y - other.y));
     }
 
-    @Override
+
     public final String toString() {
         return "(" + x + "," + y + ")";
     }

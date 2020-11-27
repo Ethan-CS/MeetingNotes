@@ -9,7 +9,7 @@ This directory contains rough meeting notes (similar to minutes, but not as form
 __Meeting N__
 DD-MM-YYYY
 
-_NAME_
+_NAME of participant(s),_
 _Ethan Kelly_
 
 

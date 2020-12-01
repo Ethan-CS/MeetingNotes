@@ -2,6 +2,7 @@ package io.github.ethankelly;
 
 import java.util.Arrays;
 
+
 /**
  *
  * Firefighter defence uses Greedy algorithm (1/2 approx. for optimal solution)
@@ -9,6 +10,7 @@ import java.util.Arrays;
  * @author Ethan Kelly <e.kelly.1@research.gla.ac.uk></e.kelly.1@research.gla.ac.uk>
  *
  */
+
 
 public class  GreedyFirefighter extends State {
 
@@ -84,29 +86,22 @@ public class  GreedyFirefighter extends State {
 
     // Main method
     public static void main(String[] args) throws InvalidTurnCountException {
-        // Define the graph
-        int numVertices = 12;
+        // Define graph g
+        int numVertices = 4;
         Graph g = new Graph(numVertices);
 
-        g.addEdge(0, 5);
-        g.addEdge(1, 5);
-        g.addEdge(1, 6);
-        g.addEdge(1, 10);
-        g.addEdge(1, 11);
+        // Add edges between vertices
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
         g.addEdge(2, 3);
-        g.addEdge(2, 4);
-        g.addEdge(2, 6);
-        g.addEdge(3, 4);
-        g.addEdge(3, 6);
-        g.addEdge(3, 11);
-        g.addEdge(5, 10);
 
         // Print adjacency matrix
         System.out.println("Graph:");
         System.out.print(g.toString());
 
         // Inputs and state at t=0
-
         int turnCount = 0;
         int start = outbreak(numVertices);
         int[][] state = initialState(numVertices, start, turnCount);

@@ -2,24 +2,11 @@ package io.github.ethankelly;
 
 import java.util.Arrays;
 
-/**
- * Store the state of a graph (as a 2d array) at each time-step
- *
- * @author Ethan Kelly
- * <e.kelly.1@research.gla.ac.uk></e.kelly.1@research.gla.ac.uk>
- */
-
 public class State extends Graph {
     public State(int numVertices) {
         super(numVertices);
     }
-    /**
-     * Rows correspond to vertices, columns correspond to turn count.
-     * Defence happens in odd rounds, burning in even rounds.
-     *
-     * 0 -> open; 1 -> defended; 2 -> burning.
-     *
-     */
+
     public static int[][] initialState(int numVertices, int start, int turnCount) {
         int[][] state = new int[numVertices][turnCount + 1];
 

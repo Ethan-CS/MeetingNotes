@@ -3,12 +3,14 @@ package io.github.ethankelly;
 import java.util.Arrays;
 import java.util.Random;
 
-/**
+/*****
+ *
  * Initialise a graph for the Firefighter Problem and methods to use them in solving this problem
  *
  * @author Ethan Kelly
- * <e.kelly.1@research.gla.ac.uk></e.kelly.1@research.gla.ac.uk>
- */
+ * e.kelly.1@research.gla.ac.uk
+ *
+ *****/
 
 // Graph represented with an adjacency matrix
 public class Graph {
@@ -46,9 +48,23 @@ public class Graph {
         return start;
     }
 
+    /***
+     *
+     * Initialise 2D array to represent state of each vertex in graph at given time
+     *
+     * Rows correspond to vertices (indexed from 0), columns correspond to turn
+     * count (time t) Defence happens in odd rounds, burning in even rounds
+     *
+     * 0 -> open; 1 -> defended; 2 -> burning.
+     *
+     ***/
+
+
+
     public static void printMatrix(int[][] matrix) {
         // Loop through all rows
         for (int[] row : matrix)
+
             // Convert each row to string, then print (moving cursor down each time)
             System.out.println(Arrays.toString(row));
     }
@@ -67,6 +83,18 @@ public class Graph {
     }
 
     public static void main(String[] args) throws InvalidTurnCountException {
+        // Define the graph
+        int numVertices = 4;
+        Graph g = new Graph(numVertices);
 
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
+        g.addEdge(2, 3);
+
+        // Print adjacency matrix
+        System.out.println("Graph:");
+        System.out.print(g.toString());
     }
 }

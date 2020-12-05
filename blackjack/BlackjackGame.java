@@ -18,18 +18,6 @@ public class BlackjackGame {
     // Starts game and displays the rules
     public void initializeGame() {
         String names;
-        out.println("Welcome to Blackjack!");
-        out.println();
-        out.println("  BLACKJACK RULES: ");
-        out.println("	- Each player is dealt 2 cards. Dealer is dealt 2 cards, one face-up and one face-down.");
-        out.println("	- Cards are equal to their value; face cards are worth 10 and an Ace can be 1 or 11.");
-        out.println("	- The player's cards are added up for their total.");
-        out.println("	- Players “Twist” to gain another card from the deck. Players “Stick” to keep their current card total.");
-        out.println("	- Dealer “Twists” until they equal or exceed 17.");
-        out.println("	- The goal is to have a higher card total than the dealer without going over 21.");
-        out.println("	- If the player total equals the dealer total, it is a “Push” and the hand ends.");
-        out.println("	- Players win their bet if they beat the dealer. Players win 1.5x their bet if they get “Blackjack” which is 21.");
-        out.println();
 
         // Gets the number of players and creates them
         out.print("How many people are playing (1-6)? ");

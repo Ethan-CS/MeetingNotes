@@ -1,95 +1,96 @@
 package io.github.ethankelly;
 
 import java.io.Serializable;
+import java.util.Random;
 
 /**
- * Represents a playing card
+ * Represents a deck of playing cards
  */
 
-public class Card implements Serializable {
+public class Deck extends Exception implements Serializable {
 
-    // Making data "private" is information hiding, so that
-    // it cannot be accessed with code outside this class.
-    private final char suit;
-    private final int value;
+    private static Card[] deck = new Card[52];
+    private static int nextCardIndex;
 
-    private Card() {
-        suit = ' ';
-        value = 0;
+    private Deck() {
+
+        // Initialise the deck
+        int count = 0;
+        try {
+            for (int i = 1; i <= 13; i++) deck[count++] = new Card('H', i);
+            for (int i = 1; i <= 13; i++) deck[count++] = new Card('S', i);
+            for (int i = 1; i <= 13; i++) deck[count++] = new Card('C', i);
+            for (int i = 1; i <= 13; i++) deck[count++] = new Card('D', i);
+        } catch (InvalidCardValueException | InvalidCardSuitException exp1) {
+            exp1.printStackTrace();
+        }
+        nextCardIndex = 0;
     }
 
-    public Card(char newSuit, int newValue) throws InvalidCardValueException, InvalidCardSuitException {
-        if (newValue < 1 || newValue > 13) {
-            throw new InvalidCardValueException(newValue);
-        } else {
-            this.value = newValue;
-        }
-        if (newSuit != 'H' && newSuit != 'S' && newSuit != 'D' && newSuit != 'C') {
-            throw new InvalidCardSuitException(newSuit);
-        } else {
-            this.suit = newSuit;
-        }
+    public static Deck getInstance() {
+        Deck instance = new Deck();
 
+        return instance;
+    }
+
+    private void isValidIndex(int index) throws InvalidDeckPositionException {
+        if (index < 0 || index > 51) {
+            throw new InvalidDeckPositionException(index);
+        }
     }
 
     @Override
     public String toString() {
 
-        return getSuitName() + " " + this.value;
+        StringBuilder str = new StringBuilder();
 
+        for (Card card : deck) {
+            str.append(card.toString()).append(" ");
+        }
+        return str.toString();
     }
 
-    public String getSuitName() {
+    // Swaps two cards
+    private void swapCards(int index1, int index2) throws InvalidDeckPositionException {
+        Card hold;
 
-        return switch (this.suit) {
-            case 'H' -> "Hearts";
-            case 'S' -> "Spades";
-            case 'C' -> "Clubs";
-            case 'D' -> "Diamonds";
-            default -> "Unknown";
-        };
+        isValidIndex(index1);
+        isValidIndex(index2);
+        hold = deck[index1];
+        deck[index1] = deck[index2];
+        deck[index2] = hold;
     }
 
-    public char getSuitDesignator() {
-        return suit;
+    // Shuffle the deck
+    public void shuffle() throws InvalidDeckPositionException {
+        Random rn = new Random();
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < deck.length; j++) {
+                swapCards(i, rn.nextInt(52));
+            }
+        }
+        nextCardIndex = 0;
     }
 
-    public String getValueName() {
-
-        return switch (this.value) {
-            case 1 -> "Ace";
-            case 2 -> "Two";
-            case 3 -> "Three";
-            case 4 -> "Four";
-            case 5 -> "Five";
-            case 6 -> "Six";
-            case 7 -> "Seven";
-            case 8 -> "Eight";
-            case 9 -> "Nine";
-            case 10 -> "Ten";
-            case 11 -> "Jack";
-            case 12 -> "Queen";
-            case 13 -> "King";
-            default -> "Unknown";
-        };
+    public Card getCard(int index) throws InvalidDeckPositionException {
+        isValidIndex(index);
+        return deck[index];
     }
 
-    /* Encapsulation: provides access to hidden information by
-     * putting it together in one unit with a public method. So, anyone who wants
-     * data will have to use a setter/getter.*/
-    public int getValue() {
-        return this.value;
+
+    public boolean compareTo(Deck otherDeck) throws InvalidDeckPositionException {
+        for (int i = 0; i < deck.length; i++) {
+            if (!deck[i].compareTo(otherDeck.getCard(i))) {
+                return false;
+            }
+        }
+        return true;
     }
 
-    public boolean compareSuit(Card card) {
-        return this.suit == card.getSuitDesignator();
-    }
-
-    public boolean compareValue(Card card) {
-        return this.value == card.getValue();
-    }
-
-    public boolean compareTo(Card card) {
-        return this.suit == card.getSuitDesignator() && this.value == card.getValue();
+    public Card nextCard() {
+        if (nextCardIndex < 0 || nextCardIndex > 51) {
+            System.out.println("Future exception goes here");
+        }
+        return deck[nextCardIndex++];
     }
 }

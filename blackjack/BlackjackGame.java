@@ -30,7 +30,7 @@ public class BlackjackGame {
         }
 
         players = new Player[users];
-        deck = new Deck();
+        deck = Deck.getInstance();
 
         // Asks for player names and assigns them
         for (int i = 0; i < users; i++) {

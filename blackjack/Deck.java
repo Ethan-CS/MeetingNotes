@@ -11,8 +11,10 @@ public class Deck extends Exception implements Serializable {
 
     private static Card[] deck = new Card[52];
     private static int nextCardIndex;
+    private static Deck ourInstance;  // a place where our _only_ instance will go
 
     private Deck() {
+
 
         // Initialise the deck
         int count = 0;
@@ -28,9 +30,14 @@ public class Deck extends Exception implements Serializable {
     }
 
     public static Deck getInstance() {
-        Deck instance = new Deck();
 
-        return instance;
+        // If we've never made an instance, make one and store it
+        if (ourInstance == null) {
+            ourInstance = new Deck();
+        }
+
+        // Return the only instance we ever made, rather than creating multiple
+        return ourInstance;
     }
 
     private void isValidIndex(int index) throws InvalidDeckPositionException {

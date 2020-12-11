@@ -1,11 +1,10 @@
 # Firefighter
 
-In this directory are the most up-to-date Java files that I have been working on to understand different aspects of the Firefighter Problem. Below is a rough contents of this, which will be updated as I carry on with this project:
-
+Here, you can find a `src` directory containing the most up-to-date Java files that I have been working on to understand different aspects of the Firefighter Problem, as well as a `version-history` directory containing some past iterations of this project (warts and all)! Below is a rough contents of the project as it currently stands (i.e. as found in `src`, which will be updated as I carry on with this project.
 
 ## `Agent`
 
-Not currently in use, but is accessory code for a version of the Firefighter Problem I aim to work on soon that involves using the methods in this file to imbue each vertex (individual) with some agency-related properties, for instance a defense rating which corresponds to the level of protection they have from the contagion propagating through the graph.
+Not currently in use; contains accessory code for a version of the Firefighter Problem I aim to work on soon that involves using the methods in this file to imbue each vertex (individual) with some agency-related properties, for instance a defense rating which corresponds to the level of protection they have from the contagion propagating through the graph.
 
 ## `Graph`
 

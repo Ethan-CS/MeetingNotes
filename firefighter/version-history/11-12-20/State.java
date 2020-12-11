@@ -18,15 +18,18 @@ public class State extends Graph {
      * Defence happens in odd rounds, burning in even rounds.
      *
      * 0 -> open; 1 -> defended; 2 -> burning.
+     *
      */
     public static int[][] initialState(int numVertices, int start, int turnCount) {
         int[][] state = new int[numVertices][turnCount + 1];
 
         // Initialise with outbreak at t=0: 2,
         // everything else 0
+
         for (int n = 0; n <= turnCount; n++) {
             state[start][n] = 2;
         }
+
         return state;
     }
 

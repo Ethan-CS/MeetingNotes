@@ -2,6 +2,7 @@ package io.github.ethankelly;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Program to return an optimal firefighter solution
@@ -15,71 +16,94 @@ public class NaiveOptimalFirefighter extends State {
         super(numVertices);
     }
 
+
+    /**
+     * Permutes a given integer array input, using helper method (below)
+     *
+     * @param  array an array of integers
+     * @return all permutations of the given integer array as a list of lists (of integers)
+     */
+    public static List<List<Integer>> permute(int[] array) {
+        List<List<Integer>> result = new ArrayList<>();
+        helper(0, array, result);
+        return result;
+    }
+
+    private static void helper(int start, int[] array, List<List<Integer>> result){
+        if(start == array.length-1){
+            ArrayList<Integer> list = new ArrayList<>();
+            for(int num : array){
+                list.add(num);
+            }
+            result.add(list);
+            return;
+        }
+
+        for(int i=start; i<array.length; i++){
+            swap(array, i, start);
+            helper(start+1, array, result);
+            swap(array, i, start);
+        }
+    }
+
+    // Swaps two elements of an integer array
+    private static void swap(int[] array, int i, int j){
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
     /**
      * Determine optimal defence strategy
      *
-     * @param perm permutation of the open vertices
+     * @param  perm permutation of the open vertices
      * @return optimal defence strategy from the combinations
      */
-    public static int[] optimalDefence(ArrayList<int[]> perm, int[][] state) {
-        int[] pOptimal = new int[0];
-        /*
-         * Cycle through defence strategies
-         * find end turn count for each and how many vertices burned in each (did we play all defences?)
-         * use this info to determine the optimal strategy of all permutations
-         */
-        return pOptimal;
-    }
-    /**
-     * Determine first defensible vertex in a strategy
-     *
-     * @param  strategy a defence strategy
-     * @param  i the vertex we want to start at
-     * @param  state the matrix containing the current state of the graph
-     * @return optimal defence strategy from the combinations
-     */
-    public static int findDefence(int[] strategy, int i, int[][] state) {
-        // Initialise at -1 - catch this as meaning no possible defences
-        int index = -1;
-        // Traverse strategy, find first open vertex
-        for (int j = i; j < strategy.length; j++) {
-            if (state[strategy[j]][state[0].length] == 0) {
-                index = j;
-                break;
-            }
+    public static List<Integer> optimalDefence(List<List<Integer>> perm, int[][] state, int[] openVertices) {
+
+        List<Integer> strategy;
+        int[] end = new int[factorial(openVertices.length)];
+
+        // Cycle through defence strategies
+        for (int i = 0; i < factorial(openVertices.length); i++) {
+
+            strategy = perm.get(i); // Strategy is the i-th list of perm
+            System.out.println("Strategy: " + Arrays.toString(new List[]{strategy}));
+
+            int firstDefence = findDefence(strategy, state); // Get first defensible vertex
+            System.out.println("First defensible vertex: " + firstDefence);
+
+            List<Integer> subList = strategy.subList(firstDefence, strategy.size()); // Start strategy at first defensible vertex
+
+            int[][] defenceState = defend(subList, state); // Defend according to strategy
+
+            // Store end turn count for the defence (number of columns in the state matrix)
+            System.out.println("LENGTH: " + defenceState[0].length);
+            end[i] = defenceState[0].length;
         }
-        if (index == -1) {
-            System.out.println("No defence possible in this strategy");
-        } else {
-            System.out.println("First possible defence in " + Arrays.toString(strategy) + " is " + strategy[index]);
-        }
-        return index;
+
+        // Find smallest length of game, return corresponding strategy
+        System.out.println(Arrays.toString(end));
+        System.out.println(findSmallest(end));
+        return perm.get(findSmallest(end));
+
     }
 
     /**
      * Cycle through a given defence strategy, record information about how it performs
      *
-     * @param  strategy a defence strategy
-     * @param  state the matrix containing the current state of the graph
+     * @param strategy a defence strategy
+     * @param state    the matrix containing the current state of the graph
      * @return the end state of the graph given we play the given strategy
      */
-     public static int[][] defence(int[] strategy, int[][] state) {
-        /*
-         * Given a strategy (and which row it is in permutation matrix)
-         * defend first defensible vertex, i++, burn relevant vertices, i++, repeat
-         * No: "Impossible defence strategy," break
-         * How many of the vertices was it necessary to defend, if we defended all? When was the fire contained?
-         *
-         */
-        for (int i = 1; i < strategy.length; i++) {
-            // Odd numbered turns - defence move
+    public static int[][] defend (List<Integer> strategy, int[][] state) {
+        for (int i = 1; i < strategy.size(); i++) {
+            // Odd numbered turn - defensive move
             if (i % 2 == 1) {
-                int defendVertex = strategy[findDefence(strategy, i - 1, state)];
-                if (defendVertex >= 0) {
-
-
+                int defendVertex = strategy.get(i-1);
+                if (state[defendVertex][i-1] == 0) {
                     // Remove all edges connected to the defended vertex
-                    for (int j = 0; j < strategy.length; j++) {
+                    for (int j = 0; j < strategy.size(); j++) {
                         if (getEdge(defendVertex, j)) {
                             removeEdge(defendVertex, j);
                         }
@@ -94,7 +118,7 @@ public class NaiveOptimalFirefighter extends State {
                 }
             } else {
                 // Even turn count - burn all open vertices adjacent to a burning vertex
-                int[] toBurn = burn(state, i + 1);
+                int[] toBurn = burn(state, i);
                 int[] comparator = new int[numVertices];
                 Arrays.fill(comparator, -1);
 
@@ -108,33 +132,79 @@ public class NaiveOptimalFirefighter extends State {
                     System.out.println("No vertices can be burned; game over.");
                     break;
                 }
-
             }
         }
         return state;
     }
 
+    // Finds the smallest value in the given integer array
+    public static int findSmallest (int[] array) {
+        int index = 0;
+        int min = array[index];
 
-    /**
-     *
-     */
+        for (int i = 1; i < array.length; i++) {
+
+            if (array[i] < min) {
+                min = array[i];
+                index = i;
+            }
+        }
+        return index;
+    }
+
+
+    //Determine first defensible vertex in a strategy
+    public static int findDefence(List<Integer> strategy, int[][] state) {
+        int index = -1;
+
+        for (int i = 0; i < strategy.size(); i++) {
+            if (state[strategy.get(i)][i] == 0) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+
+
+    // Prints a (permutation) array to check the method works
+    public static void test(List<List<Integer>> permutation) {
+        List<Integer> array;
+        System.out.println("Permutations of the open vertices: ");
+        for (List<Integer> ints : permutation) {
+            array = ints;
+            System.out.println(array);
+        }
+    }
+
+    // Returns the factorial of a given integer input
+    public static int factorial(int input) {
+        if (input <= 2) {
+            return input;
+        }
+        return input * factorial(input - 1);
+    }
+
+    // Gets the open vertices
+    public static int[] getOpenVertices(int start, int numVertices) {
+        int[] vertices = new int[numVertices];
+        for (int i = 0; i < numVertices; ++i) vertices[i] = i;
+
+        int[] openVertices = new int[numVertices - 1];
+        for (int i = 0, k = 0; i < numVertices; i++) if (i != start) openVertices[k++] = vertices[i];
+
+        return openVertices;
+    }
+
     public static void main(String[] args) {
         // Define the graph
-        int numVertices = 12;
+        int numVertices = 4;
         Graph g = new Graph(numVertices);
 
-        g.addEdge(0, 5);
-        g.addEdge(1, 5);
-        g.addEdge(1, 6);
-        g.addEdge(1, 10);
-        g.addEdge(1, 11);
-        g.addEdge(2, 3);
-        g.addEdge(2, 4);
-        g.addEdge(2, 6);
-        g.addEdge(3, 4);
-        g.addEdge(3, 6);
-        g.addEdge(3, 11);
-        g.addEdge(5, 10);
+        g.addEdge(0, 1);
+        //g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(1, 3);
 
         // Print adjacency matrix
         System.out.println("Graph:");
@@ -145,21 +215,15 @@ public class NaiveOptimalFirefighter extends State {
         var turnCount = 0;
         int[][] state = initialState(numVertices, start, turnCount);
 
-        // Find the open vertices
-        int[] vertices = new int[numVertices];
-        for (int i = 0; i < numVertices; ++i) vertices[i] = i;
+        // Get the open vertices
+        int[] openVertices = getOpenVertices(start, numVertices);
 
-        int[] openVertices = new int[numVertices - 1];
-        for (int i = 0, k = 0; i < numVertices; i++) if (i != start) openVertices[k++] = vertices[i];
-
-        // Give all permutations of the open vertices
-        int w = openVertices.length;
-        int h = Permutation.factorial(w);
-       // int[][] newPerm = Permutation.permutations(openVertices, 0, w);
-      //  printMatrix(newPerm);
+        // Get permutations to try as defence strategies
+        List<List<Integer>> newPerm = permute(openVertices);
+        test(newPerm);
 
         // Get the optimal defence strategy
-        //int[] defend = optimalDefence(newPerm, state);
-        //System.out.println(Arrays.toString(defend));
+        List<Integer> defend = optimalDefence(newPerm, state, openVertices);
+        System.out.println("Optimal defence: " + Arrays.toString(new List[]{defend}));
     }
 }

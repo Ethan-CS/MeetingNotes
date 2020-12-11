@@ -1,6 +1,5 @@
 package io.github.ethankelly;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.function.IntFunction;
@@ -8,13 +7,11 @@ import java.util.function.IntFunction;
 /**
  * Permute a given array of vertices, store as ArrayList of integers
  *
- * NB Not currently used in NaiveOptimalFirefighter, although some methods have been added to that class
- *
  * @author Ethan Kelly
  * <e.kelly.1@research.gla.ac.uk></e.kelly.1@research.gla.ac.uk>
  */
 
-public class Permutation implements Serializable {
+public class Permutation extends ArrayList<int[]> {
     public static int[] a;
     public static int numPerm;
     public static ArrayList<int[]> newList;
@@ -34,9 +31,8 @@ public class Permutation implements Serializable {
         return input * factorial(input - 1);
     }
 
-    public static ArrayList<int[]> permute(int[] openVertices) {
+    public static void permute() {
         permuteMethod(a, 0, a.length);
-        return null;
     }
 
     public static void permuteMethod(int[] array, int start, int end) {
@@ -86,14 +82,13 @@ public class Permutation implements Serializable {
      */
     @SuppressWarnings("AccessStaticViaInstance")
     public static void main(String[] args) {
-        int[] toPermute = new int[] {2, 3, 5, 7, 9};
-        Permutation newPerm = new Permutation(toPermute);
-        newPerm.permute(toPermute);
+        Permutation newPerm = new Permutation(new int[] {2, 3, 5, 7, 9});
+        newPerm.permute();
         newPerm.test();
     }
 
+    @Override
     public <T> T[] toArray(IntFunction<T[]> generator) {
         return null;
     }
-
 }

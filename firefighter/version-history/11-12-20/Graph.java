@@ -1,7 +1,6 @@
 package io.github.ethankelly;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -53,14 +52,6 @@ public class Graph {
             // Convert each row to string, then print (moving cursor down each time)
             System.out.println(Arrays.toString(row));
     }
-
-    public static void printList(List<int[]> list) {
-        // Loop through all rows
-        for (int[] row : list)
-            // Convert each row to string, then print (moving cursor down each time)
-            System.out.println(Arrays.toString(row));
-    }
-
 
     // Build the matrix
     public String toString() {

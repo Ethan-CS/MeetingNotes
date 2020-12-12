@@ -1,0 +1,113 @@
+{
+  "main": {
+    "id": "c5c7daf3037186c1",
+    "type": "split",
+    "children": [
+      {
+        "id": "cf34a55e8d166933",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Papers/Markovian SIR epidemics on networks/3. Main Result for Networks with Loops.md",
+            "mode": "source"
+          }
+        },
+        "group": "9c066a5fd043fd31"
+      },
+      {
+        "id": "cf89ebba88f971ad",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Papers/Markovian SIR epidemics on networks/3. Main Result for Networks with Loops.md",
+            "mode": "preview"
+          }
+        },
+        "group": "9c066a5fd043fd31"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "621d05754af01aeb",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c99d9fc8556af6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "df8921216f5e1b34",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ec90a56750ef6177",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 135
+  },
+  "right": {
+    "id": "3aefe5a27645f016",
+    "type": "split",
+    "children": [
+      {
+        "id": "0952f77d816d3f6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aa802fe34a939d94",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Papers/Markovian SIR epidemics on networks/3. Main Result for Networks with Loops.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Papers/Markovian SIR epidemics on networks/Untitled.md",
+    "Papers/Markovian SIR epidemics on networks/2. Background and Examples.md",
+    "Papers/Markovian SIR epidemics on networks/0. Meta.md",
+    "Papers/Markovian SIR epidemics on networks/1. Introduction.md",
+    "Definitions/DEF. Closure.md",
+    "Definitions/DEF. CFR.md",
+    "Definitions/DEF. Closures.md",
+    "Definitions/Untitled.md",
+    "Definitions/DEF. k-firefighter.md",
+    "Papers/Fighting constrained fires/1. Introduction.md"
+  ]
+}

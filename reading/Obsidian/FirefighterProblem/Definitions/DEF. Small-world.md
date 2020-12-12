@@ -1,0 +1,3 @@
+## Definition: Small-world networks
+
+Small-world networks were first proposed by Duncan J Watts and Steven H Strogatz in 'Collective dynamics of "small-world" networks,' where they use the term by analogy with the 'small world phenomenon.' This is the psychological hypothesis that every person in the world can be reached through a short chain of social acquaintances, commonly characterised as 'six degrees of separation.'

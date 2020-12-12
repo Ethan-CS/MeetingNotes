@@ -1,0 +1,3 @@
+## Definition: Closure
+
+A closure of a directed graph $G$ is a set of vertices $C$ such that no edges leave $C$; the closure is sometimes written $C(G)$. This is done by adding edges repeatedly between non-connected vertices whose degrees sum to at most $n$ until no more edges can be added. The Closure Problem asks to find the maximum (or minimum, depending on context) weight closure in a vertex-weighted directed graph, which can be done in polynomial time using a reduction to max flow problem.

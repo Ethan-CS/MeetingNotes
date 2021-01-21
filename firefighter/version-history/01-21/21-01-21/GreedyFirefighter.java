@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  */
 
-public class  GreedyFirefighter extends GraphState {
+public class  GreedyFirefighter extends State {
 
     public GreedyFirefighter(int numVertices) {
         super(numVertices);
@@ -63,11 +63,11 @@ public class  GreedyFirefighter extends GraphState {
             throw new InvalidTurnCountException("Not an odd numbered turn, cannot defend");
         } else
             for (int i = 0; i < numVertices; i++) {
-                if (state[i][turnCount - 1] != 0) {
-                    possibleWeights[i] = 0;
-                }
-                defendVertex = largestWeight(possibleWeights);
+            if (state[i][turnCount - 1] != 0) {
+                possibleWeights[i] = 0;
             }
+            defendVertex = largestWeight(possibleWeights);
+        }
         for (int j = 0; j < numVertices; j++) {
             if (getEdge(defendVertex, j)) {
                 removeEdge(defendVertex, j);

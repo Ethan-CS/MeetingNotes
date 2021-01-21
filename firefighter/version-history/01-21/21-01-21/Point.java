@@ -6,12 +6,11 @@ package io.github.ethankelly;
  * @author ethankelly <e.kelly.1@research.gla.ac.uk></e.kelly.1@research.gla.ac.uk>
  */
 
-public final class Point extends Graph implements Cloneable {
+public final class Point implements Cloneable {
     public int x;
     public int y;
 
     public Point(int x, int y) {
-        super(numVertices);
         this.x = x;
         this.y = y;
     }
@@ -26,7 +25,7 @@ public final class Point extends Graph implements Cloneable {
     }
 
     /**
-     * @param other - point to find distance to
+     * @param other
      * @return rectilinear distance, (x1-x2, y1-y2)
      */
     public final int distance(Point other) {
@@ -37,9 +36,7 @@ public final class Point extends Graph implements Cloneable {
         return Math.sqrt((x - other.x) * (x - other.x) + (y - other.y) * (y - other.y));
     }
 
-
-
-        @Override
+    @Override
     public final String toString() {
         return "(" + x + "," + y + ")";
     }

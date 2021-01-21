@@ -1,4 +1,3 @@
-
 package io.github.ethankelly;
 
 public final class InvalidTurnCountException extends Exception {

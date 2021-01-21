@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * @author ethankelly
  */
 
-public class NaiveOptimalFirefighter extends GraphState {
+public class NaiveOptimalFirefighter extends State {
 
     public NaiveOptimalFirefighter(int numVertices) {
         super(numVertices);
@@ -124,13 +124,13 @@ public class NaiveOptimalFirefighter extends GraphState {
         }
 
         System.out.println("Full optimal strategy: " + fullOptimalStrategy.toString());
-
+        
         //System.out.println("Number of defences played: " + numberOfDefences);
         //System.out.println("Actual strategy: " + Arrays.toString(Arrays.copyOfRange(fullOptimalArray, 0, numberOfDefences)));
 
         return Arrays.stream(Arrays.copyOfRange(fullOptimalArray, 0, numberOfDefences))
-                .boxed()
-                .collect(Collectors.toList());
+                                         .boxed()
+                                         .collect(Collectors.toList());
 
     }
 

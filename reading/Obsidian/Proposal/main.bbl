@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+
+\bibitem{bowling00}
+{\sc M.~B. and}, {\em An analysis of stochastic game theory for multiagent
+  reinforcement learning}.
+\newblock Circulated Online, October 2000.
+\newblock Available at: cs.cmu.edu/~mmv/papers/00TR-mike.pdf.
+
+\bibitem{dezso02}
+{\sc Z.~Dezs\H{o} and A.-L. Barab\'{a}si}, {\em Halting viruses in scale-free
+  networks}, Physical Review E, 65 (2002).
+
+\bibitem{finbow07}
+{\sc S.~Finbow, A.~King, G.~MacGillivray, and R.~Rizzi}, {\em The firefighter
+  problem for graphs of maximum degree three}, Discrete Mathematics, 307
+  (2007), pp.~2094--2105.
+
+\bibitem{finbow09}
+{\sc S.~Finbow and G.~MacGillivray}, {\em The firefighter problem: A survey of
+  results, directions and questions}, Australasian Journal of Combinatorics, 43
+  (2009), pp.~57--77.
+
+\bibitem{fomin16}
+{\sc F.~V. Fomin, P.~Heggernes, and E.~J. van Leeuwen}, {\em The firefighter
+  problem on graph classes}, Theoretical Computer Science, 613 (2016),
+  pp.~38--50.
+
+\bibitem{gilbert59}
+{\sc E.~N. Gilbert}, {\em Random graphs}, Annals of Mathematical Statistics, 30
+  (1959), pp.~1141--1144.
+
+\bibitem{gleeson14}
+{\sc J.~P. Gleeson, D.~Cellai, J.-P. Onnela, M.~A. Porter, and
+  F.~Reed-Tsochas}, {\em A simple generative model of collective online
+  behaviour}, Physics and Society, 111 (2014), pp.~10411--10415.
+
+\bibitem{goeree99}
+{\sc J.~K. Goeree and C.~A. Holt}, {\em Stochastic game theory: For playing
+  games, not just for doing theory}, Proceedings of the National Academy of
+  Sciences of the United States of America, 96 (1999), pp.~10564 -- 10567.
+
+\bibitem{govt20}
+{\sc U.~K. Government}, {\em Share checklist}, 2020.
+\newblock {https://sharechecklist.gov.uk/}.
+
+\bibitem{hartnell95}
+{\sc B.~L. Hartnell}, {\em Firefighter! an application of domination}, in 25th
+  Manitoba Conference on Combinatorial Mathematics and Computing, 1995.
+
+\bibitem{kennedy12}
+{\sc W.~G. Kennedy}, {\em Agent-Based Models of Geographical Systems},
+  Springer, Dordrecht, January 2012, ch.~Modelling Human Behaviour in
+  Agent-Based Models, pp.~167--179.
+
+\bibitem{leizhen09}
+{\sc C.~Leizhen and W.~Weifan}, {\em The surviving rate of a graph for the
+  firefighter problem}, Siam Journal of Discrete Mathematics, 23 (2009),
+  pp.~1814--1826.
+
+\bibitem{macgillivray03}
+{\sc G.~MacGillivray and P.~Wang}, {\em On the firefighter problem}, Journal of
+  Combinatorial Mathematics and Combinatorial Computing, 47 (2003), pp.~83--96.
+
+\bibitem{newman02}
+{\sc M.~E.~J. Newman, I.~Jensen, and R.~M. Ziff}, {\em Percolation and
+  epidemics in a two-dimensional small world}, Physical Review E, 65 (2002).
+
+\bibitem{obrien19}
+{\sc J.~D. O'Brien, I.~K. Dassios, and J.~P. Gleeson}, {\em Spreading of memes
+  on multiplex networks}, New Journal of Physics, 21 (2019).
+
+\bibitem{pastor01}
+{\sc R.~Pastor-Satorras and A.~Vespignani}, {\em Epidemic spreading in
+  scale-free networks}, Physical Review, 86 (2001).
+
+\bibitem{porter12}
+{\sc M.~A. Porter}, {\em {S}mall-world network}, Scholarpedia, 7 (2012),
+  p.~1739.
+\newblock revision \#187873.
+
+\bibitem{ross83}
+{\sc S.~Ross}, {\em Introduction to Stochastic Dynamic Programming}, Academic
+  Press, New York, 1983.
+
+\bibitem{scott06}
+{\sc A.~E. Scott, U.~Stege, and N.~Zeh}, {\em Politician's firefighting}, in
+  Algorithms and Computation, Kolkata, India, December 2006, 17th International
+  Symposium.
+
+\bibitem{tennenholtz17}
+{\sc G.~Tennenholtz, C.~Caramanis, and S.~Mannor}, {\em The stochastic
+  firefighter problem}, 2017.
+\newblock arXiv:1711.08237.
+
+\end{thebibliography}

@@ -1,1 +1,0 @@
-## Definition: Combinotorial game

@@ -15,7 +15,8 @@ import java.util.Arrays;
  * transmission and the protection rating of the agents the contagion is currently
  * adjacent to. Then, another defence turn is played and so on, until no more moves can
  * be made. This class needs to contain methods that check for this instance after every
- * turn and thereby end the simulation.
+ * turn and thereby end the simulation. The methods here are used to pass probabilities which
+ * dictate infection dynamics, depending on the particular context we want to consider.
  *
  * @author Ethan Kelly
  */
@@ -47,15 +48,19 @@ public class ModelState {
     public static int[][] updateStateDefence(int[][] state, int defend, int turnCount) {
         // TODO This needs to be able to increase protection rating by a given amount for one or more agent(s)
         int[][] updated = new int[numVertices][turnCount + 1];
-        for (int i = 0; i < numVertices; i++) {
-            for (int j = 0; j < turnCount; j++) {
+
+        int i = 0, j = 0;
+        while (i < numVertices) {
+            while (j < turnCount) {
                 updated[i][j] = state[i][j];
                 updated[i][j + 1] = state[i][j];
+                j++;
             }
+            i++;
         }
         for (int k = turnCount; k <= turnCount; k++) {
             // Only update what has been defended
-            updated[defend][k] = 1;
+            updated[defend][k] = (State.PROTECTED).value();
         }
         return updated;
     }
@@ -82,11 +87,53 @@ public class ModelState {
         return ModelState.graphState;
     }
 
-    /*
-     * Rows correspond to vertices, columns correspond to turn count.
-     * Defence happens in odd rounds, burning in even rounds.
-     * 0 -> open; 1 -> defended; 2 -> burning.
+    /**
+     * Returns an array of any vertices currently infected (on fire) in the model.
+     *
+     * @return array of vertex positions of any infected agents
      */
+    public static int[] getFires() {
+        int[][] state = getGraphState();
+        int currentRound = state[0].length;
+
+        int[] vertexSet = new int[state.length];
+        for (int i = 0; i < vertexSet.length; ++i) vertexSet[i] = i;
+
+        int[] onFire = new int[vertexSet.length];
+        int k = 0, i = 0;
+
+        while (i < vertexSet.length) {
+            if (state[i][currentRound-1] == (State.INFECTED).value()) {
+                onFire[k++] = vertexSet[i];
+            }
+            i++;
+        }
+        System.out.println("Burning vertices: " + Arrays.toString(Arrays.copyOf(onFire, k)));
+        return Arrays.copyOf(onFire, k);
+    }
+
+    /**
+     * Returns an array of the vertex positions of any currently protected vertices
+     *
+     * @return array of vertex locations of any currently protected vertices.
+     */
+    public static int[] getDefended() {
+        int[][] state = getGraphState();
+        int vertices = state.length;
+        int currentRound = state[0].length;
+
+        int[] vertexSet = new int[vertices];
+        for (int i = 0; i < vertices; ++i) vertexSet[i] = i;
+
+        int[] defended = new int[vertices - 1];
+        int k = 0;
+
+        for (int i = 0; i < vertices; i++) {
+            if (state[i][currentRound-1] == State.PROTECTED.value()) defended[k++] = vertexSet[i];
+        }
+        System.out.println("Defended vertices: " + Arrays.toString(Arrays.copyOf(defended, k)));
+        return Arrays.copyOf(defended, k);
+    }
 
     /**
      * Given the number of vertices and the source node of the contagion, we create a new 2d array to begin storing
@@ -97,10 +144,9 @@ public class ModelState {
      * @return the initialised state of the model, a 2d array (height: number of vertices, width: 1)
      */
     private int[][] initialState(int numVertices, int outbreak) {
-        //TODO rather than 0, 1 or 2, store named variables instead
         int[][] state = new int[numVertices][1];
-        // Initialise with outbreak at t=0 -> 2, everything else -> 0
-        state[outbreak][0] = 2;
+        // Initialise with outbreak at t=0 -> INFECTED, everything else SUSCEPTIBLE
+        state[outbreak][0] = State.INFECTED.value();
 
         return state;
     }
@@ -112,34 +158,34 @@ public class ModelState {
      * @param turnCount the current turn count we're trying to progress infection in.
      * @return The vertices that are currently burning.
      */
-    public int[] burn(int[][] state, int turnCount) {
-        // TODO this needs to include some way of deciding whether something contracts based on a variable probability of transmission.
-        int[] burningVertices = new int[getNumVertices()];
+    public boolean[] burn(int[][] state, int turnCount) {
+        boolean[] burningVertices = new boolean[getNumVertices()];
         // Value of 1 if vertex (index) is burning, 0 otherwise (defended or open)
         for (int i = 0; i < numVertices; i++) {
             for (int j = 0; j < numVertices; j++) {
                 // Store any vertices already on fire
-                if (state[i][turnCount - 1] == 2) {
-                    burningVertices[i] = 1;
+                if (state[i][turnCount - 1] == State.INFECTED.value()) {
+                    burningVertices[i] = true;
                     // Open neighbours of burning vertices catch fire
+                    // TODO this needs to include some way of deciding whether something contracts based on a variable probability of transmission.
                     if (state[j][turnCount - 1] == 0 && Graph.getEdge(i, j)) {
-                        burningVertices[j] = 1;
+                        burningVertices[j] = true;
                     }
                 }
             }
         }
         // Array containing vertices burning last round,
         // Used to check if the contagion has been contained
-        int[] previouslyBurning = new int[numVertices];
+        boolean[] previouslyBurning = new boolean[numVertices];
         for (int k = 0; k < numVertices; k++) {
-            if (state[k][turnCount - 1] == 2) {
-                previouslyBurning[k] = 1;
+            if (state[k][turnCount - 1] == State.INFECTED.value()) {
+                previouslyBurning[k] = true;
             }
         }
         // If we haven't burned anything new, fire cannot spread, end game
-        // Flag if nothing can burn by filling all entries with -1
+        // Flag if nothing can burn
         if (Arrays.equals(burningVertices, previouslyBurning)) {
-            Arrays.fill(burningVertices, -1);
+            // TODO flag that the fire cannot spread
         }
         return burningVertices;
     }
@@ -148,12 +194,12 @@ public class ModelState {
      * Given the current state of the model and some vertices to burn, as well as the current turn count, returns
      * an updated array for the new state of the matrix (with the new burning vertices)
      *
-     * @param state the current state of the model, up until current burning has taken place
-     * @param toBurn the vertices that will contract the infection
-     * @param turnCount the current turn count of the model
+     * @param state the current state of the model, up until current burning has taken place.
+     * @param toBurn the vertices that will contract the infection (toBurn[i] is true if i is infected, false otherwise).
      * @return the updated state of the graph, with what is currently burning added in a new column.
      */
-    public int[][] updateStateBurning(int[][] state, int[] toBurn, int turnCount) {
+    public int[][] updateStateBurning(int[][] state, boolean[] toBurn) {
+        int turnCount = state[0].length + 1;
         int[][] updated = new int[numVertices][turnCount + 1];
         for (int i = 0; i < numVertices; i++) {
             for (int j = 0; j < turnCount; j++) {
@@ -163,11 +209,10 @@ public class ModelState {
         }
         for (int i = 0; i < numVertices; i++) {
             for (int j = 0; j < numVertices; j++) {
-                // If something is previously burned or defended, ensure all following
-                // incidences also that state
-                if (toBurn[i] == 1) {
+                // If something is previously burned or defended, ensure all following incidences also that state
+                if (toBurn[i]) {
                     if (Graph.getEdge(i, j)) {
-                        updated[j][turnCount] = 2;
+                        updated[j][turnCount] = State.INFECTED.value();
                     }
                 }
             }
@@ -176,8 +221,7 @@ public class ModelState {
     }
 
     /**
-     * Given a 2d (rectangular) array, prints it to the console.
-     * This is used for testing purposes.
+     * Given a 2d (rectangular) array, prints it to the console. This is used for testing purposes.
      *
      * @param matrix the 2d array to be printed to the standard output.
      */

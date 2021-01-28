@@ -69,11 +69,7 @@ public class Agent {
         double protection;
         double peril = getPeril();
 
-        if (peril == 0) {
-            protection = baseline;
-        } else {
-            protection = baseline*getPeril();
-        }
+        protection = peril == 0 ? baseline : baseline * getPeril();
 
         return protection;
     }
@@ -95,7 +91,7 @@ public class Agent {
      * @return the peril rating to set
      */
     private double setPeril() { // Using Dijkstra's Algorithm to find shortest distance
-        int[] fires = Model.getFires();
+        int[] fires = ModelState.getFires();
         double peril;
 
             double tempDist;
@@ -107,13 +103,9 @@ public class Agent {
                 if (tempDist < leastDist)
                     leastDist = tempDist;
             }
-            if (leastDist == 0) {
-                peril = 1.0;
-            } else if (leastDist == Integer.MAX_VALUE) {
-                peril = 0.0;
-            } else {
-                peril = 1 / leastDist;
-            }
+            if (leastDist == 0) peril = 1.0;
+            else peril = leastDist == Integer.MAX_VALUE ? 0.0 : 1 / leastDist;
+
         return peril;
     }
 
@@ -134,8 +126,8 @@ public class Agent {
      */
     private State setState(int vertex) {
 
-        int[] fires = Model.getFires();
-        int[] defended = Model.getDefended();
+        int[] fires = ModelState.getFires();
+        int[] defended = ModelState.getDefended();
 
         State toSet = State.SUSCEPTIBLE;
 
@@ -145,18 +137,12 @@ public class Agent {
                 break;
             }
         }
-
         for (int i : defended) {
-            if (i == vertex) {
+            if (i == vertex || this.getPeril() == 0) {
                 toSet = State.PROTECTED;
                 break;
             }
         }
-
-        if (this.getPeril() == 0) {
-            toSet = State.PROTECTED;
-        }
-
         this.state = toSet;
         return toSet;
 

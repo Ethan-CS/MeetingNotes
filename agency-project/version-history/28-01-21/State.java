@@ -13,17 +13,28 @@ public enum State {
     /**
      * Susceptible state
      */
-    SUSCEPTIBLE,
+    SUSCEPTIBLE(0),
     /**
      * Infected state
      */
-    INFECTED,
+    INFECTED(1),
     /**
      * Recovered state
      */
-    RECOVERED,
+    RECOVERED(2),
     /**
-     * Protected (or defended) state
+     * Protected (defended) state
      */
-    PROTECTED
+    PROTECTED(3);
+
+
+    private final int value;
+
+    State(int value) {
+        this.value = value;
+    }
+
+    public int value() {
+        return value;
+    }
 }

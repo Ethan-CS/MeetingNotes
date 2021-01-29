@@ -108,31 +108,7 @@ public class ModelState {
             }
             i++;
         }
-        System.out.println("Burning vertices: " + Arrays.toString(Arrays.copyOf(onFire, k)));
         return Arrays.copyOf(onFire, k);
-    }
-
-    /**
-     * Returns an array of the vertex positions of any currently protected vertices
-     *
-     * @return array of vertex locations of any currently protected vertices.
-     */
-    public static int[] getDefended() {
-        int[][] state = getGraphState();
-        int vertices = state.length;
-        int currentRound = state[0].length;
-
-        int[] vertexSet = new int[vertices];
-        for (int i = 0; i < vertices; ++i) vertexSet[i] = i;
-
-        int[] defended = new int[vertices - 1];
-        int k = 0;
-
-        for (int i = 0; i < vertices; i++) {
-            if (state[i][currentRound-1] == State.PROTECTED.value()) defended[k++] = vertexSet[i];
-        }
-        System.out.println("Defended vertices: " + Arrays.toString(Arrays.copyOf(defended, k)));
-        return Arrays.copyOf(defended, k);
     }
 
     /**

@@ -1,5 +1,8 @@
 package io.github.ethankelly;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * The agency-based model of this project is driven by this main class.
  *
@@ -34,6 +37,54 @@ public class Model {
         }
     }
 
+        public static int[] getSusceptible(List<Agent> agents) {
+        int[] isSusceptible = new int[agents.size()];
+
+        int k = 0;
+        for (Agent agent : agents) {
+            if (agent.getState() == State.SUSCEPTIBLE) {
+                isSusceptible[k++] = agents.indexOf(agent);
+            }
+        }
+        return Arrays.copyOf(isSusceptible, k);
+    }
+
+    public static int[] getInfected(List<Agent> agents) {
+        int[] isInfected = new int[agents.size()];
+
+        int k = 0;
+        for (Agent agent : agents) {
+            if (agent.getState() == State.INFECTED) {
+                isInfected[k++] = agents.indexOf(agent);
+            }
+        }
+        return Arrays.copyOf(isInfected, k);
+    }
+
+    public static int[] getRecovered(List<Agent> agents) {
+        int[] isRecovered = new int[agents.size()];
+
+        int k = 0;
+        for (Agent agent : agents) {
+            if (agent.getState() == State.RECOVERED) {
+                isRecovered[k++] = agents.indexOf(agent);
+            }
+        }
+        return Arrays.copyOf(isRecovered, k);
+    }
+
+    public static int[] getProtected(List<Agent> agents) {
+        int[] isProtected = new int[agents.size()];
+
+        int k = 0;
+        for (Agent agent : agents) {
+            if (agent.getState() == State.PROTECTED) {
+                isProtected[k++] = agents.indexOf(agent);
+            }
+        }
+        return Arrays.copyOf(isProtected, k);
+    }
+    
     public static void main(String[] args) {
         runTest();
     }

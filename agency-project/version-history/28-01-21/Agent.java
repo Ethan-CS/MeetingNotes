@@ -127,7 +127,6 @@ public class Agent {
     private State setState(int vertex) {
 
         int[] fires = ModelState.getFires();
-        int[] defended = ModelState.getDefended();
 
         State toSet = State.SUSCEPTIBLE;
 
@@ -137,11 +136,8 @@ public class Agent {
                 break;
             }
         }
-        for (int i : defended) {
-            if (i == vertex || this.getPeril() == 0) {
-                toSet = State.PROTECTED;
-                break;
-            }
+        if (this.getPeril() == 0) {
+            toSet = State.PROTECTED;
         }
         this.state = toSet;
         return toSet;
@@ -157,8 +153,8 @@ public class Agent {
     @Override
     public String toString() {
         return "Agent at position " + getVertex()
-                + " has peril rating " + getPeril()
-                + ", protection rating " + getProtection()
+                + " has peril rating " + String.format("%.2f", getPeril())
+                + ", protection rating " + String.format("%.2f",getProtection())
                 + " and is in state " + getState();
     }
 }

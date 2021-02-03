@@ -7,22 +7,19 @@ import java.util.List;
 
 
 /**
- * The model class contains all methods involved in storing and updating the state of
- * play. For instance, a method for getting the currently burning vertices
- * (based on a given probability of propagation) and for updating the state (stored as a matrix)
- * of the graph. This matrix keeping information about how the contagion has progressed
- * and begins with one column of all zeros, where each row represents the vertex
- * corresponding to the row index. Another column will represent a defensive move - if
- * any vertices have been influenced to the level required to deem them immune to the
- * disease (perhaps by a vaccine), then they move to the protected state. Then, another
- * column is added to represent any transmissions that occur based on the probability of
- * transmission and the protection rating of the agents the contagion is currently
- * adjacent to. Then, another defence turn is played and so on, until no more moves can
- * be made. This class needs to contain methods that check for this instance after every
- * turn and thereby end the simulation. The methods here are used to pass probabilities which
- * dictate infection dynamics, depending on the particular context we want to consider.
+ * The model class contains all methods involved in storing and updating the state of play. For instance, a method for
+ * getting the currently burning vertices (based on a given probability of propagation) and for updating the state
+ * (stored as a matrix) of the graph. This matrix keeping information about how the contagion has progressed and begins
+ * with one column of all zeros, where each row represents the vertex corresponding to the row index. Another column
+ * will represent a defensive move - if any vertices have been influenced to the level required to deem them immune to
+ * the disease (perhaps by a vaccine), then they move to the protected state. Then, another column is added to represent
+ * any transmissions that occur based on the probability of transmission and the protection rating of the agents the
+ * contagion is currently adjacent to. Then, another defence turn is played and so on, until no more moves can be made.
+ * This class needs to contain methods that check for this instance after every turn and thereby end the simulation. The
+ * methods here are used to pass probabilities which dictate infection dynamics, depending on the particular context we
+ * want to consider.
  *
- * @author Ethan Kelly
+ * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
  */
 public class Model {
     private Graph graph;
@@ -39,10 +36,9 @@ public class Model {
     }
 
     /**
-     * Given an agent, the current fires and the graph the model uses, we return a peril
-     * rating. This method can be used frequently to update the peril when the graph has been
-     * updated (new infections, recoveries and protections have taken place) and the peril rating
-     * itself is thus a true reflection of the danger level the agent is facing.
+     * Given an agent, the current fires and the graph the model uses, we return a peril rating. This method can be used
+     * frequently to update the peril when the graph has been updated (new infections, recoveries and protections have
+     * taken place) and the peril rating itself is thus a true reflection of the danger level the agent is facing.
      *
      * @param agent the agent we want to calculate danger relative to.
      * @param fires agents that are currently infected by the contagion.
@@ -65,9 +61,9 @@ public class Model {
     }
 
     /**
-     * For a given agent, we need to update their protection rating frequently, which this model
-     * does by multiplying a baseline random number between 0 and 1 by the current peril rating, which
-     * means the protection rating increases with proximity to infected agents.
+     * For a given agent, we need to update their protection rating frequently, which this model does by multiplying a
+     * baseline random number between 0 and 1 by the current peril rating, which means the protection rating increases
+     * with proximity to infected agents.
      *
      * @param agent the agent to determine a protection rating for.
      * @return the updated protection rating attribute.
@@ -80,12 +76,10 @@ public class Model {
     }
 
     /**
-     * Given an agent and the agents that are currently infected, we determine the state
-     * based on whether a path exists between the agent and an infected vertex. If no such
-     * path exists, we say the agent is protected. If one exists, they are susceptible. If
-     * the distance to an infected vertex is zero, then they are infected themselves. If
-     * they have been infected for a given number of turns, the agent becomes recovered for a
-     * further given number of turns.
+     * Given an agent and the agents that are currently infected, we determine the state based on whether a path exists
+     * between the agent and an infected vertex. If no such path exists, we say the agent is protected. If one exists,
+     * they are susceptible. If the distance to an infected vertex is zero, then they are infected themselves. If they
+     * have been infected for a given number of turns, the agent becomes recovered for a further given number of turns.
      *
      * @param agent the agent to determine the state of.
      * @param fires all currently infected (burning) vertices.
@@ -112,16 +106,14 @@ public class Model {
     }
 
     /**
-     * The next defence to implement in the model is determined by first finding the vertex
-     * or vertices with the highest peril. Then, the total defence available is shared evenly
-     * (for now) between these vertices (or given entirely to one vertex) and then their protection
-     * ratings are increased by this evenly split amount. For instance, if we have a defence quota
-     * of 1.0 and two vertices with the same highest peril rating, we would increase each of their
-     * protection ratings by (up to) 0.5 or 50%. Of course, if their protection rating plus this
-     * proposed increase is greater than one, we only need to increase by some fraction of the
-     * proposed amount, using the remainder on the next vertex. When a vertex has a protection rating
-     * of 1.0, it moves to the protected state and cannot contract the infection. The higher the
-     * protection up to this point, the smaller the likelihood of contraction.
+     * The next defence to implement in the model is determined by first finding the vertex or vertices with the highest
+     * peril. Then, the total defence available is shared evenly (for now) between these vertices (or given entirely to
+     * one vertex) and then their protection ratings are increased by this evenly split amount. For instance, if we have
+     * a defence quota of 1.0 and two vertices with the same highest peril rating, we would increase each of their
+     * protection ratings by (up to) 0.5 or 50%. Of course, if their protection rating plus this proposed increase is
+     * greater than one, we only need to increase by some fraction of the proposed amount, using the remainder on the
+     * next vertex. When a vertex has a protection rating of 1.0, it moves to the protected state and cannot contract
+     * the infection. The higher the protection up to this point, the smaller the likelihood of contraction.
      *
      * @param totalDefence the total defence quota that we can implement per turn.
      */
@@ -140,6 +132,7 @@ public class Model {
                     // up to 1.0 and then redistribute the remaining defence quota amongst the other agents to protect.
                     strategy[i] = 1 - agents.get(i).getProtection();
                     eachDefence = (totalDefence - strategy[i]) / toDefend.size();
+                    agents.get(i).setState(State.PROTECTED);
                     // Remove any fully defended agents from the susceptible list
                     susceptibleAgents.remove(agents.get(i));
                 } else strategy[i] = eachDefence;
@@ -147,24 +140,24 @@ public class Model {
                 double sum = 0;
                 for (double v : strategy) sum += v;
                 // If we still have defence to use, find the next highest peril agent(s) and defend them
-                while (sum < 1 && !susceptibleAgents.isEmpty()) {
+                while (sum < totalDefence && !susceptibleAgents.isEmpty()) {
                     List<Agent> nextToDefend = findHighestPeril(susceptibleAgents);
                     toDefend.addAll(nextToDefend);
                     totalDefence = 1 - sum;
                     eachDefence = totalDefence / nextToDefend.size();
                     for (Agent nextDefence : nextToDefend) {
-                        if (nextDefence.getProtection() + eachDefence > 1) {
+                        if (nextDefence.getProtection() + eachDefence >= 1) {
                             // Again, if increasing protection by the calculated amount will take protection over 1,
-                            // take the defence up to 1.0 and then redistribute the remaining defence quota amongst
-                            // the other agents to protect.
+                            // take the defence up to 1.0 and then redistribute remaining quota.
                             strategy[nextDefence.getVertex()] = 1 - nextDefence.getProtection();
-                            eachDefence = (totalDefence - strategy[nextDefence.getVertex()]) / (nextToDefend.size() - 1);
+                            eachDefence =
+                                    (totalDefence - strategy[nextDefence.getVertex()]) / (nextToDefend.size() - 1);
+                            agents.get(nextDefence.getVertex()).setState(State.PROTECTED);
                             // Remove any fully defended agents from the susceptible list
                             susceptibleAgents.remove(nextDefence);
                         } else strategy[nextDefence.getVertex()] += eachDefence;
                     }
-                    // Reset and recalculate the sum of the strategy elements
-                    // to see if we've played entire defence quota
+                    // Recalculate the sum of the strategy elements to see if we've played entire defence quota
                     sum = 0;
                     for (double v : strategy) sum += v;
                 }
@@ -213,8 +206,8 @@ public class Model {
     }
 
     /**
-     * Given a rate (probability) of infection, we determine which susceptible vertices
-     * contract the infection from any infected neighbours.
+     * Given a rate (probability) of infection, we determine which susceptible vertices contract the infection from any
+     * infected neighbours.
      *
      * @param probabilityOfInfection the probability with which the infection spreads.
      */
@@ -244,11 +237,11 @@ public class Model {
     }
 
     /**
-     * Given a probability of infection and the defence rating of the susceptible vertex that
-     * that may become infected, determines whether it will be infected.
+     * Given a probability of infection and the defence rating of the susceptible vertex that that may become infected,
+     * determines whether it will be infected.
      *
      * @param probInfection the probability with which the infection propagates.
-     * @param defence the protection rating of the susceptible agent in peril.
+     * @param defence       the protection rating of the susceptible agent in peril.
      * @return whether the agent becomes infected or not.
      */
     public boolean willInfect(double probInfection, double defence) {
@@ -256,9 +249,9 @@ public class Model {
     }
 
     /**
-     * Being a graph (or network) model, we associate each model with a graph object (using
-     * the graph class). The graph a given model utilises is saved and stored as an attribute
-     * of the model, hence the use of getters and setters to access it.
+     * Being a graph (or network) model, we associate each model with a graph object (using the graph class). The graph
+     * a given model utilises is saved and stored as an attribute of the model, hence the use of getters and setters to
+     * access it.
      *
      * @return the graph on which the model is based.
      */
@@ -267,8 +260,8 @@ public class Model {
     }
 
     /**
-     * Setter used to set a graph to the model attribute - that is, to store a graph object
-     * that we instantiate as a permanent attribute to the model we are working on.
+     * Setter used to set a graph to the model attribute - that is, to store a graph object that we instantiate as a
+     * permanent attribute to the model we are working on.
      *
      * @param graph the graph to associate as an attribute to the current model.
      */
@@ -277,10 +270,9 @@ public class Model {
     }
 
     /**
-     * We maintain a list of agents, one per vertex, that form the basis of the model.
-     * Each agent has the usual attributes of an agent object: a vertex (where it lives),
-     * a peril rating, a protection rating and a state (susceptible, infected, recovered or
-     * protected).
+     * We maintain a list of agents, one per vertex, that form the basis of the model. Each agent has the usual
+     * attributes of an agent object: a vertex (where it lives), a peril rating, a protection rating and a state
+     * (susceptible, infected, recovered or protected).
      *
      * @return the current list of agents.
      */
@@ -294,11 +286,10 @@ public class Model {
     }
 
     /**
-     * We set the list of agents by creating a new agent for each vertex and setting peril and
-     * protection initially to zero and state to susceptible. We then go on to assign the actual
-     * ratings and states to each agent once we initialise the graph and decide on a vertex location
-     * for the outbreak to begin at. This method is called only once, at the start of the method when
-     * we do not have an instance of the field yet.
+     * We set the list of agents by creating a new agent for each vertex and setting peril and protection initially to
+     * zero and state to susceptible. We then go on to assign the actual ratings and states to each agent once we
+     * initialise the graph and decide on a vertex location for the outbreak to begin at. This method is called only
+     * once, at the start of the method when we do not have an instance of the field yet.
      *
      * @param numVertices the number of vertices in the graph model.
      * @return the list of agents we have created.
@@ -314,9 +305,9 @@ public class Model {
     }
 
     /**
-     * An important piece of information in the model is the number of vertices in the
-     * graph. This informs how many agents we need to generate to inhabit each vertex and
-     * the range of values we can select from to begin the outbreak.
+     * An important piece of information in the model is the number of vertices in the graph. This informs how many
+     * agents we need to generate to inhabit each vertex and the range of values we can select from to begin the
+     * outbreak.
      *
      * @return the assigned number of vertices in the graph model.
      */
@@ -325,9 +316,9 @@ public class Model {
     }
 
     /**
-     * Several methods benefit from having access to a List of only the susceptible vertices,
-     * such as determining the next defence strategy or which vertices contract the infection in
-     * the next time step. This method returns a List of all currently susceptible vertices.
+     * Several methods benefit from having access to a List of only the susceptible vertices, such as determining the
+     * next defence strategy or which vertices contract the infection in the next time step. This method returns a List
+     * of all currently susceptible vertices.
      *
      * @return all agents currently in the susceptible state, as a list of agents.
      */
@@ -343,8 +334,8 @@ public class Model {
     }
 
     /**
-     * In order to monitor and analyse the progression of the model, we need to be able to view which
-     * vertices are in each state - this method returns the agents currently infected by the contagion.
+     * In order to monitor and analyse the progression of the model, we need to be able to view which vertices are in
+     * each state - this method returns the agents currently infected by the contagion.
      *
      * @return the currently infected agents, as a list of agents.
      */
@@ -360,10 +351,10 @@ public class Model {
     }
 
     /**
-     * In order to monitor and analyse the progression of the model, we need to be able to view which
-     * vertices are in each state - this method returns the agents that are currently recovered from the contagion,
-     * allowing us to attribute to them some (potentially zero) increase in protection due to some level
-     * of immunity, where appropriate.
+     * In order to monitor and analyse the progression of the model, we need to be able to view which vertices are in
+     * each state - this method returns the agents that are currently recovered from the contagion, allowing us to
+     * attribute to them some (potentially zero) increase in protection due to some level of immunity, where
+     * appropriate.
      *
      * @return the currently recovered agents, as a list of agents.
      */
@@ -379,10 +370,10 @@ public class Model {
     }
 
     /**
-     * In order to monitor and analyse the progression of the model, we need to be able to view which
-     * vertices are in each state - this method returns the currently protected vertices. These are
-     * agents who either have a protection rating of 1.0 (and can thereby not contract the infection)
-     * or have no path on the graph to any currently infected vertex.
+     * In order to monitor and analyse the progression of the model, we need to be able to view which vertices are in
+     * each state - this method returns the currently protected vertices. These are agents who either have a protection
+     * rating of 1.0 (and can thereby not contract the infection) or have no path on the graph to any currently infected
+     * vertex.
      *
      * @return the currently protected vertices, as a list of agents.
      */
@@ -398,8 +389,7 @@ public class Model {
     }
 
     /**
-     * Cycles through the agents list field and prints them to the standard output.
-     * Used for testing purposes.
+     * Cycles through the agents list field and prints them to the standard output. Used for testing purposes.
      */
     private void printAgents() {
         List<Agent> agents = this.getAgents();
@@ -409,9 +399,8 @@ public class Model {
     }
 
     /**
-     * Prints arrays to the standard output that contain the vertices of the currently
-     * susceptible, infected, recovered and protected vertices in order to verify that
-     * the model is working as expected.
+     * Prints arrays to the standard output that contain the vertices of the currently susceptible, infected, recovered
+     * and protected vertices in order to verify that the model is working as expected.
      */
     private void printSIRP() {
         System.out.println("   *****   ");
@@ -436,14 +425,40 @@ public class Model {
                 + "\nP: " + Arrays.toString(defended));
     }
 
+    /**
+     * Runs a test model, with a particular graph and outbreak, so that we can test and monitor the behaviours of each
+     * method and verify that the model runs as expected.
+     */
+    private void runTestModel() {
+        while (true) {
+            this.printSIRP();
+            if (this.getSusceptible().isEmpty()) {
+                System.out.println("No susceptible vertices to protect; ending model...");
+                break;
+            } else {
+                this.nextDefence(1.0);
+                this.printSIRP();
+            }
+            if (this.getSusceptible().isEmpty()) {
+                System.out.println("Nothing more to infect; ending model...");
+                break;
+            } else {
+                this.nextBurning(1.0);
+                this.printSIRP();
+            }
+        }
+    }
+
     public static void main(String[] args) {
         // Initialise the model
         Model m = new Model(9);
+
         // New graph for use in the model
         Graph g = new Graph(m.getNumVertices());
         g.generateTestGraph();
         m.setGraph(g);
         System.out.println(m.getGraph());
+
         // Choose a random vertex for the source node of the contagion
         int outbreak = m.getGraph().randomVertex(m.numVertices);
         System.out.println("Outbreak: " + outbreak);
@@ -461,25 +476,5 @@ public class Model {
 
         // Runs the model until either nothing can be infected or nothing can be protected
         m.runTestModel();
-    }
-
-    private void runTestModel() {
-        while(true) {
-            this.printSIRP();
-            if (this.getSusceptible().isEmpty()) {
-                System.out.println("No susceptible vertices to protect; ending model...");
-                break;
-            } else {
-                this.nextDefence(1.0);
-                this.printSIRP();
-            }
-            if (this.getSusceptible().isEmpty()) {
-                System.out.println("Nothing more to infect; ending model...");
-                break;
-            } else {
-                this.nextBurning(1.0);
-                this.printSIRP();
-            }
-        }
     }
 }

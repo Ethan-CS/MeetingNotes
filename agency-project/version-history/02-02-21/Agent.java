@@ -2,9 +2,8 @@ package io.github.ethankelly;
 
 
 /**
- * Agency is the basis and purpose of the model we are developing. Each agent
- * has certain attributes that need to be determined initially and updated
- * at each time-step in the model, which are:
+ * Agency is the basis and purpose of the model we are developing. Each agent has certain attributes that need to be
+ * determined initially and updated at each time-step in the model, which are:
  * <ul>
  *     <li> The vertex the agent is located at
  *     <li> The peril rating, based on the agent's proximity to infected vertices
@@ -23,8 +22,7 @@ package io.github.ethankelly;
  *     At each time-step, we need to determine any changes to state, protection and peril.
  * </p>
  *
- * @author Ethan Kelly
- *
+ * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
  */
 public class Agent {
     private final int vertex;
@@ -35,10 +33,10 @@ public class Agent {
     /**
      * Class constructor.
      *
-     * @param vertex the vertex position (location) of the agent.
-     * @param peril the initial peril rating of the agent (based on proximity to fire).
+     * @param vertex     the vertex position (location) of the agent.
+     * @param peril      the initial peril rating of the agent (based on proximity to fire).
      * @param protection the initial protection rating of the agent (partially random, increases with peril).
-     * @param state the initial state of the agent.
+     * @param state      the initial state of the agent.
      */
     public Agent(int vertex, double peril, double protection, State state) {
         this.vertex = vertex;
@@ -48,9 +46,8 @@ public class Agent {
     }
 
     /**
-     * The vertex attribute of an agent indicates their location on the graph that the model uses.
-     * This, in turn, helps determine which other agents (vertices) they are connected to, which may
-     * indicate a possible route of infection.
+     * The vertex attribute of an agent indicates their location on the graph that the model uses. This, in turn, helps
+     * determine which other agents (vertices) they are connected to, which may indicate a possible route of infection.
      *
      * @return the vertex location of the agent.
      */
@@ -59,11 +56,11 @@ public class Agent {
     }
 
     /**
-     * An agent's peril rating represents the danger they are currently in. The more infected vertices
-     * within a certain proximity, and the closer infected vertices are to the given agent, the higher
-     * the peril rating. Peril is zero if there is no path between the vertex and an infected agent,
-     * in which case they are placed into the protected state. Peril is one if the agent is in
-     * immediate danger, i.e. one of their directly adjacent neighbours is infected.
+     * An agent's peril rating represents the danger they are currently in. The more infected vertices within a certain
+     * proximity, and the closer infected vertices are to the given agent, the higher the peril rating. Peril is zero if
+     * there is no path between the vertex and an infected agent, in which case they are placed into the protected
+     * state. Peril is one if the agent is in immediate danger, i.e. one of their directly adjacent neighbours is
+     * infected.
      *
      * @return the current peril rating of the agent.
      */
@@ -72,8 +69,8 @@ public class Agent {
     }
 
     /**
-     * We assign the peril rating of the agent based on the current graph state (as determined in
-     * the main model class) - specifically, the agent's proximity to infected vertices.
+     * We assign the peril rating of the agent based on the current graph state (as determined in the main model class)
+     * - specifically, the agent's proximity to infected vertices.
      *
      * @param peril the peril rating to be set to the current vertex.
      */
@@ -82,12 +79,11 @@ public class Agent {
     }
 
     /**
-     * The protection rating of an agent is based on a baseline random real number, between 0
-     * and 1, and the peril. As peril increases, protection increases - simulating an agent
-     * becoming more concerned as more agents close to them contract the infection, thereby adopting
-     * more protective behaviours and increasing their overall protection rating. The protection rating
-     * is also updated when we deploy a defensive move in the model, and the higher the defence rating
-     * the smaller the likelihood of the agent contracting the contagion.
+     * The protection rating of an agent is based on a baseline random real number, between 0 and 1, and the peril. As
+     * peril increases, protection increases - simulating an agent becoming more concerned as more agents close to them
+     * contract the infection, thereby adopting more protective behaviours and increasing their overall protection
+     * rating. The protection rating is also updated when we deploy a defensive move in the model, and the higher the
+     * defence rating the smaller the likelihood of the agent contracting the contagion.
      *
      * @return the protection rating of the current agent.
      */
@@ -96,10 +92,10 @@ public class Agent {
     }
 
     /**
-     * Several methods update the method, whenever the peril has been updated (i.e. the state of
-     * the graph has changed in some way, peril may have changed and so protection also needs to be
-     * updated and set to its new value). We do not allow a protection of rating over 1, so this
-     * method prevents the value being set from being greater than that.
+     * Several methods update the method, whenever the peril has been updated (i.e. the state of the graph has changed
+     * in some way, peril may have changed and so protection also needs to be updated and set to its new value). We do
+     * not allow a protection of rating over 1, so this method prevents the value being set from being greater than
+     * that.
      *
      * @param protection the new protection to be assigned to the current agent.
      */
@@ -112,9 +108,9 @@ public class Agent {
     }
 
     /**
-     * Each agent can be in one of a number of states, namely any of those in the State enum.
-     * These indicate which compartment of the SIR model the agent belongs to and each has an associated
-     * value to make computation simpler when updating the graph state and so on.
+     * Each agent can be in one of a number of states, namely any of those in the State enum. These indicate which
+     * compartment of the SIR model the agent belongs to and each has an associated value to make computation simpler
+     * when updating the graph state and so on.
      *
      * @return the state to which the current agent belongs.
      */
@@ -123,9 +119,9 @@ public class Agent {
     }
 
     /**
-     * For methods that update the state of the graph, they may have to update the state or states of
-     * certain agents. For instance, if an agent has been defended so that their protection rating is
-     * now 1.0, they are moved to the protected state.
+     * For methods that update the state of the graph, they may have to update the state or states of certain agents.
+     * For instance, if an agent has been defended so that their protection rating is now 1.0, they are moved to the
+     * protected state.
      *
      * @param state the state into which we want to move the current agent.
      */
@@ -135,8 +131,8 @@ public class Agent {
 
 
     /**
-     * Returns a textual representation of the agent, detailing its vertex location, peril rating,
-     * protection rating and current state. This is used to print to the console.
+     * Returns a textual representation of the agent, detailing its vertex location, peril rating, protection rating and
+     * current state. This is used to print to the console.
      *
      * @return a string representation of the agent.
      */

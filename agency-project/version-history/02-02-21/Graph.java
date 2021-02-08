@@ -5,13 +5,12 @@ import java.util.Random;
 
 
 /**
- * A graph is a collection of vertices connected by edges in some configuration. While the
- * basis for the model is agency, this agency is represented as interactions of vertices of a graph.
+ * A graph is a collection of vertices connected by edges in some configuration. While the basis for the model is
+ * agency, this agency is represented as interactions of vertices of a graph.
  * <p>
- * Using a graph to represent and examine allows the use of many excellent existing results in
- * graph theory, plus the use of a graph is not an unusual choice of visualisation in models of
- * contagion even intuitively. The graphs to be used in this model, objects of this class, have
- * two important attributes:
+ * Using a graph to represent and examine allows the use of many excellent existing results in graph theory, plus the
+ * use of a graph is not an unusual choice of visualisation in models of contagion even intuitively. The graphs to be
+ * used in this model, objects of this class, have two important attributes:
  * <ul>
  *     <li> The number of vertices in the graph.
  *     <li> An adjacency matrix - each entry is true if the vertices represented by the row
@@ -19,7 +18,7 @@ import java.util.Random;
  *          (@see <a href ="https://mathworld.wolfram.com/AdjacencyMatrix.html">https://mathworld.wolfram.com/AdjacencyMatrix.html</a>).
  * </ul>
  *
- * @author Ethan Kelly
+ * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
  */
 public class Graph {
     private int numVertices;
@@ -31,8 +30,8 @@ public class Graph {
     }
 
     /**
-     * Helper method for calculating the shortest path, returns the minimum value
-     * of an array of path lengths if such a minimum value exists.
+     * Helper method for calculating the shortest path, returns the minimum value of an array of path lengths if such a
+     * minimum value exists.
      *
      * @param pathArray       a collection of minimum distances from some vertex, v.
      * @param shortestPathSet array containing whether a shortest path exists from v to each vertex.
@@ -50,8 +49,7 @@ public class Graph {
     }
 
     /**
-     * Given the current state of the model, calculates the shortest paths from a given
-     * vertex to every other vertex
+     * Given the current state of the model, calculates the shortest paths from a given vertex to every other vertex
      *
      * @param vertex the vertex relative to which we want to calculate paths.
      * @return the shortest path to each other vertex in the graph (if one exists).
@@ -146,11 +144,10 @@ public class Graph {
     }
 
     /**
-     * An adjacency matrix represents a (finite) graph by indicating whether a pair of
-     * vertices share an edge between them. At the intersection of row i, column j,
-     * if the value is 1 there is an edge from i to j and if it's zero then there is no
-     * such edge. In our uses, graphs will mostly be bidirectional, meaning this value
-     * will be the same in row i, column j and row j, column i.
+     * An adjacency matrix represents a (finite) graph by indicating whether a pair of vertices share an edge between
+     * them. At the intersection of row i, column j, if the value is 1 there is an edge from i to j and if it's zero
+     * then there is no such edge. In our uses, graphs will mostly be bidirectional, meaning this value will be the same
+     * in row i, column j and row j, column i.
      *
      * @return the adjacency matrix of the graph
      */
@@ -179,8 +176,7 @@ public class Graph {
     }
 
     /**
-     * Returns a textual representation of a graph as an adjacency matrix
-     * to be printed to the standard output.
+     * Returns a textual representation of a graph as an adjacency matrix to be printed to the standard output.
      *
      * @return a string representation of the graph.
      */

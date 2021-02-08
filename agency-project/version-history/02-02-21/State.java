@@ -9,6 +9,8 @@ package io.github.ethankelly;
  *     <li> {@link #RECOVERED} - previously had the disease, has since recovered and is no longer infectious.
  *     <li> {@link #PROTECTED} - an agent in this state cannot become infected.
  * </ul>
+ *
+ * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
  */
 public enum State {
     /**
@@ -32,14 +34,14 @@ public enum State {
      * Class constructor, used to associate the inputted value with a given state.
      */
     private final int value;
+
     State(int value) {
         this.value = value;
     }
 
     /**
-     * Each state has a value associated to it, for ease of computation and storage of
-     * the graph state at each time step. The value method returns the value associated
-     * to the state that it is called on.
+     * Each state has a value associated to it, for ease of computation and storage of the graph state at each time
+     * step. The value method returns the value associated to the state that it is called on.
      *
      * @return the value of the state.
      */

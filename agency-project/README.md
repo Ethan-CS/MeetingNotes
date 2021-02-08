@@ -46,6 +46,7 @@ The `GraphGenerator` has the capacity to generate any of the following types of 
 - Star,
 - Regular,
 - Tree.
+
 There is also a unit test in the `main` method of this class that tests each of these graphs generate correctly, given a number of vertices and a number of edges and/or probability as and when appropriate.
 
 
@@ -98,4 +99,5 @@ The `StdRandom` class provides many static methods to generate pseudo-random num
 - Cauchy,
 - Discrete
 - Exponential.
+
 The class also provides methods to shuffle an array of various types of Objects/primitives and return a uniformly random permutation. Importantly, the class also provides a seed for the random number generation, so that results can be reproduced if/when required (when used to generate random graphs).

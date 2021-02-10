@@ -23,7 +23,7 @@ import java.util.TreeSet;
  * <p>
  *
  * @param <Key> the generic type of a key in this set
- * @author Ethan Kelly
+ * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
  */
 public class Set<Key extends Comparable<Key>> implements Iterable<Key> {
     private final TreeSet<Key> set;

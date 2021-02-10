@@ -1,6 +1,7 @@
 package io.github.ethankelly;
 
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,9 +31,11 @@ public class Model {
      * Class constructor.
      *
      * @param numVertices the number of vertices in the graph the model is based on.
+     * @param graph the graph we use in the model we are creating.
      */
-    public Model(int numVertices) {
+    public Model(int numVertices, Graph graph) {
         this.numVertices = numVertices;
+        this.graph = graph;
     }
 
     /**
@@ -176,20 +179,20 @@ public class Model {
         }
         fires = Arrays.copyOf(fires, k);
 
-        if (!toDefend.isEmpty()) {
-            StdOut.print("To Defend: ");
-            for (Agent agent : toDefend) {
-                StdOut.print(agent.getVertex() + " (" + String.format("%.2f", agent.getPeril()) + ")  ");
-            }
-            StdOut.println();
-        }
-
         for (int j = 0; j < this.getNumVertices(); j++) {
             agents.get(j).setProtection(agents.get(j).getProtection() + strategy[j]);
             agents.get(j).setState(this.findState(agents.get(j), fires));
         }
         // Print the strategy we performed (for testing purposes).
-        StdOut.println("Strategy: " + Arrays.toString(strategy));
+        // Each increase is to 2 dp when printed, but maintains full length in usage
+        DecimalFormat df = new DecimalFormat("0.00");
+        int i = 0;
+        double[] strategyToPrint = new double[strategy.length];
+        for (double d : strategy) {
+            strategyToPrint[i++] = Double.parseDouble(df.format(d));
+        }
+        StdOut.println("Strategy: " + Arrays.toString(strategyToPrint));
+
     }
 
     /**
@@ -212,7 +215,6 @@ public class Model {
         for (Agent agent : susceptibleAgents) {
             if (agent.getPeril() == highestPeril) {
                 toDefend.add(agent);
-                StdOut.println("DEFEND " + agent.getVertex());
             }
         }
         return toDefend;
@@ -241,10 +243,10 @@ public class Model {
             }
         }
         if(!toInfect.isEmpty()) {
-            StdOut.println();
+            System.out.println();
             StdOut.print("INFECTING: ");
             for (Agent agent : toInfect) {
-                StdOut.print(agent.getVertex());
+                StdOut.print(agent.getVertex() + " ");
                 agent.setState(State.INFECTED);
             }
             StdOut.println();
@@ -416,9 +418,8 @@ public class Model {
      * Prints arrays to the standard output that contain the vertices of the currently susceptible, infected, recovered
      * and protected vertices in order to verify that the model is working as expected.
      */
-    private void printSIRP(String message) {
+    private void printSIRP() {
         StdOut.println();
-        StdOut.println("   *****  " + message + "  *****     ");
         // Get the vertex locations of currently susceptible agents.
         int[] susceptible = new int[this.getSusceptible().size()];
         Arrays.setAll(susceptible, i -> this.getSusceptible().get(i).getVertex());
@@ -445,55 +446,81 @@ public class Model {
      * method and verify that the model runs as expected.
      */
     private void runTestModel() {
-        this.printSIRP("Initial State");
+        this.printSIRP();
         int turn = 0;
         while (true) {
             //this.printSIRP();
-            if (this.getSusceptible().isEmpty()) {
-                StdOut.println("No susceptible vertices to protect; ending model.");
-                break;
+            if (!this.getSusceptible().isEmpty()) {
+                this.nextDefence(1);
+                this.printSIRP();
+                turn++;
             } else {
-                StdOut.println("Turn count: " + ++turn);
-                this.nextDefence(0.75);
-                this.printSIRP("Turn Count: " + turn);
+                StdOut.println("No susceptible vertices to protect; ending model after turn " + turn);
+                StdOut.println();
+                break;
             }
-            if (this.getSusceptible().isEmpty()) {
-                StdOut.println("Nothing more to infect; ending model.");
-                break;
-            } else {
-                StdOut.println("Turn count: " + ++turn);
+            if (!this.getSusceptible().isEmpty()) {
                 this.nextBurning(1.0);
-                this.printSIRP("Turn Count: " + turn);
+                this.printSIRP();
+                turn++;
+            } else {
+                StdOut.println("Nothing more to infect; ending model after turn " + turn);
+                StdOut.println();
+                break;
             }
         }
     }
 
     public static void main(String[] args) {
-        // Initialise the model
-        Model m = new Model(9);
+        // Numbers of vertices and edges for testing on random graphs
+        int numVertices = 8;
+        int numEdges = 16;
+
+        // Split vertices into two partitions for bipartite graphs
+        int numVertices1 = numVertices / 2;
+        int numVertices2 = numVertices - numVertices1;
+
+        // Probabilities for testing Erdős–Rényi and Erdős–Rényi bipartite graphs
+        double p = (double) numEdges / (numVertices * (numVertices - 1) / 2.0);
+        double q = (double) numEdges / (numVertices1 * numVertices2);
+        StdOut.println(" *** Model: Tree on "
+                + numVertices + " vertices. ***");// and probability "
+                //+ p + "  ***");
+        StdOut.println();
 
         // New graph for use in the model
-        Graph g = new Graph(m.getNumVertices());
-        g.generateTestGraph();
-        m.setGraph(g);
+        Graph g = GraphGenerator.tree(numVertices);
+        StdOut.println("Seed: " + GraphGenerator.getSeed());
+        StdOut.println();
+
+        // Initialise the model
+        Model m = new Model(numVertices, g);
         StdOut.println(m.getGraph());
 
-        // Choose a random vertex for the source node of the contagion
-        int outbreak = m.getGraph().randomVertex(m.numVertices);
-        StdOut.println("Outbreak: " + outbreak);
 
-        // Initialise a list of agents given the starting state of the graph
-        List<Agent> agents = m.getAgents();
+        // Cycle through all vertices to test the model using each vertex as a source
         for (int i = 0; i < m.getNumVertices(); i++) {
-            agents.set(i, new Agent(i, 0, 0, State.SUSCEPTIBLE));
-            agents.get(i).setPeril(m.perilRating(agents.get(i), new int[]{outbreak}, m.getGraph()));
-            agents.get(i).setProtection(m.protectionRating(agents.get(i)));
-            agents.get(i).setState(m.findState(agents.get(i), new int[]{outbreak}));
-        }
-        // Print the agents we initialised
-        m.printAgents();
+            StdOut.println(" * Outbreak: " + i + " * ");
+            StdOut.println();
 
-        // Runs the model until either nothing can be infected or nothing can be protected
-        m.runTestModel();
+            // Initialise a list of agents given the starting state of the graph
+            List<Agent> agents = m.getAgents();
+            for (int j = 0; j < m.getNumVertices(); j++) {
+                agents.set(j, new Agent(j, 0, 0, State.SUSCEPTIBLE));
+                agents.get(j).setPeril(m.perilRating(agents.get(j), new int[]{i}, m.getGraph()));
+                agents.get(j).setProtection(m.protectionRating(agents.get(j)));
+                agents.get(j).setState(m.findState(agents.get(j), new int[]{i}));
+
+//                agents.get(j).setPeril(m.perilRating(agents.get(j), new int[]{i}, m.getGraph()));
+//                agents.get(j).setProtection(m.protectionRating(agents.get(j)));
+//                agents.get(j).setState(m.findState(agents.get(j), new int[]{i}));
+            }
+            // Print the agents we initialised
+            m.printAgents();
+
+            // Runs the model until either nothing can be infected or nothing can be protected
+            m.runTestModel();
+        }
+        StdOut.close();
     }
 }

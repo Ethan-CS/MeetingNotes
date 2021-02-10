@@ -205,15 +205,6 @@ public class Graph {
         return new Random().nextInt(numVertices);
     }
 
-    public void generateTestGraph() {
-        this.addEdge(0, 1);
-        this.addEdge(0, 3);
-        this.addEdge(1, 4);
-        this.addEdge(3, 7);
-        this.addEdge(5, 8);
-        this.addEdge(6, 7);
-    }
-
     public int getNumEdges() {
         return numEdges;
     }

@@ -1,8 +1,7 @@
 package io.github.ethankelly;
 
-import java.io.OutputStreamWriter;
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
 /**
@@ -33,7 +32,7 @@ import java.util.Locale;
  * </ul>
  * <p>
  *
- * @author Ethan Kelly
+ * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
  */
 public final class StdOut {
     // Unicode UTF-8 encoding
@@ -46,8 +45,14 @@ public final class StdOut {
     // This is called before invoking any methods
     static {
         try {
-            out = new PrintWriter(new OutputStreamWriter(System.out, CHARSET_NAME), true);
-        } catch (UnsupportedEncodingException e) {
+            // Replace with OutputStreamWriter to print to console
+//          out = new PrintWriter(new OutputStreamWriter(System.out, CHARSET_NAME), true);
+
+            // Print to a new file, with the given name
+            out = new PrintWriter("out/test.txt");
+
+            // OSW throws UnsupportedEncodingException, File throws FileNotFound
+        } catch (FileNotFoundException e) {
             System.out.println("Unsupported encoding " + e);
         }
     }
@@ -266,6 +271,15 @@ public final class StdOut {
     public static void printf(Locale locale, String format, Object... args) {
         out.printf(locale, format, args);
         out.flush();
+    }
+
+    /**
+     * When we are finished writing characters to the Java PrintWriter we generally need to close it. Closing a
+     * PrintWriter will also close the Writer instance to which the PrintWriter is writing. Closing a PrintWriter is
+     * done by calling its close() method. This method is used to do this.
+     */
+    public static void close() {
+        out.close();
     }
 
     /**

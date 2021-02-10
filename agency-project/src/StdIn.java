@@ -138,7 +138,7 @@ import java.util.regex.Pattern;
  * system and IDE, use either {@code <Ctrl/Cmd+d>} or {@code <Ctrl/Cmd+z>} on its own line. If we want to redirect the
  * standard input from a file, we won't need to do anything to signal that the input is finished.
  *
- * @author Ethan Kelly
+ * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
  */
 public final class StdIn {
     // Unicode UTF-8 encoding

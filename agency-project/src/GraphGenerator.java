@@ -9,13 +9,22 @@ import java.util.stream.IntStream;
  * @author Ethan Kelly
  */
 public class GraphGenerator {
+    private static long seed;
+
+    static {
+        setSeed();
+    }
+
     /**
      * The Edge class is used to represent an edge as a pair of vertex locations (v, w) where v < w, between which the
      * edge exists.
+     *
+     * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
      */
     private static final class Edge implements Comparable<Edge> {
         private final int v;
         private final int w;
+
 
         /**
          * Class constructor - ensures v is less than w.
@@ -335,9 +344,10 @@ public class GraphGenerator {
      * @param numVertices the number of vertices in the graph
      * @param k           degree of each vertex
      * @return a uniformly random {@code k}-regular graph on {@code numVertices} vertices.
+     * @throws AssertionError if the number of vertices multiplied by k is not even.
      */
     public static Graph regular(int numVertices, int k) {
-        if (numVertices * k % 2 != 0) throw new IllegalArgumentException("Number of vertices * k must be even");
+        assert numVertices * k % 2 == 0 : "Number of vertices * k must be even";
         Graph g = new Graph(numVertices);
 
         // Create k copies of each vertex
@@ -393,6 +403,21 @@ public class GraphGenerator {
         }
         g.addEdge(pq.delMin(), pq.delMin());
         return g;
+    }
+
+    /**
+     * @return the seed from StdRandom used to generate the pseudo-random values used to create random graphs.
+     */
+    public static long getSeed() {
+        return seed;
+    }
+
+    /**
+     * Sets the seed attribute of this class to the seed attribute of the StdRandom instance used to generate random
+     * graphs.
+     */
+    public static void setSeed() {
+        seed = StdRandom.getSeed();
     }
 
     /**

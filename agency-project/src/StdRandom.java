@@ -41,15 +41,7 @@ import java.util.Random;
  *  99 17.55771  true 8.99762  0
  * </pre>
  *
- * <b>Remarks</b>
- *  <ul>
- *      <li> Relies on randomness of {@code nextDouble()} method in {@code java.util.Random} to generate pseudo-random
- *      numbers in [0, 1).
- *      <li> This library allows us to set and get the pseudo-random number seed.
- *      <li> See http://www.honeylocust.com/RngPack/ for an industrial strength random number generator in Java.
- * </ul>
- *
- * @author Ethan Kelly
+ * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
  */
 public final class StdRandom {
 

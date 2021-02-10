@@ -17,7 +17,7 @@ import java.util.NoSuchElementException;
  * <p>
  *
  * @param <Key> the generic type of key on the priority queue.
- * @author Ethan Kelly
+ * @author <a href="mailto:e.kelly.1@research.gla.ac.uk">Ethan Kelly</a>
  */
 public class MinPriorityQueue<Key> implements Iterable<Key> {
     private Key[] pq;                    // Store items at indices 1 to n
@@ -213,8 +213,6 @@ public class MinPriorityQueue<Key> implements Iterable<Key> {
 
     /**
      * Returns an iterator that iterates over the keys on this priority queue in ascending order.
-     * <p>
-     * The iterator doesn't implement {@code remove()} since it's optional.
      *
      * @return an iterator that iterates over the keys in ascending order
      */

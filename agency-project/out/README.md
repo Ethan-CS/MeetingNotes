@@ -2,7 +2,7 @@
 
 These are some initial model test results on various randomly generated graphs. The inputs for graph generation are as follows: 
 ```java
- // Numbers of vertices and edges
+// Numbers of vertices and edges
 int numVertices = 8;
 int numEdges = 16;
 

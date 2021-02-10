@@ -1,4 +1,4 @@
- *** Model: Eulerian Path on 8 vertices. ***
+ *** Model: Eulerian Path on 8 vertices and 16 edges. ***
 
 Seed: 1612973406260
 

@@ -1,0 +1,308 @@
+ *** Model: Eulerian Path on 8 vertices. ***
+
+Seed: 1612973406260
+
+0: 0 0 0 1 1 0 0 0 
+1: 0 0 0 0 1 1 0 0 
+2: 0 0 0 0 0 0 0 0 
+3: 1 0 0 0 0 0 0 1 
+4: 1 1 0 0 0 1 1 1 
+5: 0 1 0 0 1 0 0 0 
+6: 0 0 0 0 1 0 0 1 
+7: 0 0 0 1 1 0 1 1 
+
+ * Outbreak: 0 * 
+
+Agent at vertex 0: peril 1.00, protection 0.49 and state INFECTED.
+Agent at vertex 1: peril 0.50, protection 1.00 and state PROTECTED.
+Agent at vertex 2: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 3: peril 1.00, protection 0.17 and state SUSCEPTIBLE.
+Agent at vertex 4: peril 1.00, protection 0.03 and state SUSCEPTIBLE.
+Agent at vertex 5: peril 0.50, protection 0.65 and state SUSCEPTIBLE.
+Agent at vertex 6: peril 0.50, protection 0.04 and state SUSCEPTIBLE.
+Agent at vertex 7: peril 0.50, protection 1.00 and state PROTECTED.
+
+S: [3, 4, 5, 6]
+I: [0]
+R: []
+P: [1, 2, 7]
+Strategy: [0.0, 0.0, 0.0, 0.75, 0.25, 0.0, 0.0, 0.0]
+
+S: [3, 4, 5, 6]
+I: [0]
+R: []
+P: [1, 2, 7]
+INFECTING: 3 4 
+
+S: [5, 6]
+I: [0, 3, 4]
+R: []
+P: [1, 2, 7]
+Strategy: [0.0, 0.0, 0.0, 0.0, 0.0, 0.35, 0.65, 0.0]
+
+S: [6]
+I: [0, 3, 4]
+R: []
+P: [1, 2, 5, 7]
+INFECTING: 6 
+
+S: []
+I: [0, 3, 4, 6]
+R: []
+P: [1, 2, 5, 7]
+No susceptible vertices to protect; ending model after turn 4
+
+ * Outbreak: 1 * 
+
+Agent at vertex 0: peril 0.50, protection 0.71 and state SUSCEPTIBLE.
+Agent at vertex 1: peril 1.00, protection 0.41 and state INFECTED.
+Agent at vertex 2: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 3: peril 0.33, protection 1.00 and state PROTECTED.
+Agent at vertex 4: peril 1.00, protection 0.38 and state SUSCEPTIBLE.
+Agent at vertex 5: peril 1.00, protection 0.10 and state SUSCEPTIBLE.
+Agent at vertex 6: peril 0.50, protection 0.11 and state SUSCEPTIBLE.
+Agent at vertex 7: peril 0.50, protection 0.29 and state SUSCEPTIBLE.
+
+S: [0, 4, 5, 6, 7]
+I: [1]
+R: []
+P: [2, 3]
+Strategy: [0.0, 0.0, 0.0, 0.0, 0.75, 0.25, 0.0, 0.0]
+
+S: [0, 5, 6, 7]
+I: [1]
+R: []
+P: [2, 3, 4]
+INFECTING: 5 
+
+S: [0, 6, 7]
+I: [1, 5]
+R: []
+P: [2, 3, 4]
+Strategy: [0.29, 0.0, 0.0, 0.0, 0.0, 0.0, 0.36, 0.36]
+
+S: [6, 7]
+I: [1, 5]
+R: []
+P: [0, 2, 3, 4]
+
+S: [6, 7]
+I: [1, 5]
+R: []
+P: [0, 2, 3, 4]
+Strategy: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.75, 0.25]
+
+S: [7]
+I: [1, 5]
+R: []
+P: [0, 2, 3, 4, 6]
+
+S: [7]
+I: [1, 5]
+R: []
+P: [0, 2, 3, 4, 6]
+Strategy: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1]
+
+S: []
+I: [1, 5]
+R: []
+P: [0, 2, 3, 4, 6, 7]
+Nothing more to infect; ending model after turn 7
+
+ * Outbreak: 2 * 
+
+Agent at vertex 0: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 1: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 2: peril 1.00, protection 0.58 and state INFECTED.
+Agent at vertex 3: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 4: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 5: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 6: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 7: peril 0.00, protection 1.00 and state PROTECTED.
+
+S: []
+I: [2]
+R: []
+P: [0, 1, 3, 4, 5, 6, 7]
+No susceptible vertices to protect; ending model after turn 0
+
+ * Outbreak: 3 * 
+
+Agent at vertex 0: peril 1.00, protection 0.91 and state SUSCEPTIBLE.
+Agent at vertex 1: peril 0.33, protection 1.00 and state PROTECTED.
+Agent at vertex 2: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 3: peril 1.00, protection 0.24 and state INFECTED.
+Agent at vertex 4: peril 0.50, protection 0.32 and state SUSCEPTIBLE.
+Agent at vertex 5: peril 0.33, protection 1.00 and state PROTECTED.
+Agent at vertex 6: peril 0.50, protection 1.00 and state PROTECTED.
+Agent at vertex 7: peril 1.00, protection 0.10 and state SUSCEPTIBLE.
+
+S: [0, 4, 7]
+I: [3]
+R: []
+P: [1, 2, 5, 6]
+Strategy: [0.09, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.9]
+
+S: [4]
+I: [3]
+R: []
+P: [0, 1, 2, 5, 6, 7]
+
+S: [4]
+I: [3]
+R: []
+P: [0, 1, 2, 5, 6, 7]
+Strategy: [0.0, 0.0, 0.0, 0.0, 0.68, 0.0, 0.0, 0.0]
+
+S: []
+I: [3]
+R: []
+P: [0, 1, 2, 4, 5, 6, 7]
+Nothing more to infect; ending model after turn 3
+
+ * Outbreak: 4 * 
+
+Agent at vertex 0: peril 1.00, protection 0.77 and state SUSCEPTIBLE.
+Agent at vertex 1: peril 1.00, protection 0.71 and state SUSCEPTIBLE.
+Agent at vertex 2: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 3: peril 0.50, protection 0.07 and state SUSCEPTIBLE.
+Agent at vertex 4: peril 1.00, protection 0.39 and state INFECTED.
+Agent at vertex 5: peril 1.00, protection 0.00 and state SUSCEPTIBLE.
+Agent at vertex 6: peril 1.00, protection 0.87 and state SUSCEPTIBLE.
+Agent at vertex 7: peril 1.00, protection 0.67 and state SUSCEPTIBLE.
+
+S: [0, 1, 3, 5, 6, 7]
+I: [4]
+R: []
+P: [2]
+Strategy: [0.36, 0.17, 0.0, 0.0, 0.0, 0.17, 0.13, 0.07]
+
+S: [1, 3, 5, 7]
+I: [4]
+R: []
+P: [0, 2, 6]
+INFECTING: 1 5 7 
+
+S: [3]
+I: [1, 4, 5, 7]
+R: []
+P: [0, 2, 6]
+Strategy: [0.0, 0.0, 0.0, 0.93, 0.0, 0.0, 0.0, 0.0]
+
+S: []
+I: [1, 4, 5, 7]
+R: []
+P: [0, 2, 3, 6]
+Nothing more to infect; ending model after turn 3
+
+ * Outbreak: 5 * 
+
+Agent at vertex 0: peril 0.50, protection 0.45 and state SUSCEPTIBLE.
+Agent at vertex 1: peril 1.00, protection 0.80 and state SUSCEPTIBLE.
+Agent at vertex 2: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 3: peril 0.33, protection 1.00 and state PROTECTED.
+Agent at vertex 4: peril 1.00, protection 0.45 and state SUSCEPTIBLE.
+Agent at vertex 5: peril 1.00, protection 0.97 and state INFECTED.
+Agent at vertex 6: peril 0.50, protection 1.00 and state PROTECTED.
+Agent at vertex 7: peril 0.50, protection 0.00 and state SUSCEPTIBLE.
+
+S: [0, 1, 4, 7]
+I: [5]
+R: []
+P: [2, 3, 6]
+Strategy: [0.12, 0.2, 0.0, 0.0, 0.12, 0.0, 0.0, 0.12]
+
+S: [0, 4, 7]
+I: [5]
+R: []
+P: [1, 2, 3, 6]
+INFECTING: 4 
+
+S: [0, 7]
+I: [4, 5]
+R: []
+P: [1, 2, 3, 6]
+Strategy: [0.43, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.57]
+
+S: [7]
+I: [4, 5]
+R: []
+P: [0, 1, 2, 3, 6]
+INFECTING: 7 
+
+S: []
+I: [4, 5, 7]
+R: []
+P: [0, 1, 2, 3, 6]
+No susceptible vertices to protect; ending model after turn 4
+
+ * Outbreak: 6 * 
+
+Agent at vertex 0: peril 0.50, protection 0.82 and state SUSCEPTIBLE.
+Agent at vertex 1: peril 0.50, protection 0.83 and state SUSCEPTIBLE.
+Agent at vertex 2: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 3: peril 0.50, protection 1.00 and state PROTECTED.
+Agent at vertex 4: peril 1.00, protection 0.88 and state SUSCEPTIBLE.
+Agent at vertex 5: peril 0.50, protection 1.00 and state PROTECTED.
+Agent at vertex 6: peril 1.00, protection 0.68 and state INFECTED.
+Agent at vertex 7: peril 1.00, protection 0.10 and state SUSCEPTIBLE.
+
+S: [0, 1, 4, 7]
+I: [6]
+R: []
+P: [2, 3, 5]
+Strategy: [0.0, 0.0, 0.0, 0.0, 0.12, 0.0, 0.0, 0.88]
+
+S: [0, 1, 7]
+I: [6]
+R: []
+P: [2, 3, 4, 5]
+INFECTING: 7 
+
+S: [0, 1]
+I: [6, 7]
+R: []
+P: [2, 3, 4, 5]
+Strategy: [0.18, 0.17, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+S: []
+I: [6, 7]
+R: []
+P: [0, 1, 2, 3, 4, 5]
+Nothing more to infect; ending model after turn 3
+
+ * Outbreak: 7 * 
+
+Agent at vertex 0: peril 0.50, protection 0.72 and state SUSCEPTIBLE.
+Agent at vertex 1: peril 0.50, protection 1.00 and state PROTECTED.
+Agent at vertex 2: peril 0.00, protection 1.00 and state PROTECTED.
+Agent at vertex 3: peril 1.00, protection 0.01 and state SUSCEPTIBLE.
+Agent at vertex 4: peril 1.00, protection 1.00 and state SUSCEPTIBLE.
+Agent at vertex 5: peril 0.50, protection 1.00 and state PROTECTED.
+Agent at vertex 6: peril 1.00, protection 0.69 and state SUSCEPTIBLE.
+Agent at vertex 7: peril 1.00, protection 0.83 and state INFECTED.
+
+S: [0, 3, 4, 6]
+I: [7]
+R: []
+P: [1, 2, 5]
+Strategy: [0.0, 0.0, 0.0, 0.56, 0.0, 0.0, 0.11, 0.0]
+
+S: [0, 3, 6]
+I: [7]
+R: []
+P: [1, 2, 4, 5]
+INFECTING: 3 6 
+
+S: [0]
+I: [3, 6, 7]
+R: []
+P: [1, 2, 4, 5]
+Strategy: [0.28, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+S: []
+I: [3, 6, 7]
+R: []
+P: [0, 1, 2, 4, 5]
+Nothing more to infect; ending model after turn 3
+

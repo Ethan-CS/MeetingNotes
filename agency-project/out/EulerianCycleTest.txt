@@ -1,4 +1,4 @@
- *** Model: Eulerian Cycle on 8 vertices. ***
+ *** Model: Eulerian Cycle on 8 vertices and 16 edges. ***
 
 Seed: 1612973447713
 

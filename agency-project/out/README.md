@@ -15,6 +15,7 @@ double p = (double) numEdges / (numVertices * (numVertices - 1) / 2.0);
 
  // Total defence (improvement in protection ratings) that can be deployed each turn
 double totalDefence = 1.0;
+
 // Probability with which the infection transmits
 double probabilityOfInfection = 1.0;
 ```

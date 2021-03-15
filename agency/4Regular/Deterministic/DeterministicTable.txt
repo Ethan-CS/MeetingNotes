@@ -1,0 +1,76 @@
+\begin{center}
+  \begin{tabular}{| c || c | c | c | c |}
+    \hline
+    {\bfseries Source node} & {\bfseries Winning Strategy} & {\bfseries Infections} & {\bfseries Protections} & {\bfseries End-Turn} \\  %[0.5ex]
+    \hline\hline
+    0 & Proximity & 1 & 19 & 17
+    \hline
+    0 & Degree & 1 & 19 & 17
+    \hline
+    1 & Proximity & 1 & 19 & 17
+    \hline
+    1 & Degree & 1 & 19 & 17
+    \hline
+    2 & Proximity & 1 & 19 & 17
+    \hline
+    2 & Degree & 1 & 19 & 17
+    \hline
+    3 & Proximity & 1 & 19 & 17
+    \hline
+    3 & Degree & 1 & 19 & 17
+    \hline
+    4 & Proximity & 1 & 19 & 19
+    \hline
+    5 & Proximity & 1 & 19 & 17
+    \hline
+    5 & Degree & 1 & 19 & 17
+    \hline
+    6 & Proximity & 1 & 19 & 17
+    \hline
+    6 & Degree & 1 & 19 & 17
+    \hline
+    7 & Proximity & 1 & 19 & 17
+    \hline
+    8 & Proximity & 1 & 19 & 17
+    \hline
+    8 & Degree & 1 & 19 & 17
+    \hline
+    9 & Proximity & 1 & 19 & 17
+    \hline
+    9 & Degree & 1 & 19 & 17
+    \hline
+    10 & Proximity & 1 & 19 & 17
+    \hline
+    10 & Degree & 1 & 19 & 17
+    \hline
+    11 & Proximity & 1 & 19 & 17
+    \hline
+    11 & Degree & 1 & 19 & 17
+    \hline
+    12 & Proximity & 1 & 19 & 19
+    \hline
+    13 & Proximity & 1 & 19 & 17
+    \hline
+    13 & Degree & 1 & 19 & 17
+    \hline
+    14 & Proximity & 1 & 19 & 17
+    \hline
+    14 & Degree & 1 & 19 & 17
+    \hline
+    15 & Proximity & 1 & 19 & 17
+    \hline
+    16 & Proximity & 1 & 19 & 17
+    \hline
+    16 & Degree & 1 & 19 & 17
+    \hline
+    17 & Proximity & 1 & 19 & 17
+    \hline
+    18 & Proximity & 1 & 19 & 17
+    \hline
+    18 & Degree & 1 & 19 & 17
+    \hline
+    19 & Proximity & 1 & 19 & 17
+    \hline  \hline
+  \end{tabular}
+\end{center}
+

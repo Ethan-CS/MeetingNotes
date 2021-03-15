@@ -1,0 +1,48 @@
+\begin{center}
+  \begin{tabular}{| c || c | c | c | c |}
+    \hline
+    {\bfseries Source node} & {\bfseries Winning Strategy} & {\bfseries Infections} & {\bfseries Protections} & {\bfseries End-Turn} \\  %[0.5ex]
+    \hline\hline
+    0 & Protection & 15 & 5 & 2
+    \hline
+    1 & Protection & 16 & 4 & 2
+    \hline
+    2 & Protection & 15 & 5 & 2
+    \hline
+    3 & Protection & 16 & 4 & 2
+    \hline
+    4 & Protection & 16 & 4 & 2
+    \hline
+    5 & Protection & 13 & 7 & 2
+    \hline
+    6 & Protection & 15 & 5 & 2
+    \hline
+    7 & Protection & 15 & 5 & 2
+    \hline
+    8 & Protection & 15 & 5 & 2
+    \hline
+    9 & Protection & 17 & 3 & 2
+    \hline
+    10 & Protection & 15 & 5 & 2
+    \hline
+    11 & Protection & 13 & 7 & 2
+    \hline
+    12 & Protection & 16 & 4 & 2
+    \hline
+    13 & Protection & 15 & 5 & 2
+    \hline
+    14 & Protection & 14 & 6 & 2
+    \hline
+    15 & Protection & 13 & 7 & 2
+    \hline
+    16 & Protection & 16 & 4 & 2
+    \hline
+    17 & Protection & 13 & 7 & 2
+    \hline
+    18 & Protection & 13 & 7 & 2
+    \hline
+    19 & Protection & 13 & 7 & 2
+    \hline[1ex]  \hline
+  \end{tabular}
+\end{center}
+

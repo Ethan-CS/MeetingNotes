@@ -1,0 +1,48 @@
+\begin{center}
+  \begin{tabular}{| c || c | c | c | c |}
+    \hline
+    {\bfseries Source node} & {\bfseries Winning Strategy} & {\bfseries Infections} & {\bfseries Protections} & {\bfseries End-Turn} \\  %[0.5ex]
+    \hline\hline
+    0 & Proximity & 1 & 19 & 11
+    \hline
+    1 & Proximity & 1 & 19 & 9
+    \hline
+    2 & Proximity & 1 & 19 & 11
+    \hline
+    3 & Proximity & 1 & 19 & 11
+    \hline
+    4 & Proximity & 1 & 19 & 13
+    \hline
+    5 & Proximity & 1 & 19 & 5
+    \hline
+    6 & Proximity & 1 & 19 & 15
+    \hline
+    7 & Proximity & 1 & 19 & 9
+    \hline
+    8 & Proximity & 1 & 19 & 11
+    \hline
+    9 & Proximity & 1 & 19 & 11
+    \hline
+    10 & Proximity & 1 & 19 & 13
+    \hline
+    11 & Proximity & 1 & 19 & 11
+    \hline
+    12 & Proximity & 1 & 19 & 15
+    \hline
+    13 & Proximity & 1 & 19 & 11
+    \hline
+    14 & Proximity & 1 & 19 & 11
+    \hline
+    15 & Proximity & 1 & 19 & 13
+    \hline
+    16 & Proximity & 1 & 19 & 13
+    \hline
+    17 & Proximity & 1 & 19 & 13
+    \hline
+    18 & Proximity & 1 & 19 & 7
+    \hline
+    19 & Proximity & 1 & 19 & 13
+    \hline  \hline
+  \end{tabular}
+\end{center}
+

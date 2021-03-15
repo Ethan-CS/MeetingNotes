@@ -1,0 +1,128 @@
+\begin{center}
+  \begin{tabular}{| c || c | c | c | c |}
+    \hline
+    {\bfseries Source node} & {\bfseries Winning Strategy} & {\bfseries Infections} & {\bfseries Protections} & {\bfseries End-Turn} \\  %[0.5ex]
+    \hline\hline
+    0 & Proximity & 1 & 19 & 1
+    \hline
+    0 & Degree & 1 & 19 & 1
+    \hline
+    0 & Protection & 1 & 19 & 1
+    \hline
+    1 & Proximity & 1 & 19 & 1
+    \hline
+    1 & Degree & 1 & 19 & 1
+    \hline
+    1 & Protection & 1 & 19 & 1
+    \hline
+    2 & Proximity & 1 & 19 & 1
+    \hline
+    2 & Degree & 1 & 19 & 1
+    \hline
+    2 & Protection & 1 & 19 & 1
+    \hline
+    3 & Proximity & 1 & 19 & 1
+    \hline
+    3 & Degree & 1 & 19 & 1
+    \hline
+    3 & Protection & 1 & 19 & 1
+    \hline
+    4 & Proximity & 1 & 19 & 1
+    \hline
+    4 & Degree & 1 & 19 & 1
+    \hline
+    4 & Protection & 1 & 19 & 1
+    \hline
+    5 & Proximity & 1 & 19 & 1
+    \hline
+    5 & Degree & 1 & 19 & 1
+    \hline
+    5 & Protection & 1 & 19 & 1
+    \hline
+    6 & Proximity & 1 & 19 & 1
+    \hline
+    6 & Degree & 1 & 19 & 1
+    \hline
+    6 & Protection & 1 & 19 & 1
+    \hline
+    7 & Proximity & 1 & 19 & 1
+    \hline
+    7 & Degree & 1 & 19 & 1
+    \hline
+    7 & Protection & 1 & 19 & 1
+    \hline
+    8 & Proximity & 1 & 19 & 1
+    \hline
+    8 & Degree & 1 & 19 & 1
+    \hline
+    8 & Protection & 1 & 19 & 1
+    \hline
+    9 & Proximity & 1 & 19 & 1
+    \hline
+    9 & Degree & 1 & 19 & 1
+    \hline
+    9 & Protection & 1 & 19 & 1
+    \hline
+    10 & Proximity & 1 & 19 & 1
+    \hline
+    10 & Degree & 1 & 19 & 1
+    \hline
+    10 & Protection & 1 & 19 & 1
+    \hline
+    11 & Proximity & 1 & 19 & 1
+    \hline
+    11 & Degree & 1 & 19 & 1
+    \hline
+    11 & Protection & 1 & 19 & 1
+    \hline
+    12 & Proximity & 1 & 19 & 1
+    \hline
+    12 & Degree & 1 & 19 & 1
+    \hline
+    12 & Protection & 1 & 19 & 1
+    \hline
+    13 & Proximity & 1 & 19 & 1
+    \hline
+    13 & Degree & 1 & 19 & 1
+    \hline
+    13 & Protection & 1 & 19 & 1
+    \hline
+    14 & Proximity & 1 & 19 & 1
+    \hline
+    14 & Degree & 1 & 19 & 1
+    \hline
+    14 & Protection & 1 & 19 & 1
+    \hline
+    15 & Proximity & 1 & 19 & 1
+    \hline
+    15 & Degree & 1 & 19 & 1
+    \hline
+    15 & Protection & 1 & 19 & 1
+    \hline
+    16 & Proximity & 1 & 19 & 1
+    \hline
+    16 & Degree & 1 & 19 & 1
+    \hline
+    16 & Protection & 1 & 19 & 1
+    \hline
+    17 & Proximity & 1 & 19 & 1
+    \hline
+    17 & Degree & 1 & 19 & 1
+    \hline
+    17 & Protection & 1 & 19 & 1
+    \hline
+    18 & Proximity & 1 & 19 & 1
+    \hline
+    18 & Degree & 1 & 19 & 1
+    \hline
+    18 & Protection & 1 & 19 & 1
+    \hline
+    19 & Proximity & 1 & 19 & 1
+    \hline
+    19 & Degree & 1 & 19 & 1
+    \hline
+    19 & Protection & 1 & 19 & 1
+    \hline[1ex]  \hline
+  \end{tabular}
+\end{center}
+

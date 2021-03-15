@@ -1,0 +1,124 @@
+\documentclass[results.tex]{subfiles}
+\begin{document}
+
+\newpage
+
+\subsection{Tree Graph}
+
+For the Tree graph, the Graph Generator used the following parameters:
+
+\begin{itemize}
+\item Type of graph: Tree
+\item Number of vertices: 20
+\item Number of edges: 19
+\item Random generator seed: 1615826088771
+\end{itemize}
+and the model took the following parameters:
+\begin{itemize}
+\item Total defence quota each turn: 1.0
+\item Probability with which the infection propagates: 1.0
+\end{itemize}
+
+\subsubsection{Deterministic Protection}
+
+\subfile{Tree/Deterministic/DeterministicTable.tex}
+
+\newpage
+
+\begin{figure}[!ht]
+\centering
+     \begin{subfigure}[b]{0.9\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Tree/Deterministic/DeterministicInfectedChart}
+         %\caption{Infected}
+         \label{fig:tree-det-infected}
+     \end{subfigure}
+     \vfill
+     \begin{subfigure}[b]{0.9\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Tree/Deterministic/DeterministicProtectedChart}
+         %\caption{Protected}
+         \label{fig:tree-det-protected}
+     \end{subfigure}
+     \vfill
+     \begin{subfigure}[b]{0.9\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Tree/Deterministic/DeterministicEndTurnChart}
+         %\caption{End Turn}
+         \label{fig:tree-det-end}
+     \end{subfigure}
+        \caption{Model results on a Tree graph by source node for each defence strategy with deterministic initial protection allocation.}
+        \label{fig:tree-det-charts}
+\end{figure}
+
+\newpage
+
+
+\subsubsection{Mixed Protection}
+
+\subfile{Tree/Mixed/MixedTable.tex}
+
+\newpage
+
+\begin{figure}[!ht]
+\centering
+     \begin{subfigure}[b]{0.9\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Tree/Mixed/MixedInfectedChart}
+         %\caption{Infected}
+         \label{fig:tree-mix-infected}
+     \end{subfigure}
+     \vfill
+     \begin{subfigure}[b]{0.9\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Tree/Mixed/MixedProtectedChart}
+         %\caption{Protected}
+         \label{fig:tree-mix-protected}
+     \end{subfigure}
+     \vfill
+     \begin{subfigure}[b]{0.9\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Tree/Mixed/MixedEndTurnChart}
+         %\caption{End Turn}
+         \label{fig:tree-mix-end}
+     \end{subfigure}
+        \caption{Model results on a Tree graph by source node for each defence strategy with mixed initial protection allocation.}
+        \label{fig:tree-mix-charts}
+\end{figure}
+
+\newpage 
+
+
+\subsubsection{Random Protection}
+
+\subfile{Tree/Random/RandomTable.tex}
+
+\newpage
+
+\begin{figure}[!ht]
+\centering
+     \begin{subfigure}[b]{0.9\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Tree/Random/RandomInfectedChart}
+         %\caption{Infected}
+         \label{fig:tree-ran-infected}
+     \end{subfigure}
+     \vfill
+     \begin{subfigure}[b]{0.9\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Tree/Random/RandomProtectedChart}
+         %\caption{Protected}
+         \label{fig:tree-ran-protected}
+     \end{subfigure}
+     \vfill
+     \begin{subfigure}[b]{0.9\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Tree/Random/RandomEndTurnChart}
+         %\caption{End Turn}
+         \label{fig:tree-ran-end}
+     \end{subfigure}
+        \caption{Model results on a Tree graph by source node for each defence strategy with random initial protection allocation.}
+        \label{fig:tree-ran-charts}
+\end{figure}
+
+\end{document}

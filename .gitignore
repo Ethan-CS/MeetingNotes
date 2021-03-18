@@ -6,7 +6,7 @@
 *.bbl
 *.blg
 *.dvi
-*.gz
+*.synctex.gz
 *.toc
 
 

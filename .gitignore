@@ -1,6 +1,15 @@
 # Compiled class file
 *.class
 
+# Useless TeX files
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.gz
+*.toc
+
+
 # Log file
 *.log
 

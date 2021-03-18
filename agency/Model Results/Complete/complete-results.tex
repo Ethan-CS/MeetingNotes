@@ -17,6 +17,13 @@ and the model took the following parameters:
 \item Probability with which the infection propagates: 1.0
 \end{itemize}
 
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{complete.jpg}
+	\caption{The Complete graph used.}
+	\label{fig:complete}
+\end{figure}
+
 \subsubsection{Deterministic Protection}
 
 The winning strategies by source node are listed in the table below. This really isn't too surprising - by {\it deterministic}, we mean that the initial protection is equal to the ``peril" rating of the given agent, which - in a complete graph - must be 1, since every vertex is adjacent to every other vertex and so adjacent to the source node. We can see this in the following initial agent states for source node 0:
@@ -125,21 +132,21 @@ Thus, all vertices become protected in the second turn as their protection ratin
 \centering
      \begin{subfigure}[b]{0.9\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{Complete/Deterministic/DeterministicInfectedChart}
+         \includegraphics[width=\textwidth]{Deterministic/DeterministicInfectedChart}
          %\caption{Infected}
          \label{fig:com-det-infected}
      \end{subfigure}
      \vfill
      \begin{subfigure}[b]{0.9\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{Complete/Deterministic/DeterministicProtectedChart}
+         \includegraphics[width=\textwidth]{Deterministic/DeterministicProtectedChart}
          %\caption{Protected}
          \label{fig:com-det-protected}
      \end{subfigure}
      \vfill
      \begin{subfigure}[b]{0.9\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{Complete/Deterministic/DeterministicEndTurnChart}
+         \includegraphics[width=\textwidth]{Deterministic/DeterministicEndTurnChart}
          %\caption{End Turn}
          \label{fig:com-det-end}
      \end{subfigure}
@@ -153,7 +160,7 @@ Thus, all vertices become protected in the second turn as their protection ratin
 
 Here, we allocate protection by first generating a baseline pseudo-random number and then increasing based on proximity to closest infection.
 
-\subfile{Complete/Mixed/MixedTable.tex}
+\subfile{Mixed/MixedTable.tex}
 
 \newpage
 
@@ -161,21 +168,21 @@ Here, we allocate protection by first generating a baseline pseudo-random number
 \centering
      \begin{subfigure}[b]{0.9\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{Complete/Mixed/MixedInfectedChart}
+         \includegraphics[width=\textwidth]{Mixed/MixedInfectedChart}
          %\caption{Infected}
          \label{fig:com-mix-infected}
      \end{subfigure}
      \vfill
      \begin{subfigure}[b]{0.9\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{Complete/Mixed/MixedProtectedChart}
+         \includegraphics[width=\textwidth]{Mixed/MixedProtectedChart}
          %\caption{Protected}
          \label{fig:com-mix-protected}
      \end{subfigure}
      \vfill
      \begin{subfigure}[b]{0.9\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{Complete/Mixed/MixedEndTurnChart}
+         \includegraphics[width=\textwidth]{Mixed/MixedEndTurnChart}
          %\caption{End Turn}
          \label{fig:com-mix-end}
      \end{subfigure}
@@ -189,27 +196,27 @@ Here, we allocate protection by first generating a baseline pseudo-random number
 
 Here, we generate a pseudo-random number and assigning this as the protection rating of the given vertex
 
-\subfile{Complete/Random/RandomTable.tex}
+\subfile{Random/RandomTable.tex}
 
 \begin{figure}[!ht]
 \centering
      \begin{subfigure}[b]{0.9\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{Complete/Random/RandomInfectedChart}
+         \includegraphics[width=\textwidth]{Random/RandomInfectedChart}
          %\caption{Infected}
          \label{fig:com-ran-infected}
      \end{subfigure}
      \vfill
      \begin{subfigure}[b]{0.9\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{Complete/Random/RandomProtectedChart}
+         \includegraphics[width=\textwidth]{Random/RandomProtectedChart}
          %\caption{Protected}
          \label{fig:com-ran-protected}
      \end{subfigure}
      \vfill
      \begin{subfigure}[b]{0.9\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{Complete/Random/RandomEndTurnChart}
+         \includegraphics[width=\textwidth]{Random/RandomEndTurnChart}
          %\caption{End Turn}
          \label{fig:com-ran-end}
      \end{subfigure}

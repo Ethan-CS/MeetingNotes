@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Obsidian-generated files
+*.js
+
 # Useless TeX files
 *.aux
 *.bbl

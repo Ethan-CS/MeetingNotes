@@ -1,0 +1,21 @@
+# Tree Model Results
+
+## Random
+
+* PROXIMITY: 4700
+* DEGREE: 900
+* PROTECTION: 1100
+
+## Mixed
+
+* PROXIMITY: 4500
+* DEGREE: 2000
+* PROTECTION: 2200
+
+## Deterministic
+
+* PROXIMITY: 5000
+* DEGREE: 500
+* PROTECTION: 300
+
+

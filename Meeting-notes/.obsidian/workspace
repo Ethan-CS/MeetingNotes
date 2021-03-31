@@ -1,0 +1,100 @@
+{
+  "main": {
+    "id": "3292b91d26472438",
+    "type": "split",
+    "children": [
+      {
+        "id": "9af4e459025f9bb8",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Untitled.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a26cfd8c29a8ff12",
+    "type": "split",
+    "children": [
+      {
+        "id": "2457d72bf5330991",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2eec67ef13bc6fac",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ac1fb6e6f847aa50",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "27a063a11dc99106",
+    "type": "split",
+    "children": [
+      {
+        "id": "4847db1a6d5b26bc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6c2b685b22bb70a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Untitled.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Untitled.md",
+    "22_01-04-2021.md",
+    "2021/03-21/21_25-03-2021.md",
+    "2021/03-21/20_18-03-21.md",
+    "2021/03-21/19_11-03-21.md",
+    "2021/03-21/18_04-03-21.md",
+    "2021/02-21/17_25-02-21.md",
+    "2021/02-21/16_11-02-21.md",
+    "2021/02-21/15_05-02-21.md",
+    "2021/02-21/2_03_25-02-2021.md"
+  ]
+}

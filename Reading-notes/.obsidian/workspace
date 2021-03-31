@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "LitReviews/SIR Epidemics on Networks/31032021-1644.md",
+            "file": "LitReviews/SIR Epidemics on Networks/31032021-1808 Background and Examples.md",
             "mode": "source"
           }
         },
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "LitReviews/SIR Epidemics on Networks/31032021-1644.md",
+            "file": "LitReviews/SIR Epidemics on Networks/31032021-1808 Background and Examples.md",
             "mode": "preview"
           }
         },
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LitReviews/SIR Epidemics on Networks/31032021-1644.md",
+                "file": "LitReviews/SIR Epidemics on Networks/31032021-1808 Background and Examples.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,15 +99,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "LitReviews/SIR Epidemics on Networks/31032021-1808 Background and Examples.md",
+    "LitReviews/SIR Epidemics on Networks/31032021-1644 Introduction.md",
+    "LitReviews/SIR Epidemics on Networks/31032021-1808.md",
+    "LitReviews/SIR Epidemics on Networks/31032021-1644.md",
+    "31032021-1808.md",
+    "LitReviews/SIR Epidemics on Networks/31032021-1616 Summary of Aims.md",
     "Papers/SIR Epidemics on Networks/31032021-1644.md",
     "Templates/template.md",
     "Papers/SIR Epidemics on Networks/31032021-1616 Summary of Aims.md",
-    "31032021-1646.md",
-    "31032021-1645.md",
-    "Papers/SIR Epidemics on Networks/31032021-1626.md",
-    "31032021-1626.md",
-    "Papers/SIR Epidemics on Networks/31032021-1616.md",
-    "Papers/Reading PDFs/markovian.pdf",
-    "Code/AgencyModel/22012021-1612 What V1 does.md"
+    "31032021-1646.md"
   ]
 }

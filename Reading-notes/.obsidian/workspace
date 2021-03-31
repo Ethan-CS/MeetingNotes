@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "template.md",
+            "file": "Papers/SIR Epidemics on Networks/31032021-1644.md",
             "mode": "source"
           }
         },
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "template.md",
+            "file": "Papers/SIR Epidemics on Networks/31032021-1644.md",
             "mode": "preview"
           }
         },
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "template.md",
+                "file": "Papers/SIR Epidemics on Networks/31032021-1644.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,15 +99,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "template.md",
-    "Code/AgencyModel/TODO.md",
-    "Code/AgencyModel/Programming Overview.md",
-    "Papers/Fire/On minimising the effects of fire/Untitled.md",
-    "Papers/Fire/On minimising the effects of fire/0. Meta.md",
-    "Papers/Fire/Firefighter Problem on Graph Classes/1. Introduction.md",
-    "Papers/Fire/Politician's Firefighting/Politicians_Firefighting.pdf",
-    "Papers/Fire/Stochastic Firefighter/The Stochastic Firefighter Problem.pdf",
-    "Writing/NewState/03022021-1655 Contact and transmission networks.md",
-    "03022021-1655.md"
+    "Papers/SIR Epidemics on Networks/31032021-1644.md",
+    "Templates/template.md",
+    "Papers/SIR Epidemics on Networks/31032021-1616 Summary of Aims.md",
+    "31032021-1646.md",
+    "31032021-1645.md",
+    "Papers/SIR Epidemics on Networks/31032021-1626.md",
+    "31032021-1626.md",
+    "Papers/SIR Epidemics on Networks/31032021-1616.md",
+    "Papers/Reading PDFs/markovian.pdf",
+    "Code/AgencyModel/22012021-1612 What V1 does.md"
   ]
 }

@@ -3,6 +3,7 @@
 
 # Unnecessary Obsidian files
 Reading-notes/.obsidian/plugins/
+*.js # Need to change this if I ever code in JavaScript!
 
 # Useless TeX files
 *.aux

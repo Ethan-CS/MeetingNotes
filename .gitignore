@@ -2,7 +2,7 @@
 *.class
 
 # Unnecessary Obsidian files
-/reading/Obsidian/.obsidian/plugins/
+/Reading-notes/.obsidian/plugins/
 
 # Useless TeX files
 *.aux

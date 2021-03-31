@@ -4,19 +4,6 @@ This repository contains various files associated with my PhD research, which is
 
 **_Game-theoretic and probabilistic methods applied to spatial network models of contagion_**
 
-To find out more about my research and interests, see the links under "Contact".
-
-Below is a rough roadmap to the contents of the repo.
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
-
-- [Contact:](#contact)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
 
 ## Contact:
 

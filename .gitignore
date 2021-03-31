@@ -2,7 +2,8 @@
 *.class
 
 # Unnecessary Obsidian files
-Reading-notes/.obsidian/plugins
+Reading-notes/.obsidian/plugins/obsidian-export-to-tex
+Reading-notes/.obsidian/plugins/obsidian-yfm-templater-plugin
 
 # Useless TeX files
 *.aux

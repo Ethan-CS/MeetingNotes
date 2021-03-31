@@ -10,10 +10,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Untitled.md",
+            "file": "2021/Untitled.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "eeaf33ae31394ce4"
+      },
+      {
+        "id": "e1b27437416dffcc",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "2021/Untitled.md",
+            "mode": "preview"
+          }
+        },
+        "group": "eeaf33ae31394ce4"
       }
     ],
     "direction": "vertical"
@@ -69,12 +82,12 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "2021/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           }
@@ -82,19 +95,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "lastOpenFiles": [
-    "Untitled.md",
-    "22_01-04-2021.md",
-    "2021/03-21/21_25-03-2021.md",
-    "2021/03-21/20_18-03-21.md",
-    "2021/03-21/19_11-03-21.md",
-    "2021/03-21/18_04-03-21.md",
-    "2021/02-21/17_25-02-21.md",
-    "2021/02-21/16_11-02-21.md",
-    "2021/02-21/15_05-02-21.md",
-    "2021/02-21/2_03_25-02-2021.md"
+    "2021/Untitled.md",
+    "README.md",
+    "Templates/PhD_Meeting.md",
+    "2021/04-21/22_01-04-2021.md",
+    "2021/03-21/2_04_30-03-2021 1.md",
+    "2021/03-21/2_04_30-03-2021.md",
+    "2021/01-21/2_02_28-01-2021 1.md",
+    "2021/01-21/2_02_28-01-2021.md",
+    "2021/02-21/2_03_25-02-2021.md",
+    "22_01-04-2021.md"
   ]
 }

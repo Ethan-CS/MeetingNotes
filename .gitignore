@@ -3,10 +3,12 @@
 
 # Unnecessary Obsidian files
 .DS_Store
+Reading-notes/.obsidian/themes
 Reading-notes/.obsidian/cache
 Reading-notes/.trash/
 Reading-notes/.DS_Store
 
+Meeting-notes/.obsidian/themes
 Meeting-notes/.obsidian/cache
 Meeting-notes/.trash/
 Meeting-notes/.DS_Store

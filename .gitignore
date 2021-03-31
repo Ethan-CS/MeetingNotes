@@ -2,17 +2,22 @@
 *.class
 
 # Unnecessary Obsidian files
-Reading-notes/.obsidian/plugins/obsidian-export-to-tex
-Reading-notes/.obsidian/plugins/obsidian-yfm-templater-plugin
+.DS_Store
+Reading-notes/.obsidian/cache
+Reading-notes/.trash/
+Reading-notes/.DS_Store
 
-# Useless TeX files
+Meeting-notes/.obsidian/cache
+Meeting-notes/.trash/
+Meeting-notes/.DS_Store
+
+# Unnecessary TeX files
 *.aux
 *.bbl
 *.blg
 *.dvi
 *.synctex.gz
 *.toc
-
 
 # Log file
 *.log

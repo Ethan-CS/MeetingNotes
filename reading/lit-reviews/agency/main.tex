@@ -1,0 +1,95 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options
+	\geometry{a4paper}  
+
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{setspace}
+\usepackage{listings}
+
+\lstdefinestyle{myListingStyle} 
+    {
+        basicstyle = \small\ttfamily,
+        breaklines = true,
+    }
+
+\DeclareRobustCommand{\subtitle}[1]{\\#1}
+
+\graphicspath{ {./assets/} }
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%\setkomafont{title}{\normalfont\scshape}
+%\addtokomafont{disposition}{\rmfamily}
+
+%\newcommand{\subtitle}{A review of previous work and avenues for future research}
+    
+\title{Agency in Graphical Models of Contagion}
+%\subtitle{A discussion of possible means to introduce agency into graph problems used to model contagion}
+\author{Ethan Kelly}
+%\author{Supervisor: Jessica Enright}
+
+\newcommand{\Addresses}{{
+  \bigskip
+  \footnotesize
+  \textsc{Ethan Kelly} \par\nopagebreak
+  	\hspace{\parindent}\textit{Email:~}\texttt{E.Kelly.1@research.gla.ac.uk}\par\nopagebreak
+	\vspace{1mm}
+  \textsc{Supervisor: Jessica Enright}\par\nopagebreak
+  	\hspace{\parindent}\textit{Email:~}\texttt{Jessica.Enright@glasgow.ac.uk}\par\nopagebreak
+	\vspace{1mm}
+	\begin{flushright}
+  \textsc{Department of Computing Science\\Sir Alwyn Williams Building\\University of Glasgow\\G12 8QN}
+  \end{flushright}
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\renewcommand{\subtitle}[1]{}
+\Addresses
+
+\section{Introduction}
+\label{sec:intro}
+Much work has been done to understand graph problems, such as the Firefighter Problem (which we refer to simply as {\scshape Firefighter}), first proposed by Hartnell \cite{hartnell95} and surveyed in great detail by Finbow and MacGillivray \cite{finbow09}. This problem and other similar ones, such as The Firebreak Problem (again, referred to as {\scshape Firebreak}) have now enjoyed a plethora of results in a purely graph-theoretic context. However, modelling contagion requires relaxing and adapting some assumptions present in the original formulations of these problems. Such assumptions may be that populations are well-mixed (regular graphs) and we have fully predictable outcomes each turn (non-stochastic behaviour). We propose a number of ways to amend these assumptions in this paper to yield a method for contagion modelling that can provide more realistic and contextualised results with agency-specific attributes for each vertex. This may involve providing a defence rating $d\in[0,1]$, where 0 represents a vertex with no protection from the contagion and 1 is a vertex that is fully defended. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Background}
+
+\subsection{Firefighter}
+\label{sec:fire}
+
+
+The following is a decision formulation given by Finbow and MacGillivray for {\scshape Firefighter} on a tree \cite{finbow09}:
+
+{\scshape Firefighter}\\ \indent
+{\scshape Instance:} A rooted graph $(G,r)$ and an integer $k\geq 1$.\\ \indent
+{\scshape Question:} Is there a finite sequence $d_1, d_2,\dots d_t$ of vertices of the graph $G$ such that:
+	\begin{enumerate}[label=\roman*]
+		\item $d_i$ {is neither burned nor defended at time} $i$,
+		\item {At time} $t$, no undefended vertex is adjacent to a burning vertex, and
+		\item {At least} $k$ {vertices are saved at the end of time} $t$?
+	\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%
+
+\subsection{Agency}
+\label{sec:agent}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\bibliographystyle{siam}
+\bibliography{bibliography.bib}
+\nocite{*}
+
+\Addresses
+
+\end{document}  

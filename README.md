@@ -8,6 +8,11 @@ To find out more about my research and interests, see the links under "Contact".
 
 Below is a rough roadmap to the contents of the repo.
 
+<!-- START doctoc -->
+<!-- END doctoc -->
+
+
+
 ## Contact:
 
 Ethan Kelly: e.kelly.1@research.gla.ac.uk

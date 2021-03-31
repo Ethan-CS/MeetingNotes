@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "template.md",
+            "mode": "source"
+          }
         },
         "group": "acf83af8a53ee77b"
       },
@@ -17,8 +20,11 @@
         "id": "e3d3514f05edd4cb",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "template.md",
+            "mode": "source"
+          }
         },
         "group": "acf83af8a53ee77b"
       }
@@ -76,6 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,15 +99,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "template.md",
+    "Code/AgencyModel/TODO.md",
+    "Code/AgencyModel/Programming Overview.md",
     "Papers/Fire/On minimising the effects of fire/Untitled.md",
     "Papers/Fire/On minimising the effects of fire/0. Meta.md",
     "Papers/Fire/Firefighter Problem on Graph Classes/1. Introduction.md",
     "Papers/Fire/Politician's Firefighting/Politicians_Firefighting.pdf",
     "Papers/Fire/Stochastic Firefighter/The Stochastic Firefighter Problem.pdf",
     "Writing/NewState/03022021-1655 Contact and transmission networks.md",
-    "03022021-1655.md",
-    "Writing/NewState/22012021-1633 JK meeting input.md",
-    "Papers/Epidemiology/SIR Models/Markovian SIR epidemics on networks/1. Introduction.md",
-    "Papers/Epidemiology/SIR Models/Markovian SIR epidemics on networks/0. Meta.md"
+    "03022021-1655.md"
   ]
 }

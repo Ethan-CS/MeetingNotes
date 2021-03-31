@@ -6,7 +6,6 @@
       {
         "id": "ced94ea30a362926",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -19,11 +18,12 @@
       {
         "id": "e3d3514f05edd4cb",
         "type": "leaf",
+        "active": true,
         "state": {
           "type": "markdown",
           "state": {
             "file": "template.md",
-            "mode": "source"
+            "mode": "preview"
           }
         },
         "group": "acf83af8a53ee77b"

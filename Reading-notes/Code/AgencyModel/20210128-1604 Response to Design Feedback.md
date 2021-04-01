@@ -1,12 +1,12 @@
 Tags :   #Response #Code #AgencyModel #AM_V2
-Zettel :  28012021-1604
+Zettel :  20210128-1604
 Status : #triage 
 
 -----
 
 # Response to Design Feedback from Jess
 
-**Previous note:** [[26012021-1220 Design Feedback from Jess]]
+**Previous note:** [[20210126-1220 Design Feedback from Jess]]
 
 -----
 

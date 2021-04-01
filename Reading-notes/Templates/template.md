@@ -1,5 +1,5 @@
 Tags :
-Zettel :  {{date:DDMMYYYY}}-{{time:HHmm}}
+Zettel :  {{date:YYYYMMDD}}-{{time:HHmm}}
 Status : #triage 
 
 -----

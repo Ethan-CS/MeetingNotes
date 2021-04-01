@@ -1,12 +1,12 @@
 Tags :   #AgencyModel #SIR #Java #AM_V1
-Zettel :  22012021-1612
+Zettel :  20210122-1619
 Status : #final
 
 -----
 
 # V1 update: What this version doesn't do
 
-**Previous note:** [[22012021-1612 What V1 does]]
+**Previous note:** [[20210122-1612 What V1 does]]
 
 -----
 

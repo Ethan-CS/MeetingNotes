@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "LitReviews/SIR Epidemics on Networks/31032021-1808 Background and Examples.md",
+            "file": "Templates/template.md",
             "mode": "source"
           }
         },
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "LitReviews/SIR Epidemics on Networks/31032021-1808 Background and Examples.md",
+            "file": "Templates/template.md",
             "mode": "preview"
           }
         },
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LitReviews/SIR Epidemics on Networks/31032021-1808 Background and Examples.md",
+                "file": "Templates/template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,15 +99,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "LitReviews/SIR Epidemics on Networks/31032021-1808 Background and Examples.md",
-    "LitReviews/SIR Epidemics on Networks/31032021-1644 Introduction.md",
-    "LitReviews/SIR Epidemics on Networks/31032021-1808.md",
-    "LitReviews/SIR Epidemics on Networks/31032021-1644.md",
-    "31032021-1808.md",
-    "LitReviews/SIR Epidemics on Networks/31032021-1616 Summary of Aims.md",
-    "Papers/SIR Epidemics on Networks/31032021-1644.md",
     "Templates/template.md",
-    "Papers/SIR Epidemics on Networks/31032021-1616 Summary of Aims.md",
-    "31032021-1646.md"
+    "Code/AgencyModel/TODO.md",
+    "Code/AgencyModel/Programming Overview.md",
+    "Code/AgencyModel/20210122-1612 What V1 does.md",
+    "Code/AgencyModel/20210122-1619 What V2 needs to move towards.md",
+    "Code/AgencyModel/20210126-1220 Design Feedback from Jess.md",
+    "Code/AgencyModel/20210126-1239 Code Feedback from Jess.md",
+    "Code/AgencyModel/20210126-1733 Response to Code Feedback.md",
+    "Code/AgencyModel/28012021-1604 Response to Design Feedback.md",
+    "Code/AgencyModel/26012021-1733 Response to Code Feedback.md"
   ]
 }

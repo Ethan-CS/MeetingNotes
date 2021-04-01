@@ -1,12 +1,12 @@
 Tags :   #Code #Java #AgencyModel #Feedback
-Zettel :  26012021-1239
+Zettel :  20210126-1239
 Status : #final
 
 -----
 
 # Existing Code Feedback from Jess
 
-**Previous note:** [[Programming Overview]], [[22012021-1619 What V2 needs to move towards]], [[26012021-1220 Design Feedback from Jess]]
+**Previous note:** [[Programming Overview]], [[20210122-1619 What V2 needs to move towards]], [[20210126-1220 Design Feedback from Jess]]
 
 -----
 

@@ -1,12 +1,12 @@
 Tags :   #Design #AgencyModel
-Zettel :  26012021-1220
+Zettel :  20210126-1220
 Status : #triage 
 
 -----
 
 # Design Feedback from Jess
 
-**Previous note:** [[Programming Overview]], [[22012021-1619 What V2 needs to move towards]]
+**Previous note:** [[Programming Overview]], [[20210122-1619 What V2 needs to move towards]]
 
 -----
 

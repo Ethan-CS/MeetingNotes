@@ -1,12 +1,12 @@
 Tags :   #Code #Java #AgencyModel #Response
-Zettel :  26012021-1733
+Zettel :  20210126-1733
 Status : #triage 
 
 -----
 
 # Response to Code Feedback from Jess
 
-**Previous note:** [[26012021-1239 Code Feedback from Jess]]
+**Previous note:** [[20210126-1239 Code Feedback from Jess]]
 
 -----
 

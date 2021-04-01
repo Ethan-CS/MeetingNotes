@@ -2,7 +2,7 @@
 
 This repository contains various files associated with my PhD research, which is based around the topic:
 
-**_Game-theoretic and probabilistic methods applied to spatial network models of contagion_**
+> Game-theoretic and probabilistic methods applied to spatial network models of contagion
 
 
 ## Contact:

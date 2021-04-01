@@ -4,14 +4,12 @@
 # Unnecessary Obsidian files
 .DS_Store
 Reading-notes/*.css
-Reading-notes/.obsidian/themes
-Reading-notes/.obsidian/cache
+Reading-notes/.obsidian/
 Reading-notes/.trash/
 Reading-notes/.DS_Store
 
 Meeting-notes/*.css
-Meeting-notes/.obsidian/themes
-Meeting-notes/.obsidian/cache
+Meeting-notes/.obsidian/
 Meeting-notes/.trash/
 Meeting-notes/.DS_Store
 

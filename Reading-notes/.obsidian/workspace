@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Templates/template.md",
+            "file": "LitReviews/SIR Epidemics on Networks/20210401-1028 3. Main result.md",
             "mode": "source"
           }
         },
@@ -22,8 +22,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Templates/template.md",
-            "mode": "preview"
+            "file": "LitReviews/SIR Epidemics on Networks/20210401-1028 3. Main result.md",
+            "mode": "source"
           }
         },
         "group": "acf83af8a53ee77b"
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/template.md",
+                "file": "LitReviews/SIR Epidemics on Networks/20210401-1028 3. Main result.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,6 +99,8 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "LitReviews/SIR Epidemics on Networks/20210401-1028 3. Main result.md",
+    "LitReviews/SIR Epidemics on Networks/20210401-1054.md",
     "Templates/template.md",
     "Code/AgencyModel/TODO.md",
     "Code/AgencyModel/Programming Overview.md",
@@ -106,8 +108,6 @@
     "Code/AgencyModel/20210122-1619 What V2 needs to move towards.md",
     "Code/AgencyModel/20210126-1220 Design Feedback from Jess.md",
     "Code/AgencyModel/20210126-1239 Code Feedback from Jess.md",
-    "Code/AgencyModel/20210126-1733 Response to Code Feedback.md",
-    "Code/AgencyModel/28012021-1604 Response to Design Feedback.md",
-    "Code/AgencyModel/26012021-1733 Response to Code Feedback.md"
+    "Code/AgencyModel/20210126-1733 Response to Code Feedback.md"
   ]
 }

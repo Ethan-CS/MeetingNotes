@@ -6,7 +6,7 @@ Status : #triage
 
 # 2: Background and Examples
 
-**Previous note:** [[20210331-1644 1. Introduction]]
+**Previous note:** [20210331-1644 Introduction](20210331-1644%20Introduction.md)
 
 -----
 

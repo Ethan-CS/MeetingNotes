@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
+            "mode": "source"
+          }
         },
         "group": "acf83af8a53ee77b"
       },
@@ -17,8 +20,11 @@
         "id": "e3d3514f05edd4cb",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
+            "mode": "preview"
+          }
         },
         "group": "acf83af8a53ee77b"
       }
@@ -76,6 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,15 +99,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "LitReviews/SIR Epidemics on Networks/20210401-2023 Discussion.md",
     "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
-    "20210401-2023.md",
-    "LitReviews/SIR Epidemics on Networks/20210401-1028 Main result.md",
-    "LitReviews/SIR Epidemics on Networks/20210331-1616 Summary of Aims.md",
-    "LitReviews/SIR Epidemics on Networks/20210331-1644 Introduction.md",
-    "LitReviews/SIR Epidemics on Networks/20210331-1808 Background and Examples.md",
-    "LitReviews/SIR Epidemics on Networks/20210331-1616 0. Summary of Aims.md",
-    "LitReviews/SIR Epidemics on Networks/20210331-1644 1. Introduction.md",
-    "LitReviews/SIR Epidemics on Networks/20210331-1808 2. Background and Examples.md"
+    "Results/202104021049 Graphs of model results.md",
+    "202104021049.md",
+    "Results/202104021047.md",
+    "Templates/template.md",
+    "202104021047.md",
+    "Results/Untitled.md",
+    "Results/charts/winners/0.05-0.95/Random.jpg",
+    "Results/charts/winners/0.05-0.95/Mixed.jpg",
+    "Results/charts/winners/0.05-0.95/Deterministic.jpg"
   ]
 }

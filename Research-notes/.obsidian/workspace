@@ -6,27 +6,24 @@
       {
         "id": "ced94ea30a362926",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
+            "file": "LitReviews/Proposal/Untitled.md",
             "mode": "source"
           }
-        },
-        "group": "acf83af8a53ee77b"
+        }
       },
       {
-        "id": "e3d3514f05edd4cb",
+        "id": "e1db78a7f11626b2",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
-            "mode": "preview"
+            "file": "LitReviews/202104071519 Conference Abstract Draft 1.md",
+            "mode": "source"
           }
-        },
-        "group": "acf83af8a53ee77b"
+        }
       }
     ],
     "direction": "vertical"
@@ -82,10 +79,12 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
+                "file": "LitReviews/Proposal/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -98,16 +97,17 @@
     "width": 300,
     "collapsed": true
   },
+  "active": "ced94ea30a362926",
   "lastOpenFiles": [
-    "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
-    "Results/202104021049 Graphs of model results.md",
-    "202104021049.md",
-    "Results/202104021047.md",
-    "Templates/template.md",
-    "202104021047.md",
-    "Results/Untitled.md",
-    "Results/charts/winners/0.05-0.95/Random.jpg",
-    "Results/charts/winners/0.05-0.95/Mixed.jpg",
-    "Results/charts/winners/0.05-0.95/Deterministic.jpg"
+    "LitReviews/Proposal/Untitled.md",
+    "LitReviews/202104071519 Conference Abstract Draft 1.md",
+    "LitReviews/Proposal/main.pdf",
+    "LitReviews/Proposal/23062020-2238 Research Title.md",
+    "LitReviews/Proposal/2. Literature Review.md",
+    "LitReviews/Proposal/1. Introduction.md",
+    "LitReviews/Proposal/0. Title.md",
+    "202104071519.md",
+    "LitReviews/Untitled.md",
+    "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md"
   ]
 }

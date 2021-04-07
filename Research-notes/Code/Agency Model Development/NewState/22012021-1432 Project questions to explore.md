@@ -16,4 +16,4 @@ Q: How can we make the graph more complex (useful) but only with a small increas
 
 -----
  
-**Consider:** In the paper, we see a modelling framework that extends previous work which provided exactness of closures at the level of triples for Markovian SIR dynamics on tree-like networks (and a deterministic representation of epidemic dynamics on the network that can be evaluated numerically). [[Papers/Epidemiology/SIR Models/Markovian SIR epidemics on networks/0. Meta|Exact deterministic representation of Markovian SIR epidemics on networks with and without loops]]
+**Consider:** In the paper, we see a modelling framework that extends previous work which provided exactness of closures at the level of triples for Markovian SIR dynamics on tree-like networks (and a deterministic representation of epidemic dynamics on the network that can be evaluated numerically). [[Reading/Epidemiology/SIR Models/Markovian SIR epidemics on networks/0. Meta|Exact deterministic representation of Markovian SIR epidemics on networks with and without loops]]

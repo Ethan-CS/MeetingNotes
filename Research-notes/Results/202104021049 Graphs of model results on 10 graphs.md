@@ -12,22 +12,20 @@ Status : #triage
 
 ### Deterministic protection allocation
 
-![](Results/charts/percent_infected/0.05-0.95/Deterministic.jpg)
+![[Results/20210402 charts/percent_infected/0.01-0.20/Deterministic.jpg]]
 
-![](Results/charts/winners/0.05-0.95/Deterministic.jpg)
+![[Results/20210402 charts/percent_infected/ER 0.05-1.00/Deterministic.jpg]]
 
 
 ### Mixed protection allocation
 
-![](Results/charts/percent_infected/0.05-0.95/Mixed.jpg)
+![[Results/20210402 charts/percent_infected/0.01-0.20/Mixed.jpg]]
 
-![](Results/charts/winners/0.05-0.95/Mixed.jpg)
+![[Results/20210402 charts/percent_infected/ER 0.05-1.00/Mixed.jpg]]
 
 
 ### Random protection allocation
 
-![](Results/charts/percent_infected/0.05-0.95/Random.jpg)
+![[Results/20210402 charts/percent_infected/0.01-0.20/Random.jpg]]
 
-![](Results/charts/winners/0.05-0.95/Random.jpg)
-
-
+![[Results/20210402 charts/percent_infected/ER 0.05-1.00/Random.jpg]]

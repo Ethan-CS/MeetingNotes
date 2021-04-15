@@ -4,30 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "ced94ea30a362926",
-        "type": "leaf",
-        "dimension": 48.034342521464076,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Results/202104021049 Graphs of model results on 10 graphs.md",
-            "mode": "source"
-          }
-        },
-        "group": "f72239e504cf41db"
-      },
-      {
         "id": "a0d47fd4e0ea0a9f",
         "type": "leaf",
-        "dimension": 51.96565747853592,
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Results/202104021049 Graphs of model results on 10 graphs.md",
-            "mode": "preview"
+            "file": "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg"
           }
-        },
-        "group": "f72239e504cf41db"
+        }
       }
     ],
     "direction": "vertical"
@@ -54,7 +38,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "confere",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Results/202104021049 Graphs of model results on 10 graphs.md",
+                "file": "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +84,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Results/202104021049 Graphs of model results on 10 graphs.md"
+                "file": "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg"
               }
             }
           }
@@ -111,17 +95,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "ced94ea30a362926",
+  "active": "a0d47fd4e0ea0a9f",
   "lastOpenFiles": [
-    "Results/202104021049 Graphs of model results on 10 graphs.md",
-    "LitReviews/202104071519 Conference Abstract Draft 1.md",
-    "LitReviews/SIR Epidemics on Networks/Review.md",
+    "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg",
+    "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Mixed.jpg",
+    "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Deterministic.jpg",
     "LitReviews/202104141040 Closures.md",
-    "LitReviews/SIR Epidemics on Networks/20210401-1028 Main result.md",
-    "Reading/Epidemiology/SIR Models/Markovian SIR epidemics on networks/1. Introduction.md",
-    "LitReviews/SIR Epidemics on Networks/20210331-1644 Introduction.md",
-    "202104141040.md",
-    "LitReviews/Proposal/Untitled.md",
-    "LitReviews/Proposal/main.pdf"
+    "Results/202104021049 Graphs of model results on 10 graphs.md",
+    "LitReviews/202104151047 Conference Abstract Draft 2.md",
+    "LitReviews/202104071519 Conference Abstract Draft 1.md",
+    "LitReviews/202104151047.md",
+    "202104151047.md",
+    "LitReviews/SIR Epidemics on Networks/Review.md"
   ]
 }

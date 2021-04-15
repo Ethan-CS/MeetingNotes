@@ -10,8 +10,6 @@ Status : #triage
 
 ## Introduction
 
-For each increment, 10 graphs are generated. For each of these ten graphs, we cycle through each vertex - we let that vertex be the source node, begin infection, perform defence, determine new infections and so on until the infection is contained. 
-
 -----
 
 ### Agents
@@ -116,10 +114,8 @@ graph TD;
 	Prox2 -->|No| Defend
 	
 	%% Protection
-	B -->|Random| Prot1[Find highest protection]
-	Prot1 --> Prot2{More than one?}
-	Prot2 -->|Yes| Prot3[Select arbitrarily] --> Defend
-	Prot2 -->|No| Defend
+	B -->|Protection| Prot1[Find highest protection]
+	Prot1 -->Defend
 
 ```
 
@@ -142,6 +138,8 @@ graph LR;
 -----
 
 ## Model Results: Erdős–Rényi Graphs
+
+For each increment, 10 graphs are generated. For each of these ten graphs, we cycle through each vertex - we let that vertex be the source node, begin infection, perform defence, determine new infections and so on until the infection is contained. 
 
 -----
 

@@ -1,4 +1,4 @@
-Tags :	  
+Tags :	  #Abstract #Conference #Summary
 Zettel :  20210407-1520
 Status : #triage 
 
@@ -21,7 +21,7 @@ Give some (nuanced) facts and points of view:
 - We can instead use a stochastic approach
 
 
-Give three to five bullet points, outlining what the audience will learn from the talk:
+Give three to five bullet points, outlining what the audience will learn from the talk.
 
 
 

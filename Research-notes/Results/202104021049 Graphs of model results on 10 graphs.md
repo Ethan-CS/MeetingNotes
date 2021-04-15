@@ -157,11 +157,11 @@ For each increment, 10 graphs are generated. For each of these ten graphs, we cy
 
 #### Range: $0.05 \leq p \leq 0.95$ (0.05 increments)
 
-![[Results/20210414 charts/percent_infected/0.05-1.00/scatterplots/Deterministic.jpg]]
+![](Results/20210414%20charts/percent_infected/0.05-1.00/scatterplots/Deterministic.jpg)
 
-![[Results/20210414 charts/percent_infected/0.05-1.00/boxplots/Deterministic.jpg]]
+![](Results/20210414%20charts/percent_infected/0.05-1.00/boxplots/Deterministic.jpg)
 
-![[Results/20210414 charts/percent_infected/0.05-1.00/violinplots/Deterministic.jpg]]
+![](Results/20210414%20charts/percent_infected/0.05-1.00/violinplots/Deterministic.jpg)
 
 Here, we see proximity and protection allow far less of the graph to become infected than the degree-based defence strategy. As the graph becomes more dense (vertices accumulate more and more edges), degree starts to perform better but the distribution of results here becomes much larger.
 

@@ -7,11 +7,25 @@
         "id": "a0d47fd4e0ea0a9f",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg"
+            "file": "Results/202104212046 More model results.md",
+            "mode": "source"
           }
-        }
+        },
+        "group": "1f4e74f0540a05cf"
+      },
+      {
+        "id": "bb4731dd1541aa48",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Results/202104212046 More model results.md",
+            "mode": "preview"
+          }
+        },
+        "group": "1f4e74f0540a05cf"
       }
     ],
     "direction": "vertical"
@@ -67,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg",
+                "file": "Results/202104212046 More model results.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg"
+                "file": "Results/202104212046 More model results.md"
               }
             }
           }
@@ -95,17 +109,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a0d47fd4e0ea0a9f",
+  "active": "bb4731dd1541aa48",
   "lastOpenFiles": [
-    "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg",
-    "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Mixed.jpg",
-    "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Deterministic.jpg",
-    "LitReviews/202104141040 Closures.md",
-    "Results/202104021049 Graphs of model results on 10 graphs.md",
-    "LitReviews/202104151047 Conference Abstract Draft 2.md",
-    "LitReviews/202104071519 Conference Abstract Draft 1.md",
-    "LitReviews/202104151047.md",
-    "202104151047.md",
-    "LitReviews/SIR Epidemics on Networks/Review.md"
+    "Results/202104212046 More model results.md",
+    "Results/20210421 charts/percent_infected/BA 1 - 4/Deterministic.jpg",
+    "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Random.jpg",
+    "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Mixed.jpg",
+    "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Deterministic.jpg",
+    "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Random.jpg",
+    "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Mixed.jpg",
+    "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Deterministic.jpg",
+    "202104212046.md",
+    "LitReviews/202104151047 Conference Abstract Draft 2.md"
   ]
 }

@@ -1,7 +1,7 @@
 # PHD MEETING
 
 __Meeting N__
-{{date}}
+{{date:DD-MM-YYYY}}
 
 
 _Jess Enright,_
@@ -24,4 +24,4 @@ _Ethan Kelly_
 
 
 
-_EK {{time}} {{date}}_
+_EK {{time}} {{DD-MM-YY}}_

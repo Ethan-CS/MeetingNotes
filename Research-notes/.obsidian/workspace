@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Results/202104212046 More model results.md",
+            "file": "Results/202121042003 More model results.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Results/202104212046 More model results.md",
+            "file": "Results/202121042003 More model results.md",
             "mode": "preview"
           }
         },
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Results/202104212046 More model results.md",
+                "file": "Results/202121042003 More model results.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Results/202104212046 More model results.md"
+                "file": "Results/202121042003 More model results.md"
               }
             }
           }
@@ -111,15 +111,15 @@
   },
   "active": "bb4731dd1541aa48",
   "lastOpenFiles": [
+    "Results/202121042003 More model results.md",
     "Results/202104212046 More model results.md",
+    "Results/202117041541 Preferential Attachment model results.md",
     "Results/20210421 charts/percent_infected/BA 1 - 4/Deterministic.jpg",
     "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Random.jpg",
     "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Mixed.jpg",
     "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Deterministic.jpg",
     "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Random.jpg",
     "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Mixed.jpg",
-    "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Deterministic.jpg",
-    "202104212046.md",
-    "LitReviews/202104151047 Conference Abstract Draft 2.md"
+    "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Deterministic.jpg"
   ]
 }

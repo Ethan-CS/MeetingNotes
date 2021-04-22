@@ -7,11 +7,25 @@
         "id": "a0d47fd4e0ea0a9f",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg"
+            "file": "LitReviews/CompBio Conference/202104191640 Conference Abstract Final.md",
+            "mode": "source"
           }
-        }
+        },
+        "group": "2cc4aebf8a180437"
+      },
+      {
+        "id": "90f95a31ebfec371",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "LitReviews/CompBio Conference/202104191640 Conference Abstract Final.md",
+            "mode": "preview"
+          }
+        },
+        "group": "2cc4aebf8a180437"
       }
     ],
     "direction": "vertical"
@@ -67,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg",
+                "file": "LitReviews/CompBio Conference/202104191640 Conference Abstract Final.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg"
+                "file": "LitReviews/CompBio Conference/202104191640 Conference Abstract Final.md"
               }
             }
           }
@@ -97,15 +111,15 @@
   },
   "active": "a0d47fd4e0ea0a9f",
   "lastOpenFiles": [
-    "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Random.jpg",
-    "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Mixed.jpg",
-    "Results/20210414 charts/percent_infected/0.01-0.20/boxplots/Deterministic.jpg",
-    "LitReviews/202104141040 Closures.md",
-    "Results/202104021049 Graphs of model results on 10 graphs.md",
+    "LitReviews/CompBio Conference/202104191640 Conference Abstract Final.md",
+    "LitReviews/CompBio Conference/202104191640.md",
+    "LitReviews/CompBio Conference/202104151047 Conference Abstract Draft 2.md",
+    "202104191640.md",
     "LitReviews/202104151047 Conference Abstract Draft 2.md",
-    "LitReviews/202104071519 Conference Abstract Draft 1.md",
-    "LitReviews/202104151047.md",
-    "202104151047.md",
-    "LitReviews/SIR Epidemics on Networks/Review.md"
+    "LitReviews/202104141040 Closures.md",
+    "Results/202117041541 Preferential Attachment model results.md",
+    "Results/202104021613 Erdős–Rényi model results.md",
+    "Results/202104021049 How Agency-Based Models Work.md",
+    "Results/202104021049 Erdős–Rényi model results.md"
   ]
 }

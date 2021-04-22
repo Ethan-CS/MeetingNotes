@@ -13,10 +13,10 @@
             "mode": "source"
           }
         },
-        "group": "1f4e74f0540a05cf"
+        "group": "575d0a38c222ed68"
       },
       {
-        "id": "bb4731dd1541aa48",
+        "id": "66d9dcac11dd68b2",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -25,7 +25,7 @@
             "mode": "preview"
           }
         },
-        "group": "1f4e74f0540a05cf"
+        "group": "575d0a38c222ed68"
       }
     ],
     "direction": "vertical"
@@ -109,17 +109,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "bb4731dd1541aa48",
+  "active": "a0d47fd4e0ea0a9f",
   "lastOpenFiles": [
     "Results/202121042003 More model results.md",
+    "Results/202117041543 charts/percent_infected/1 - 6/violinplots/Deterministic.jpg",
+    "Results/202117041543 charts/percent_infected/1 - 6/boxplots/Deterministic.jpg",
+    "Results/202117041543 charts/winners/1 - 6/Deterministic.jpg",
+    "Results/202117041543 charts/percent_infected/0.05-1.00/boxplots/Deterministic.jpg",
     "Results/202104212046 More model results.md",
     "Results/202117041541 Preferential Attachment model results.md",
     "Results/20210421 charts/percent_infected/BA 1 - 4/Deterministic.jpg",
     "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Random.jpg",
-    "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Mixed.jpg",
-    "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Deterministic.jpg",
-    "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Random.jpg",
-    "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Mixed.jpg",
-    "Results/20210421 charts/percent_infected/WS 0.05-1.00/boxplots/Deterministic.jpg"
+    "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Mixed.jpg"
   ]
 }

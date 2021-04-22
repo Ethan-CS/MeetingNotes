@@ -2,61 +2,61 @@
 
 ## Barabási–Albert Preferential Attachment Model
 
-For minimum degree from 1 to 4.
+For minimum degree from 1 to 5.
 
 ---
 
 **Deterministic allocation box plot of percent infected**
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%204/boxplots/Deterministic.jpg)
+![](Results/20210421%20charts/percent_infected/BA%201%20-%205/boxplots/Deterministic%201.jpg)
 
 ---
 
 **Deterministic allocation violin plot of percent infected**
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%204/violinplots/Deterministic.jpg)
+![](Results/20210421%20charts/percent_infected/BA%201%20-%205/violinplots/Deterministic%201.jpg)
 
 ---
 
 **Deterministic allocation winning strategies.**
 
-![](Results/20210421%20charts/winners/1%20-%204/Deterministic.jpg)
+![](Results/20210421%20charts/winners/BA%201%20-%205/Deterministic%201.jpg)
 
 ---
 
 **Mixed allocation box plot of percent infected**
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%204/boxplots/Mixed.jpg)
+![](Results/20210421%20charts/percent_infected/BA%201%20-%205/boxplots/Mixed%201.jpg)
 
 ---
 
 **Mixed allocation violin plot of percent infected**
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%204/violinplots/Mixed.jpg)
+![](Results/20210421%20charts/percent_infected/BA%201%20-%205/violinplots/Mixed%201.jpg)
 
 ---
 
 **Mixed allocation winning strategies**
 
-![](Results/20210421%20charts/winners/1%20-%204/Mixed.jpg)
+![](Results/20210421%20charts/winners/BA%201%20-%205/Mixed%201.jpg)
 
 ---
 
 **Random allocation box plot of percent infected**
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%204/boxplots/Random.jpg)
+![](Results/20210421%20charts/percent_infected/BA%201%20-%205/boxplots/Random%201.jpg)
 
 ---
 
 **Random allocation violin plot of percent infected**
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%204/violinplots/Random.jpg)
+![](Results/20210421%20charts/percent_infected/BA%201%20-%205/violinplots/Random%201.jpg)
 
 ---
 
 **Random allocation winning strategies**
 
-![](Results/20210421%20charts/winners/1%20-%204/Random.jpg)
+![](Results/20210421%20charts/winners/BA%201%20-%205/Random%201.jpg)
 
 ---
 

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Results/202121042003 More model results.md",
+            "file": "LitReviews/202104141040 Closures.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Results/202121042003 More model results.md",
+            "file": "LitReviews/202104141040 Closures.md",
             "mode": "preview"
           }
         },
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Results/202121042003 More model results.md",
+                "file": "LitReviews/202104141040 Closures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Results/202121042003 More model results.md"
+                "file": "LitReviews/202104141040 Closures.md"
               }
             }
           }
@@ -111,6 +111,7 @@
   },
   "active": "a0d47fd4e0ea0a9f",
   "lastOpenFiles": [
+    "LitReviews/202104141040 Closures.md",
     "Results/202121042003 More model results.md",
     "Results/202117041543 charts/percent_infected/1 - 6/violinplots/Deterministic.jpg",
     "Results/202117041543 charts/percent_infected/1 - 6/boxplots/Deterministic.jpg",
@@ -119,7 +120,6 @@
     "Results/202104212046 More model results.md",
     "Results/202117041541 Preferential Attachment model results.md",
     "Results/20210421 charts/percent_infected/BA 1 - 4/Deterministic.jpg",
-    "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Random.jpg",
-    "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Mixed.jpg"
+    "Results/20210421 charts/percent_infected/WS 0.05-1.00/violinplots/Random.jpg"
   ]
 }

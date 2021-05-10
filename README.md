@@ -7,7 +7,7 @@ This repository contains various files associated with my PhD research, which is
 ## Highlights
 
 Some note-worthy parts of this repo:
-* [Erdős–Rényi SIRP graph model results](/Research-notes/Results/202104021049%20Graphs%20of%20model%20results%20on%2010%20graphs.md)
+* [Erdős–Rényi SIRP graph model results](Research-notes/Results/202104021049%20Graphs%20of%20model%20results%20on%2010%20graphs.md)
 * [MD Presentation on Closures](Research-notes/LitReviews/202104141040%20Closures.md)
 
 

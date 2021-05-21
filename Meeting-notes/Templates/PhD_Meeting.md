@@ -24,4 +24,4 @@ _Ethan Kelly_
 
 
 
-_EK {{time}} {{DD-MM-YY}}_
+_EK {{time}} {{date:DD-MM-YY}}_

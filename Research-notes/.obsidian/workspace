@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 100
+    "width": 190
   },
   "right": {
     "id": "3aefe5a27645f016",
@@ -98,6 +98,7 @@
   },
   "active": "d3df32e1b029d7e5",
   "lastOpenFiles": [
+    "Reading/Concepts/ODEs/202112081756 Symmetry in ODEs.md",
     "202112081756.md",
     "Reading/Untitled.md",
     "LitReviews/202107151813 Systematic Equations Generation.md",
@@ -106,7 +107,6 @@
     "LitReviews/SIR Epidemics on Networks/20210401-1028 Main result.md",
     "LitReviews/Proposal/2. Literature Review.md",
     "LitReviews/CompBio Conference/202104191640 Conference Abstract Final.md",
-    "LitReviews/CompBio Conference/202104151047 Conference Abstract Draft 2.md",
-    "LitReviews/CompBio Conference/202104071519 Conference Abstract Draft 1.md"
+    "LitReviews/CompBio Conference/202104151047 Conference Abstract Draft 2.md"
   ]
 }

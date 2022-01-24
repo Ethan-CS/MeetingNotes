@@ -31,11 +31,11 @@ For each increment, 10 graphs are generated. For each of these ten graphs, we cy
 -----
 
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%205/boxplots/Deterministic%201.jpg)
+![](2020-21/Results/20210421%20charts/percent_infected/BA%201%20-%205/boxplots/Deterministic%201.jpg)
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%205/violinplots/Deterministic%201.jpg)
+![](2020-21/Results/20210421%20charts/percent_infected/BA%201%20-%205/violinplots/Deterministic%201.jpg)
 
-![](Results/20210421%20charts/winners/BA%201%20-%205/Deterministic%201.jpg)
+![](2020-21/Results/20210421%20charts/winners/BA%201%20-%205/Deterministic%201.jpg)
 
 -----
 
@@ -45,11 +45,11 @@ The mixed protection allocation involves assigning each agent a baseline pseudo-
 
 -----
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%205/boxplots/Mixed%201.jpg)
+![](2020-21/Results/20210421%20charts/percent_infected/BA%201%20-%205/boxplots/Mixed%201.jpg)
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%205/violinplots/Mixed%201.jpg)
+![](2020-21/Results/20210421%20charts/percent_infected/BA%201%20-%205/violinplots/Mixed%201.jpg)
 
-![](Results/20210421%20charts/winners/BA%201%20-%205/Mixed%201.jpg)
+![](2020-21/Results/20210421%20charts/winners/BA%201%20-%205/Mixed%201.jpg)
 
 -----
 
@@ -60,10 +60,10 @@ Random protection allocation involves each agent being assigned an entirely (pse
 -----
 
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%205/boxplots/Random%201.jpg)
+![](2020-21/Results/20210421%20charts/percent_infected/BA%201%20-%205/boxplots/Random%201.jpg)
 
-![](Results/20210421%20charts/percent_infected/BA%201%20-%205/violinplots/Random%201.jpg)
+![](2020-21/Results/20210421%20charts/percent_infected/BA%201%20-%205/violinplots/Random%201.jpg)
 
-![](Results/20210421%20charts/winners/BA%201%20-%205/Random%201.jpg)
+![](2020-21/Results/20210421%20charts/winners/BA%201%20-%205/Random%201.jpg)
 
 -----

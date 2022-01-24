@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Reading/Concepts/ODEs/202112081756 Symmetry in ODEs.md",
+            "file": "2022/202201242216 Upper Bound for Paths.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "d03d2891ed801e2b"
+      },
+      {
+        "id": "44d36d8661573d0e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "2022/202201242216 Upper Bound for Paths.md",
+            "mode": "preview"
+          }
+        },
+        "group": "d03d2891ed801e2b"
       }
     ],
     "direction": "vertical"
@@ -68,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reading/Concepts/ODEs/202112081756 Symmetry in ODEs.md",
+                "file": "2022/202201242216 Upper Bound for Paths.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reading/Concepts/ODEs/202112081756 Symmetry in ODEs.md"
+                "file": "2022/202201242216 Upper Bound for Paths.md"
               }
             }
           }
@@ -98,15 +111,15 @@
   },
   "active": "d3df32e1b029d7e5",
   "lastOpenFiles": [
-    "Reading/Concepts/ODEs/202112081756 Symmetry in ODEs.md",
+    "2022/202201242216 Upper Bound for Paths.md",
+    "2022/Untitled.md",
+    "2020-21/Reading/Concepts/ODEs/202112081756 Symmetry in ODEs.md",
     "202112081756.md",
     "Reading/Untitled.md",
-    "LitReviews/202107151813 Systematic Equations Generation.md",
-    "LitReviews/SIR Epidemics on Networks/Review.md",
-    "LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
-    "LitReviews/SIR Epidemics on Networks/20210401-1028 Main result.md",
-    "LitReviews/Proposal/2. Literature Review.md",
-    "LitReviews/CompBio Conference/202104191640 Conference Abstract Final.md",
-    "LitReviews/CompBio Conference/202104151047 Conference Abstract Draft 2.md"
+    "2020-21/LitReviews/202107151813 Systematic Equations Generation.md",
+    "2020-21/LitReviews/SIR Epidemics on Networks/Review.md",
+    "2020-21/LitReviews/SIR Epidemics on Networks/20210401-1818 Applications of the Main Result.md",
+    "2020-21/LitReviews/SIR Epidemics on Networks/20210401-1028 Main result.md",
+    "2020-21/LitReviews/Proposal/2. Literature Review.md"
   ]
 }

@@ -14,7 +14,7 @@ Status : #triage
 
 Authors consider a specific network, the _star-triangle network._
 
-![Star Triangle Network with M triangles](Images/Screenshot%202021-04-01%20at%2018.21.30.png)
+![Star Triangle Network with M triangles](Screenshot%202021-04-01%20at%2018.21.30.png)
 _The Star Triangle Network with $M$ Triangles_
 
 #### Star-triangle network

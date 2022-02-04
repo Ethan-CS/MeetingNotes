@@ -1,1 +1,0 @@
-Iterative method to find local max likelihood or max *a posteriori* estimates of parameters in statistical models, where model depends on unobserved latent variables.

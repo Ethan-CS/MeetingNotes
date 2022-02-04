@@ -1,1 +1,0 @@
-## Definition: The Firefighter Problem

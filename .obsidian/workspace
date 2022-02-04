@@ -1,0 +1,98 @@
+{
+  "main": {
+    "id": "f9c8a96bfa47c40d",
+    "type": "split",
+    "children": [
+      {
+        "id": "689ad6d03efa605e",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "830509c43c6f3078",
+    "type": "split",
+    "children": [
+      {
+        "id": "be1fc40c09480545",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b96c1ec76b81144",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "6409dcf5f95c9625",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8955b48a389d2f0c",
+    "type": "split",
+    "children": [
+      {
+        "id": "39eba8dfcd0c17b6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a7cb24477fb95fb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "689ad6d03efa605e",
+  "lastOpenFiles": [
+    "2022/01/39_18-01-22 1.md",
+    "2021/07-21/35_15-07-21.md",
+    "2021/07-21/34_07-07-21.md",
+    "2021/07-21/33_01-07-21.md",
+    "2021/07-21/Untitled.md",
+    "2021/06-21/32_24-06-21.md",
+    "2021/06-21/31_10-06-21.md",
+    "2021/06-21/30_02-06-21.md",
+    "2021/06-21/31_10_06_21.md",
+    "2021/05-21/29_20-05-21.md"
+  ]
+}

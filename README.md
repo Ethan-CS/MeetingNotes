@@ -1,4 +1,4 @@
-# ethankelly/meeting-notes/
+# ethankelly/MeetingNotes/
 
 Contains notes taken during meetings during my PhD program, mostly from supervisor meetings.
 

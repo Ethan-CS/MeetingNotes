@@ -3,16 +3,11 @@
 
 # Unnecessary Obsidian files
 .DS_Store
-Reading-notes/*.css
-Reading-notes/.obsidian/
-Reading-notes/.trash/
+*.css
+.obsidian/
+.trash/
 
 *.DS_Store
-
-Meeting-notes/*.css
-Meeting-notes/.obsidian/
-Meeting-notes/.trash/
-Meeting-notes/.DS_Store
 
 # Unnecessary TeX files
 *.aux

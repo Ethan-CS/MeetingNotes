@@ -9,9 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2022/02/42_08-02-22.md",
-            "mode": "source",
-            "source": false
+            "file": "2022/02/43_14-02-22.md",
+            "mode": "source"
           }
         }
       }
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022/02/42_08-02-22.md",
+                "file": "2022/02/43_14-02-22.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +88,7 @@
   },
   "active": "689ad6d03efa605e",
   "lastOpenFiles": [
+    "2022/02/42_08-02-22 1.md",
     "2022/02/42_08-02-22.md",
     "2021/06-21/APR1_24-06-21.md",
     "2021/07-21/33_01-07-21.md",
@@ -97,7 +97,6 @@
     "2021/07-21/36_21-07-21.md",
     "2021/07-21/37_29-07-21.md",
     "2022/01/39_18-01-22 1.md",
-    "2021/07-21/Untitled.md",
-    "2021/06-21/32_24-06-21.md"
+    "2021/07-21/Untitled.md"
   ]
 }

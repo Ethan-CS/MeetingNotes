@@ -3,6 +3,7 @@
 __Meeting N__
 {{date:DD-MM-YYYY}}
 
+[< Previous]() | [Next >]()
 
 _Jess Enright,_
 _Ethan Kelly_
@@ -16,8 +17,22 @@ _Ethan Kelly_
 
 ## 3. Plan
 
+**Practical:**
+- [ ] 
+
+**Writing:**
+- [ ] 
+
+**Planning:**
+- [ ] 
+
+
 
 ## 4. Follow-up
+
+Ethan:
+
+Jess:
 
 
 **_Next meeting date: _**

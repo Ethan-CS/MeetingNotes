@@ -6,6 +6,7 @@
 *.css
 .obsidian/
 .trash/
+.obsidian/hotkeys.json
 
 *.DS_Store
 

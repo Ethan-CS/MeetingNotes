@@ -1,28 +1,11 @@
 {
-  "insert-template": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "I"
-    }
-  ],
   "obsidian-git:commit-specified-message": [
     {
       "modifiers": [
-        "Ctrl",
+        "Alt",
         "Mod"
       ],
-      "key": "C"
-    }
-  ],
-  "obsidian-git:pull": [
-    {
-      "modifiers": [
-        "Ctrl",
-        "Mod"
-      ],
-      "key": "ArrowDown"
+      "key": "ArrowUp"
     }
   ],
   "obsidian-git:push2": [
@@ -32,6 +15,15 @@
         "Mod"
       ],
       "key": "ArrowUp"
+    }
+  ],
+  "obsidian-git:pull": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "ArrowDown"
     }
   ]
 }

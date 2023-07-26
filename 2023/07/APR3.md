@@ -5,13 +5,12 @@ __Meeting: APR3__
 
 [< Previous]() | [Next >]()
 
-_Jess Enright,_
-_Ethan Kelly_
+_Oana Andrei, Ciaran McCreesh, Ethan Hunter_
 
 
 ## 1. Admin
 
-My Campus - looks as though I haven't done mandatory training. 
+My Campus - looks as though I haven't done mandatory training, but I have (just did not enter the dates as have already done this for last two years).
 
 
 ## 2. Research
@@ -52,28 +51,4 @@ may need to push back against allocation - at least one day a week guaranteed to
 
 
 
-## 3. Plan
-
-**Practical:**
-- [ ] 
-
-**Writing:**
-- [ ] 
-
-**Planning:**
-- [ ] 
-
-
-
-## 4. Follow-up
-
-Ethan:
-
-Jess:
-
-
-**_Next meeting date: _**
-
-
-
-_EK 14:15 24-07-23_
+_EH 15:15 24-07-23_

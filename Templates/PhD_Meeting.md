@@ -6,7 +6,7 @@ __Meeting N__
 [< Previous]() | [Next >]()
 
 _Jess Enright,_
-_Ethan Kelly_
+_Ethan Hunter_
 
 
 ## 1. Admin
@@ -39,4 +39,4 @@ Jess:
 
 
 
-_EK {{time}} {{date:DD-MM-YY}}_
+_EH {{time}} {{date:DD-MM-YY}}_

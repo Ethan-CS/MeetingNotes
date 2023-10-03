@@ -4,8 +4,6 @@
 
 Anna, Ed, Ethan, Quintin
 
-## 1. Notes
-
  - Ed started on spatial skills, struggling with timetabling due to maths and physics clashes.
 ### Tutor course
 - Mondays from noon (SAWB 422/423 on central timetabling now). 14:30 - 16:00 on Mondays in 422 from now on.
